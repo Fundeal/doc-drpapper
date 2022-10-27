@@ -1,5 +1,6 @@
 var namespace_dr_pepper =
 [
+    [ "Core", "de/d69/namespace_dr_pepper_1_1_core.html", "de/d69/namespace_dr_pepper_1_1_core" ],
     [ "Cell", "d7/dee/class_dr_pepper_1_1_cell.html", null ],
     [ "CellBasedObject", "d0/d93/class_dr_pepper_1_1_cell_based_object.html", null ],
     [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['drpapper_0',['DrPapper',['../dc/de6/namespace_dr_papper.html',1,'']]],
+  ['core_0',['Core',['../de/d69/namespace_dr_pepper_1_1_core.html',1,'DrPepper']]],
   ['drpepper_1',['DrPepper',['../d2/da8/namespace_dr_pepper.html',1,'']]],
-  ['system_2',['System',['../de/d58/namespace_dr_papper_1_1_system.html',1,'DrPapper']]],
-  ['tick_3',['Tick',['../d5/d9f/namespace_dr_papper_1_1_system_1_1_tick.html',1,'DrPapper::System']]]
+  ['tick_2',['Tick',['../da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html',1,'DrPepper::Core']]]
 ];

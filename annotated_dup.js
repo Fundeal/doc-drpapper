@@ -1,17 +1,15 @@
 var annotated_dup =
 [
-    [ "DrPapper", "dc/de6/namespace_dr_papper.html", [
-      [ "System", "de/d58/namespace_dr_papper_1_1_system.html", [
-        [ "Tick", "d5/d9f/namespace_dr_papper_1_1_system_1_1_tick.html", [
-          [ "FloorCheckPhase", "dc/d6d/class_dr_papper_1_1_system_1_1_tick_1_1_floor_check_phase.html", "dc/d6d/class_dr_papper_1_1_system_1_1_tick_1_1_floor_check_phase" ],
-          [ "MovePhase", "d1/d5e/class_dr_papper_1_1_system_1_1_tick_1_1_move_phase.html", "d1/d5e/class_dr_papper_1_1_system_1_1_tick_1_1_move_phase" ],
-          [ "PhaseBase", "d5/dd9/class_dr_papper_1_1_system_1_1_tick_1_1_phase_base.html", "d5/dd9/class_dr_papper_1_1_system_1_1_tick_1_1_phase_base" ],
-          [ "StandbyPhase", "d9/dad/class_dr_papper_1_1_system_1_1_tick_1_1_standby_phase.html", "d9/dad/class_dr_papper_1_1_system_1_1_tick_1_1_standby_phase" ],
-          [ "TickSystem", "d9/d76/class_dr_papper_1_1_system_1_1_tick_1_1_tick_system.html", "d9/d76/class_dr_papper_1_1_system_1_1_tick_1_1_tick_system" ]
-        ] ]
-      ] ]
-    ] ],
     [ "DrPepper", "d2/da8/namespace_dr_pepper.html", [
+      [ "Core", "de/d69/namespace_dr_pepper_1_1_core.html", [
+        [ "Tick", "da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html", [
+          [ "FloorCheckPhase", "dd/d7f/class_dr_pepper_1_1_core_1_1_tick_1_1_floor_check_phase.html", "dd/d7f/class_dr_pepper_1_1_core_1_1_tick_1_1_floor_check_phase" ],
+          [ "MovePhase", "d2/d37/class_dr_pepper_1_1_core_1_1_tick_1_1_move_phase.html", "d2/d37/class_dr_pepper_1_1_core_1_1_tick_1_1_move_phase" ],
+          [ "PhaseBase", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base" ],
+          [ "StandbyPhase", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase" ],
+          [ "TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system" ]
+        ] ]
+      ] ],
       [ "Cell", "d7/dee/class_dr_pepper_1_1_cell.html", null ],
       [ "CellBasedObject", "d0/d93/class_dr_pepper_1_1_cell_based_object.html", null ],
       [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
