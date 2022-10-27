@@ -33,7 +33,9 @@ jobs:
       - uses: mattnotmitt/doxygen-action@v1
         with:
             working-directory: 'drpepper_main/Assets/Scripts/'
-      - run: sudo mv html drpepper_main/Assets/Scripts/html
+      
+      - run: tree
+    
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
