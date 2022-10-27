@@ -26,9 +26,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v2
           
-      - run: git clone http://${{secrets.GITLAB_USER}}:${{secrets.GITLAB_ACCESS}}@${{secrets.URL}}/${{secrets.ORGAN}}/${{secrets.REPO}}
-      
-      - run: tree
+      - run: git clone -b Develop --single-branch http://${{secrets.GITLAB_USER}}:${{secrets.GITLAB_ACCESS}}@${{secrets.URL}}/${{secrets.ORGAN}}/${{secrets.REPO}}
 
       - run: mv Doxyfile drpepper_main/Assets/Scripts
       
