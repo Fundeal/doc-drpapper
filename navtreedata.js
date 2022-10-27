@@ -25,21 +25,21 @@
 var NAVTREE =
 [
   [ "DrPapper", "index.html", [
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    [ "네임스페이스", "namespaces.html", [
+      [ "네임스페이스 목록", "namespaces.html", "namespaces_dup" ]
     ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Properties", "functions_prop.html", null ]
+    [ "클래스", "annotated.html", [
+      [ "클래스 목록", "annotated.html", "annotated_dup" ],
+      [ "클래스 색인", "classes.html", null ],
+      [ "클래스 계통도", "hierarchy.html", "hierarchy" ],
+      [ "클래스 멤버", "functions.html", [
+        [ "모두", "functions.html", null ],
+        [ "함수", "functions_func.html", null ],
+        [ "속성", "functions_prop.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+    [ "파일들", "files.html", [
+      [ "파일 목록", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
@@ -49,5 +49,5 @@ var NAVTREEINDEX =
 "annotated.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';
+var SYNCOFFMSG = '패널 동기화를 활성화하기 위해 클릭하십시오';

@@ -23,16 +23,16 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Namespaces",url:"namespaces.html",children:[
-{text:"Namespace List",url:"namespaces.html"}]},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
-{text:"Class Hierarchy",url:"hierarchy.html"},
-{text:"Class Members",url:"functions.html",children:[
-{text:"All",url:"functions.html"},
-{text:"Functions",url:"functions_func.html"},
-{text:"Properties",url:"functions_prop.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"}]}]}
+{text:"메인 페이지",url:"index.html"},
+{text:"네임스페이스",url:"namespaces.html",children:[
+{text:"네임스페이스 목록",url:"namespaces.html"}]},
+{text:"클래스",url:"annotated.html",children:[
+{text:"클래스 목록",url:"annotated.html"},
+{text:"클래스 색인",url:"classes.html"},
+{text:"클래스 계통도",url:"hierarchy.html"},
+{text:"클래스 멤버",url:"functions.html",children:[
+{text:"모두",url:"functions.html"},
+{text:"함수",url:"functions_func.html"},
+{text:"속성",url:"functions_prop.html"}]}]},
+{text:"파일들",url:"files.html",children:[
+{text:"파일 목록",url:"files.html"}]}]}
