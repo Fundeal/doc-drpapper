@@ -88,79 +88,116 @@ $(document).ready(function(){initNavTree('d2/de9/_cell_based_object_8cs_source.h
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d0/d93/class_dr_pepper_1_1_cell_based_object.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d0/d93/class_dr_pepper_1_1_cell_based_object.html">CellBasedObject</a> : MonoBehaviour</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        [SerializeField] <a class="code hl_class" href="../../d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html">CellBasedObjectData</a> _Data;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <a class="code hl_class" href="../../d6/d39/class_cell_based_object_view.html">CellBasedObjectView</a> _TestView;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> Size { <span class="keyword">get</span> =&gt; _Data.Size; }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> IsSolid { <span class="keyword">get</span> =&gt; _IsSolid; }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> Vector2Int CurrentCellPosition { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> Vector2Int MaxBound { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="../../d0/d03/class_dr_pepper_1_1_room.html">Room</a> _CurrentRoom;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">bool</span> _IsSolid = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            Debug.Log(<a class="code hl_class" href="../../de/d57/class_dr_pepper_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../de/d5e/class_dr_pepper_1_1_room_system.html">RoomSystem</a>&gt;().CurrentRoom.gameObject.name);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            _IsSolid = _Data.IsSolid;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            _CurrentRoom = <a class="code hl_class" href="../../de/d57/class_dr_pepper_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../de/d5e/class_dr_pepper_1_1_room_system.html">RoomSystem</a>&gt;().CurrentRoom;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            CurrentCellPosition = _CurrentRoom.CellSystem.GetCellPosition(transform.position);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            _TestView?.SetSize(Size);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetCellPosition(Vector2Int pos)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span>(!<a class="code hl_class" href="../../de/d57/class_dr_pepper_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../de/d5e/class_dr_pepper_1_1_room_system.html">RoomSystem</a>&gt;().CurrentRoom.CellSystem.AttachCellObject(<span class="keyword">this</span>))</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.Events;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> : MonoBehaviour</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        [SerializeField] <a class="code hl_class" href="../../d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html">CellBasedObjectData</a> _Data;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField] <a class="code hl_class" href="../../d6/d39/class_cell_based_object_view.html">CellBasedObjectView</a> _TestView;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> UnityEvent&lt;<a class="code hl_class" href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html">CellBasedObjectCollisionCheck</a>.<a class="code hl_class" href="../../dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html">CollisionData</a>&gt; OnCollisionEvent;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> Size { <span class="keyword">get</span> =&gt; _Data.Size; }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> IsSolid { <span class="keyword">get</span> =&gt; _IsSolid; }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span> Vector2Int CurrentCellPosition { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span> Vector2Int MaxBound { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a> Bound { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a> NextBound { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room.Room</a> _CurrentRoom;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">bool</span> _IsSolid = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            _IsSolid = _Data.IsSolid;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            _CurrentRoom = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;Room.RoomSystem&gt;().CurrentRoom;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            CurrentCellPosition = _CurrentRoom.CellSystem.GetCellPosition(transform.position);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            _TestView?.SetSize(Size);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            Bound = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            _UpdateBound();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            CurrentCellPosition = pos;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            _UpdateBound();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> Vector3 GetModelingPosition()</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            Vector3 modelingPos = transform.position;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetCellPosition(Vector2Int pos)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObject(<span class="keyword">this</span>))</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            modelingPos.x += CurrentCellPosition.x + Size / 2.0f;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            modelingPos.y = 0.5f;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            modelingPos.z += -CurrentCellPosition.y - Size / 2.0f;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> modelingPos;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">void</span> _UpdateBound()</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            MaxBound = <span class="keyword">new</span> Vector2Int(CurrentCellPosition.x + Size, CurrentCellPosition.y + Size);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            CurrentCellPosition = pos;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            _UpdateBound();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">public</span> Vector3 GetModelingLocalPosition()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            Vector3 modelingPos = Vector3.zero;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            modelingPos.x = Size / 2.0f;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            modelingPos.y = 0.5f;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            modelingPos.z = -Size / 2.0f;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> modelingPos;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> PreCheck(Vector2Int nextPos)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_class" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a> nextBound = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            nextBound.Min = nextPos;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            nextBound.Max = nextPos + <span class="keyword">new</span> Vector2Int(Size - 1, Size - 1);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            _CurrentRoom.CellSystem.AddPreCheckObject(<span class="keyword">this</span>, nextPos);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> MoveToNextBound()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObjectWithBound(<span class="keyword">this</span>, NextBound))</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            CurrentCellPosition = NextBound.Min;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            _UpdateBound();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">void</span> _UpdateBound()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            Bound.Min = CurrentCellPosition;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            Bound.Max = CurrentCellPosition + <span class="keyword">new</span> Vector2Int(Size -1, Size - 1);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="ttc" id="aclass_cell_based_object_view_html"><div class="ttname"><a href="../../d6/d39/class_cell_based_object_view.html">CellBasedObjectView</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/ded/_cell_based_object_view_8cs_source.html#l00005">CellBasedObjectView.cs:6</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_cell_based_object_data_html"><div class="ttname"><a href="../../d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html">DrPepper.CellBasedObjectData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/da4/_cell_based_object_data_8cs_source.html#l00008">CellBasedObjectData.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_cell_based_object_html"><div class="ttname"><a href="../../d0/d93/class_dr_pepper_1_1_cell_based_object.html">DrPepper.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00007">CellBasedObject.cs:8</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_room_html"><div class="ttname"><a href="../../d0/d03/class_dr_pepper_1_1_room.html">DrPepper.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d98/_room_8cs_source.html#l00008">Room.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_room_system_html"><div class="ttname"><a href="../../de/d5e/class_dr_pepper_1_1_room_system.html">DrPepper.RoomSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8b/_room_system_8cs_source.html#l00008">RoomSystem.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_system_manager_html"><div class="ttname"><a href="../../de/d57/class_dr_pepper_1_1_system_manager.html">DrPepper.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
-<div class="ttc" id="anamespace_dr_pepper_html"><div class="ttname"><a href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8b/_room_system_8cs_source.html#l00005">RoomSystem.cs:6</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data_html"><div class="ttname"><a href="../../dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html">DrPepper.Core.Cell.CellBasedObjectCollisionCheck.CollisionData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00009">CellBasedObjectCollisionCheck.cs:10</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_html"><div class="ttname"><a href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html">DrPepper.Core.Cell.CellBasedObjectCollisionCheck</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00007">CellBasedObjectCollisionCheck.cs:8</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_html"><div class="ttname"><a href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">DrPepper.Core.Cell.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00008">CellBasedObject.cs:9</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound_html"><div class="ttname"><a href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">DrPepper.Core.Cell.CellBound</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dde/_cell_system_8cs_source.html#l00008">CellSystem.cs:9</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_room_html"><div class="ttname"><a href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">DrPepper.Core.Room.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d98/_room_8cs_source.html#l00008">Room.cs:9</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
+<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_cell_html"><div class="ttname"><a href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00005">CellBasedObjectCollisionCheck.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_37618a71d99bdfed5979e976980d5eec.html">Test</a></li><li class="navelem"><a class="el" href="../../dir_07ad9103515b239028b090550da81dbd.html">Test_CellSystem</a></li><li class="navelem"><b>CellBasedObject.cs</b></li>
-    <li class="footer">생성시간 : 목 11월 3 2022 02:00:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 11월 4 2022 02:05:29, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
