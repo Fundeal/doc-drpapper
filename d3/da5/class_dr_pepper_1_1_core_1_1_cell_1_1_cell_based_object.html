@@ -105,8 +105,8 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:ac0a59a8c9f4805b9eee771c6dfa68701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4009ac920f5405978ce2f51b86b0172"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#ad4009ac920f5405978ce2f51b86b0172">GetModelingLocalPosition</a> ()</td></tr>
 <tr class="separator:ad4009ac920f5405978ce2f51b86b0172"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973189295bca1b1d8c1a18fc4659f199"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a973189295bca1b1d8c1a18fc4659f199">PreCheck</a> (Vector2Int nextPos)</td></tr>
-<tr class="separator:a973189295bca1b1d8c1a18fc4659f199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960cda4d334473ded429b3fc5398eeec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a960cda4d334473ded429b3fc5398eeec">MoveWithCollisionCheck</a> (Vector2Int nextPos)</td></tr>
+<tr class="separator:a960cda4d334473ded429b3fc5398eeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f052e868e8e66a75e77ca25c8d2a884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a8f052e868e8e66a75e77ca25c8d2a884">MoveToNextBound</a> ()</td></tr>
 <tr class="separator:a8f052e868e8e66a75e77ca25c8d2a884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -123,8 +123,6 @@ Public 속성</h2></td></tr>
 <tr class="separator:af1da0132ceffee261ea6266bcfd48139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1588b4324d6cbfed1053738131824849"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a1588b4324d6cbfed1053738131824849">CurrentCellPosition</a><code> [get]</code></td></tr>
 <tr class="separator:a1588b4324d6cbfed1053738131824849"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a2bec3296ae8485a2dfd5192738d5cc"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a4a2bec3296ae8485a2dfd5192738d5cc">MaxBound</a><code> [get]</code></td></tr>
-<tr class="separator:a4a2bec3296ae8485a2dfd5192738d5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf5d15259cf58c4a889e156df36dd193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#acf5d15259cf58c4a889e156df36dd193">Bound</a><code> [get]</code></td></tr>
 <tr class="separator:acf5d15259cf58c4a889e156df36dd193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9e854708cd39cf25153481b85d7f4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html">CellBound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html#a2f9e854708cd39cf25153481b85d7f4f">NextBound</a><code> [get, set]</code></td></tr>
@@ -157,16 +155,16 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span>            Vector3 modelingPos = Vector3.zero;</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>            modelingPos.x = Size / 2.0f;</div>
-<div class="line"><span class="lineno">   59</span>            modelingPos.y = 0.5f;</div>
-<div class="line"><span class="lineno">   60</span>            modelingPos.z = -Size / 2.0f;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> modelingPos;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            Vector3 modelingPos = Vector3.zero;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            modelingPos.x = Size / 2.0f;</div>
+<div class="line"><span class="lineno">   70</span>            modelingPos.y = 0.5f;</div>
+<div class="line"><span class="lineno">   71</span>            modelingPos.z = -Size / 2.0f;</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> modelingPos;</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,19 +191,19 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
-<div class="line"><span class="lineno">   28</span>            _IsSolid = _Data.IsSolid;</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>            _CurrentRoom = SystemManager.Instance.GetSystem&lt;Room.RoomSystem&gt;().CurrentRoom;</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>            CurrentCellPosition = _CurrentRoom.CellSystem.GetCellPosition(transform.position);</div>
-<div class="line"><span class="lineno">   33</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
-<div class="line"><span class="lineno">   34</span>            _TestView?.SetSize(Size);</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>            Bound = <span class="keyword">new</span> CellBound();</div>
-<div class="line"><span class="lineno">   37</span>            _UpdateBound();</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            _IsSolid = _Data.IsSolid;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>            _CurrentRoom = SystemManager.Instance.GetSystem&lt;Room.DungeonSystem&gt;().CurrentRoom;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>            CurrentCellPosition = _CurrentRoom.CellSystem.GetCellPosition(transform.position);</div>
+<div class="line"><span class="lineno">   43</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><span class="lineno">   44</span>            _TestView?.SetSize(Size);</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            Bound = <span class="keyword">new</span> CellBound();</div>
+<div class="line"><span class="lineno">   47</span>            _UpdateBound();</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,25 +230,25 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObjectWithBound(<span class="keyword">this</span>, NextBound))</div>
-<div class="line"><span class="lineno">   81</span>            {</div>
-<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            CurrentCellPosition = NextBound.Min;</div>
-<div class="line"><span class="lineno">   86</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
-<div class="line"><span class="lineno">   87</span>            _UpdateBound();</div>
-<div class="line"><span class="lineno">   88</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObjectWithBound(<span class="keyword">this</span>, NextBound))</div>
+<div class="line"><span class="lineno">   95</span>            {</div>
+<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   97</span>            }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>            CurrentCellPosition = NextBound.Min;</div>
+<div class="line"><span class="lineno">  100</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><span class="lineno">  101</span>            _UpdateBound();</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a973189295bca1b1d8c1a18fc4659f199" name="a973189295bca1b1d8c1a18fc4659f199"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973189295bca1b1d8c1a18fc4659f199">&#9670;&nbsp;</a></span>PreCheck()</h2>
+<a id="a960cda4d334473ded429b3fc5398eeec" name="a960cda4d334473ded429b3fc5398eeec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960cda4d334473ded429b3fc5398eeec">&#9670;&nbsp;</a></span>MoveWithCollisionCheck()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +257,7 @@ Public 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DrPepper.Core.Cell.CellBasedObject.PreCheck </td>
+          <td class="memname">void DrPepper.Core.Cell.CellBasedObject.MoveWithCollisionCheck </td>
           <td>(</td>
           <td class="paramtype">Vector2Int&#160;</td>
           <td class="paramname"><em>nextPos</em></td><td>)</td>
@@ -273,15 +271,15 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            CellBound nextBound = <span class="keyword">new</span> CellBound();</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>            nextBound.Min = nextPos;</div>
-<div class="line"><span class="lineno">   70</span>            nextBound.Max = nextPos + <span class="keyword">new</span> Vector2Int(Size - 1, Size - 1);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            _CurrentRoom.CellSystem.AddPreCheckObject(<span class="keyword">this</span>, nextPos);</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            CellBound nextBound = <span class="keyword">new</span> CellBound();</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>            nextBound.Min = nextPos;</div>
+<div class="line"><span class="lineno">   83</span>            nextBound.Max = nextPos + <span class="keyword">new</span> Vector2Int(Size - 1, Size - 1);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            _CurrentRoom.CellSystem.AddPreCheckObject(<span class="keyword">this</span>, nextPos);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -309,19 +307,19 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   43</span>            </div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObject(<span class="keyword">this</span>))</div>
-<div class="line"><span class="lineno">   45</span>            {</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>            CurrentCellPosition = pos;</div>
-<div class="line"><span class="lineno">   50</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
-<div class="line"><span class="lineno">   51</span>            _UpdateBound();</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            _CurrentRoom.CellSystem.RemoveCellObject(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   54</span>            </div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (!_CurrentRoom.CellSystem.AttachCellObject(<span class="keyword">this</span>))</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>            CurrentCellPosition = pos;</div>
+<div class="line"><span class="lineno">   61</span>            transform.position = _CurrentRoom.CellSystem.GetWorldPosition(CurrentCellPosition);</div>
+<div class="line"><span class="lineno">   62</span>            _UpdateBound();</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,7 +336,7 @@ Public 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -363,8 +361,8 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -388,8 +386,8 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -413,33 +411,8 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span> =&gt; _IsSolid; }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a4a2bec3296ae8485a2dfd5192738d5cc" name="a4a2bec3296ae8485a2dfd5192738d5cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a2bec3296ae8485a2dfd5192738d5cc">&#9670;&nbsp;</a></span>MaxBound</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector2Int DrPepper.Core.Cell.CellBasedObject.MaxBound</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span> =&gt; _IsSolid; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -463,8 +436,8 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -488,8 +461,8 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span> =&gt; _Data.Size; }</div>
+<p class="definition"><a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html">CellBasedObject.cs</a> 파일의 <a class="el" href="../../d2/de9/_cell_based_object_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span> =&gt; _Data.Size; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,7 +475,7 @@ Public 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">Cell</a></li><li class="navelem"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a></li>
-    <li class="footer">생성시간 : 금 11월 4 2022 02:05:29, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 5 2022 01:58:38, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -12,7 +12,7 @@ var hierarchy =
       [ "DrPepper.Core.Cell.CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ],
       [ "DrPepper.Core.Room.Room", "db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html", null ],
       [ "DrPepper.Core.SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", [
-        [ "DrPepper.Core.Room.RoomSystem", "d3/d34/class_dr_pepper_1_1_core_1_1_room_1_1_room_system.html", null ],
+        [ "DrPepper.Core.Room.DungeonSystem", "d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html", null ],
         [ "DrPepper.Core.Tick.GlobalTickSystem", "d5/d8d/class_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system.html", null ]
       ] ],
       [ "DrPepper.Core.Tick.PhaseBase", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html", [

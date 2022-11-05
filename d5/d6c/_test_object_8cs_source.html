@@ -110,42 +110,34 @@ $(document).ready(function(){initNavTree('d5/d6c/_test_object_8cs_source.html','
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            _Modeling.transform.localPosition = _CellBasedObject.GetModelingLocalPosition();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            var movePhase = Core.SystemManager.Instance.GetSystem&lt;Core.Tick.GlobalTickSystem&gt;().GetPhase(Core.Tick.TickSystem.Phase.Move);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            movePhase.OnStartEvent += MovePhase_OnStartEvent;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            var standBy = Core.SystemManager.Instance.GetSystem&lt;Core.Tick.GlobalTickSystem&gt;().GetPhase(Core.Tick.TickSystem.Phase.Standby);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            standBy.OnEndEvent += StandByPhase_OnStart;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            var floorCheckPhase = Core.SystemManager.Instance.GetSystem&lt;Core.Tick.GlobalTickSystem&gt;().GetPhase(Core.Tick.TickSystem.Phase.FloorCheck);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            floorCheckPhase.OnStartEvent += FloorCheckPhase_OnStartEvent;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _CellBasedObject.OnCollisionEvent.AddListener((collisionData) =&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordtype">string</span> collisionLog = gameObject.name + System.Environment.NewLine;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; collisionData.AnotherObjects.Count; i++)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    collisionLog += $<span class="stringliteral">&quot;collision{i} : {collisionData.AnotherObjects[i].gameObject.name}&quot;</span> + System.Environment.NewLine;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                Debug.Log(collisionLog);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            });</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> FloorCheckPhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            _NextPos = _CellBasedObject.CurrentCellPosition + <a class="code hl_class" href="../../da/d4e/class_dr_pepper_1_1_utility.html">Utility</a>.GetDirectionVector(_moveDirection);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            _CellBasedObject.PreCheck(_NextPos);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> MovePhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            _CellBasedObject.MoveToNextBound();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            _CellBasedObject.OnCollisionEvent.AddListener((collisionData) =&gt;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                <span class="keywordtype">string</span> collisionLog = gameObject.name + System.Environment.NewLine;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; collisionData.AnotherObjects.Count; i++)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    collisionLog += $<span class="stringliteral">&quot;collision{i} : {collisionData.AnotherObjects[i].gameObject.name}&quot;</span> + System.Environment.NewLine;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                Debug.Log(collisionLog);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            });</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> StandByPhase_OnStart(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            _NextPos = _CellBasedObject.CurrentCellPosition + <a class="code hl_class" href="../../da/d4e/class_dr_pepper_1_1_utility.html">Utility</a>.GetDirectionVector(_moveDirection);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            _CellBasedObject.MoveWithCollisionCheck(_NextPos);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_html"><div class="ttname"><a href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">DrPepper.Core.Cell.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00008">CellBasedObject.cs:9</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_test_object_html"><div class="ttname"><a href="../../de/de0/class_dr_pepper_1_1_test_object.html">DrPepper.TestObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d6c/_test_object_8cs_source.html#l00010">TestObject.cs:11</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_utility_html"><div class="ttname"><a href="../../da/d4e/class_dr_pepper_1_1_utility.html">DrPepper.Utility</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3b/_utility_8cs_source.html#l00007">Utility.cs:8</a></div></div>
-<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_cell_html"><div class="ttname"><a href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00005">CellBasedObjectCollisionCheck.cs:6</a></div></div>
+<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_cell_html"><div class="ttname"><a href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2d/_cell_8cs_source.html#l00005">Cell.cs:6</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_html"><div class="ttname"><a href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d81/_global_constant_8cs_source.html#l00005">GlobalConstant.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -153,7 +145,7 @@ $(document).ready(function(){initNavTree('d5/d6c/_test_object_8cs_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_37618a71d99bdfed5979e976980d5eec.html">Test</a></li><li class="navelem"><b>TestObject.cs</b></li>
-    <li class="footer">생성시간 : 금 11월 4 2022 02:05:29, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 5 2022 01:58:38, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

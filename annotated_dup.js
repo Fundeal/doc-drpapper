@@ -10,8 +10,8 @@ var annotated_dup =
           [ "CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ]
         ] ],
         [ "Room", "d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html", [
-          [ "Room", "db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html", null ],
-          [ "RoomSystem", "d3/d34/class_dr_pepper_1_1_core_1_1_room_1_1_room_system.html", null ]
+          [ "DungeonSystem", "d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html", null ],
+          [ "Room", "db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html", null ]
         ] ],
         [ "Tick", "da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html", [
           [ "FloorCheckPhase", "dd/d7f/class_dr_pepper_1_1_core_1_1_tick_1_1_floor_check_phase.html", "dd/d7f/class_dr_pepper_1_1_core_1_1_tick_1_1_floor_check_phase" ],
