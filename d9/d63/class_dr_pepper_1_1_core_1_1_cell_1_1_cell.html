@@ -104,6 +104,8 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a762c8b04dfc74db5f2f030d9a26c716a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f63cac4b80e90677690504b640e5e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html#ab2f63cac4b80e90677690504b640e5e9">RemoveCellObject</a> (<a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cellObject)</td></tr>
 <tr class="separator:ab2f63cac4b80e90677690504b640e5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f60a87c8a6ffc4341ace022763b94d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html#a70f60a87c8a6ffc4341ace022763b94d">GetNotSolidObjects</a> ()</td></tr>
+<tr class="separator:a70f60a87c8a6ffc4341ace022763b94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 속성</h2></td></tr>
@@ -143,6 +145,36 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   21</span>            _AttachedCellBasedObjects.Add(cellObject);</div>
 <div class="line"><span class="lineno">   22</span>            _UpdateContainsSolidObject();</div>
 <div class="line"><span class="lineno">   23</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a70f60a87c8a6ffc4341ace022763b94d" name="a70f60a87c8a6ffc4341ace022763b94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f60a87c8a6ffc4341ace022763b94d">&#9670;&nbsp;</a></span>GetNotSolidObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> &gt; DrPepper.Core.Cell.Cell.GetNotSolidObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d7/d2d/_cell_8cs_source.html">Cell.cs</a> 파일의 <a class="el" href="../../d7/d2d/_cell_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">return</span> _AttachedCellBasedObjects.FindAll((cellObject) =&gt; { <span class="keywordflow">return</span> !cellObject.IsSolid; });</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -244,7 +276,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">Cell</a></li><li class="navelem"><a class="el" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">Cell</a></li>
-    <li class="footer">생성시간 : 월 11월 7 2022 01:56:04, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 8 2022 01:55:29, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

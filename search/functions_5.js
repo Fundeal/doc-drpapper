@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['startphase_0',['StartPhase',['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1',1,'DrPepper::Core::Tick::PhaseBase']]]
+  ['register_0',['Register',['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a6382b418182bb3448e835b62450b49dc',1,'DrPepper::Core::Tick::PhaseBase']]],
+  ['resetallevents_1',['ResetAllEvents',['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a41a881f3661febed92793eb1193baf3c',1,'DrPepper::Core::Tick::PhaseBase']]]
 ];

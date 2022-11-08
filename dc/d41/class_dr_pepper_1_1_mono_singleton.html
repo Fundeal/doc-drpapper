@@ -209,11 +209,11 @@ Protected 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   15</span>                        {</div>
 <div class="line"><span class="lineno">   16</span>                                <span class="keywordflow">if</span> (_instance == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   17</span>                                {</div>
-<div class="line"><span class="lineno">   18</span>                                        _instance = GameObject.FindObjectOfType(typeof(T)) as T;</div>
+<div class="line"><span class="lineno">   18</span>                                        _instance = GameObject.FindObjectOfType(typeof(T)) as <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>;</div>
 <div class="line"><span class="lineno">   19</span>                                        <span class="keywordflow">if</span> (_instance == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">   20</span>                                        {</div>
 <div class="line"><span class="lineno">   21</span>                                                var obj = <span class="keyword">new</span> GameObject(typeof(T).ToString());</div>
-<div class="line"><span class="lineno">   22</span>                                                _instance = obj.AddComponent&lt;T&gt;();      <span class="comment">// 이 때 Awake() 호출됨</span></div>
+<div class="line"><span class="lineno">   22</span>                                                _instance = obj.AddComponent&lt;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&gt;();      <span class="comment">// 이 때 Awake() 호출됨</span></div>
 <div class="line"><span class="lineno">   23</span> </div>
 <div class="line"><span class="lineno">   24</span>                                                <span class="comment">// Problem during the creation, this should not happen</span></div>
 <div class="line"><span class="lineno">   25</span>                                                <span class="keywordflow">if</span> (_instance == <span class="keyword">null</span>)</div>
@@ -229,6 +229,7 @@ Protected 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>                                <span class="keywordflow">return</span> _instance;</div>
 <div class="line"><span class="lineno">   36</span>                        }</div>
 <div class="line"><span class="lineno">   37</span>                }</div>
+<div class="ttc" id="anamespace_test_project_html_a33ddf870eab592abd31e37787b504170ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170ab9ece18c950afbfa6b0fdbfa4ff731d3">TestProject.ChosungType.T</a></div><div class="ttdeci">@ T</div><div class="ttdoc">ㅆ</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,7 +267,7 @@ Protected 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../dc/d41/class_dr_pepper_1_1_mono_singleton.html">MonoSingleton</a></li>
-    <li class="footer">생성시간 : 월 11월 7 2022 01:56:04, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 8 2022 01:55:29, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -26,7 +26,11 @@ var NAVTREE =
 [
   [ "DrPapper", "index.html", [
     [ "네임스페이스", "namespaces.html", [
-      [ "네임스페이스 목록", "namespaces.html", "namespaces_dup" ]
+      [ "네임스페이스 목록", "namespaces.html", "namespaces_dup" ],
+      [ "네임스페이스 멤버", "namespacemembers.html", [
+        [ "모두", "namespacemembers.html", null ],
+        [ "열거형 타입", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "클래스", "annotated.html", [
       [ "클래스 목록", "annotated.html", "annotated_dup" ],
@@ -46,7 +50,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"functions_func.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';
