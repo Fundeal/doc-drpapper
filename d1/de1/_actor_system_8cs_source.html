@@ -85,56 +85,54 @@ $(document).ready(function(){initNavTree('d1/de1/_actor_system_8cs_source.html',
   <div class="headertitle"><div class="title">ActorSystem.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Linq;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../de/d69/namespace_dr_pepper_1_1_core.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">DrPepper.Core</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// ¿˚ ∞¸∏Æ Ω√Ω∫≈€¿‘¥œ¥Ÿ.</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../df/d15/class_dr_pepper_1_1_core_1_1_actor_system.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../df/d15/class_dr_pepper_1_1_core_1_1_actor_system.html">ActorSystem</a> : <a class="code hl_class" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">SystemBase</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a> Player { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">public</span> List&lt;Actor&gt; Actors { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> List&lt;EnemyObject&gt; Enemys { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            Actors = <span class="keyword">new</span> List&lt;Actor&gt;();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            Enemys = <span class="keyword">new</span> List&lt;EnemyObject&gt;();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">foreach</span>(<a class="code hl_class" href="../../dc/d29/class_dr_pepper_1_1_enemy_object.html">EnemyObject</a> enemy <span class="keywordflow">in</span> GameObject.FindObjectsOfType&lt;<a class="code hl_class" href="../../dc/d29/class_dr_pepper_1_1_enemy_object.html">EnemyObject</a>&gt;())</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                AddEnemy(enemy);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            }</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            Player = GameObject.FindObjectOfType&lt;<a class="code hl_class" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a>&gt;();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AddActor(<a class="code hl_class" href="../../d2/d73/class_dr_pepper_1_1_actor.html">Actor</a> actor)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            Actors.Add(actor);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AddEnemy(<a class="code hl_class" href="../../dc/d29/class_dr_pepper_1_1_enemy_object.html">EnemyObject</a> enemy)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            AddActor(enemy);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Enemys.Add(enemy);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_actor_html"><div class="ttname"><a href="../../d2/d73/class_dr_pepper_1_1_actor.html">DrPepper.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00016">Actor.cs:17</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_system_html"><div class="ttname"><a href="../../df/d15/class_dr_pepper_1_1_core_1_1_actor_system.html">DrPepper.Core.ActorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00009">ActorSystem.cs:10</a></div></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">DrPepper.Core.Actor</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="comment">// ¿˚ ∞¸∏Æ Ω√Ω∫≈€¿‘¥œ¥Ÿ.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">    7</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">ActorSystem</a> : <a class="code hl_class" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">SystemBase</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a> Player { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> List&lt;Actor&gt; Actors { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> List&lt;EnemyObject&gt; Enemys { <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            Actors = <span class="keyword">new</span> List&lt;Actor&gt;();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            Enemys = <span class="keyword">new</span> List&lt;EnemyObject&gt;();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">foreach</span>(<a class="code hl_class" href="../../d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html">EnemyObject</a> enemy <span class="keywordflow">in</span> GameObject.FindObjectsOfType&lt;<a class="code hl_class" href="../../d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html">EnemyObject</a>&gt;())</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                AddEnemy(enemy);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            Player = GameObject.FindObjectOfType&lt;<a class="code hl_class" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a>&gt;();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AddActor(<a class="code hl_class" href="../../d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html">Actor</a> actor)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            Actors.Add(actor);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> AddEnemy(<a class="code hl_class" href="../../d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html">EnemyObject</a> enemy)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            AddActor(enemy);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            Enemys.Add(enemy);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_html"><div class="ttname"><a href="../../d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html">DrPepper.Core.Actor.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00016">Actor.cs:17</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_system_html"><div class="ttname"><a href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">DrPepper.Core.Actor.ActorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00007">ActorSystem.cs:8</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object_html"><div class="ttname"><a href="../../d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html">DrPepper.Core.Actor.EnemyObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/_enemy_object_8cs_source.html#l00010">EnemyObject.cs:11</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_base_html"><div class="ttname"><a href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">DrPepper.Core.SystemBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/de9/_system_base_8cs_source.html#l00007">SystemBase.cs:8</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_enemy_object_html"><div class="ttname"><a href="../../dc/d29/class_dr_pepper_1_1_enemy_object.html">DrPepper.EnemyObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/_enemy_object_8cs_source.html#l00008">EnemyObject.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_player_object_html"><div class="ttname"><a href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">DrPepper.PlayerObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df1/_player_object_8cs_source.html#l00011">PlayerObject.cs:12</a></div></div>
-<div class="ttc" id="anamespace_dr_pepper_1_1_core_html"><div class="ttname"><a href="../../de/d69/namespace_dr_pepper_1_1_core.html">DrPepper.Core</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00006">ActorSystem.cs:7</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_player_object_html"><div class="ttname"><a href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">DrPepper.PlayerObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df1/_player_object_8cs_source.html#l00013">PlayerObject.cs:14</a></div></div>
+<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_actor_html"><div class="ttname"><a href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">DrPepper.Core.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00008">Actor.cs:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><a class="el" href="../../dir_eaccaeeb5c7662bd9d6f1d410ecc9201.html">Enemy</a></li><li class="navelem"><b>ActorSystem.cs</b></li>
-    <li class="footer">ÏÉùÏÑ±ÏãúÍ∞Ñ : Í∏à 11Ïõî 11 2022 01:59:34, ÌîÑÎ°úÏ†ùÌä∏Î™Ö : DrPapper, ÏÉùÏÑ±Ïûê :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">ÏÉùÏÑ±ÏãúÍ∞Ñ : ÌÜ† 11Ïõî 12 2022 01:55:18, ÌîÑÎ°úÏ†ùÌä∏Î™Ö : DrPapper, ÏÉùÏÑ±Ïûê :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
