@@ -172,7 +172,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   63</span>                OpenList.Remove(CurNode);</div>
 <div class="line"><span class="lineno">   64</span>                ClosedList.Add(CurNode);</div>
 <div class="line"><span class="lineno">   65</span>                </div>
-<div class="line"><span class="lineno">   66</span>                <span class="comment">// ������</span></div>
+<div class="line"><span class="lineno">   66</span>                <span class="comment">// 마지막</span></div>
 <div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (CurNode == TargetNode)</div>
 <div class="line"><span class="lineno">   68</span>                {</div>
 <div class="line"><span class="lineno">   69</span>                    <a class="code hl_class" href="../../da/dee/class_dr_pepper_1_1_core_1_1_tracking_node.html">TrackingNode</a> TargetCurNode = TargetNode;</div>
@@ -191,32 +191,31 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   82</span>                OpenListAdd(CurNode.x, CurNode.y - 1);</div>
 <div class="line"><span class="lineno">   83</span>                OpenListAdd(CurNode.x - 1, CurNode.y);</div>
 <div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; 2; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++) Debug.Log(i + <span class="stringliteral">&quot;��°�� &quot;</span> + FinalNodeList[i].x + <span class="stringliteral">&quot;, &quot;</span> + FinalNodeList[i].y);</div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> (FinalNodeList.Count &lt;= 0)</div>
-<div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">return</span> CellDirection.None;</div>
-<div class="line"><span class="lineno">   89</span>            }</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (FinalNodeList[1].x &gt; StartNode.x)</div>
-<div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">return</span> CellDirection.Down;</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].x &lt; StartNode.x)</div>
-<div class="line"><span class="lineno">   95</span>            {</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">return</span> CellDirection.Up;</div>
-<div class="line"><span class="lineno">   97</span>            }</div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].y &gt; StartNode.y)</div>
-<div class="line"><span class="lineno">   99</span>            {</div>
-<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">return</span> CellDirection.Right;</div>
-<div class="line"><span class="lineno">  101</span>            }</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].y &lt; StartNode.y)</div>
-<div class="line"><span class="lineno">  103</span>            {</div>
-<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span> CellDirection.Left;</div>
-<div class="line"><span class="lineno">  105</span>            }</div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  107</span>            {</div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">return</span> CellDirection.None;</div>
-<div class="line"><span class="lineno">  109</span>            }</div>
-<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span> (FinalNodeList.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   86</span>            {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> CellDirection.None;</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (FinalNodeList[1].x &gt; StartNode.x)</div>
+<div class="line"><span class="lineno">   90</span>            {</div>
+<div class="line"><span class="lineno">   91</span>                <span class="keywordflow">return</span> CellDirection.Down;</div>
+<div class="line"><span class="lineno">   92</span>            }</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].x &lt; StartNode.x)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">return</span> CellDirection.Up;</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].y &gt; StartNode.y)</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">return</span> CellDirection.Right;</div>
+<div class="line"><span class="lineno">  100</span>            }</div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FinalNodeList[1].y &lt; StartNode.y)</div>
+<div class="line"><span class="lineno">  102</span>            {</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">return</span> CellDirection.Left;</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  106</span>            {</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">return</span> CellDirection.None;</div>
+<div class="line"><span class="lineno">  108</span>            }</div>
+<div class="line"><span class="lineno">  109</span>        }</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tracking_node_html"><div class="ttname"><a href="../../da/dee/class_dr_pepper_1_1_core_1_1_tracking_node.html">DrPepper.Core.TrackingNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d36/_cell_route_tracking_system_8cs_source.html#l00013">CellRouteTrackingSystem.cs:14</a></div></div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515">TestProject.JungsungType.j</a></div><div class="ttdeci">@ j</div><div class="ttdoc">ㅓ</div></div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
@@ -254,7 +253,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   38</span>            _mapSize = _cellSystem.MaximunSize;</div>
 <div class="line"><span class="lineno">   39</span>            _nodeArray = <span class="keyword">new</span> <a class="code hl_class" href="../../da/dee/class_dr_pepper_1_1_core_1_1_tracking_node.html">TrackingNode</a>[_mapSize.x, _mapSize.y];</div>
 <div class="line"><span class="lineno">   40</span>        }</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00007">DungeonSystem.cs:8</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00008">DungeonSystem.cs:9</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -268,7 +267,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d1/d7f/class_dr_pepper_1_1_core_1_1_cell_route_tracking_system.html">CellRouteTrackingSystem</a></li>
-    <li class="footer">생성시간 : 수 11월 16 2022 01:52:22, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 11월 17 2022 01:52:26, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

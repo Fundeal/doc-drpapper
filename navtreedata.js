@@ -39,6 +39,7 @@ var NAVTREE =
       [ "클래스 멤버", "functions.html", [
         [ "모두", "functions.html", null ],
         [ "함수", "functions_func.html", null ],
+        [ "열거형 타입", "functions_enum.html", null ],
         [ "속성", "functions_prop.html", null ]
       ] ]
     ] ],
@@ -51,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"de/dfc/_move_phase_8cs_source.html"
+"dc/dc4/_cell_based_object_develop_view_8cs_source.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

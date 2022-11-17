@@ -137,34 +137,36 @@ $(document).ready(function(){initNavTree('d6/df2/_projectile_system_8cs_source.h
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetTarget(<span class="keywordtype">int</span> count)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordtype">bool</span>[] checkArray = <span class="keyword">new</span> <span class="keywordtype">bool</span>[_actorSystem.Enemys.Count];</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; checkArray.Length; i++)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                checkArray[i] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;i &lt; count; i++)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordtype">int</span> index = UnityEngine.Random.Range(0, checkArray.Length);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">int</span> noTargetCheck = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">while</span> (checkArray[index])</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <span class="keywordflow">if</span> (noTargetCheck &gt;= checkArray.Length)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    index++;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    index %= checkArray.Length;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    noTargetCheck++;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                checkArray[index] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                _targets.Add(_actorSystem.Enemys[index]);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ReleaseTarget()</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            _targets.Clear();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (checkArray.Length &lt;= 0)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; checkArray.Length; i++)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                checkArray[i] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;i &lt; count; i++)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordtype">int</span> index = UnityEngine.Random.Range(0, checkArray.Length);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordtype">int</span> noTargetCheck = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordflow">while</span> (checkArray[index] || !_actorSystem.Enemys[index].IsDamageable)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (noTargetCheck &gt;= checkArray.Length)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    index++;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    index %= checkArray.Length;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    noTargetCheck++;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                checkArray[index] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                _targets.Add(_actorSystem.Enemys[index]);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ReleaseTarget()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            _targets.Clear();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_system_html"><div class="ttname"><a href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">DrPepper.Core.Actor.ActorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00007">ActorSystem.cs:8</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_projectile_system_html"><div class="ttname"><a href="../../dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html">DrPepper.Core.ProjectileSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df2/_projectile_system_8cs_source.html#l00008">ProjectileSystem.cs:9</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_base_html"><div class="ttname"><a href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">DrPepper.Core.SystemBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/de9/_system_base_8cs_source.html#l00007">SystemBase.cs:8</a></div></div>
@@ -178,7 +180,7 @@ $(document).ready(function(){initNavTree('d6/df2/_projectile_system_8cs_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_c049039abd2482638da2b3d05566ace6.html">Player</a></li><li class="navelem"><b>ProjectileSystem.cs</b></li>
-    <li class="footer">생성시간 : 수 11월 16 2022 01:52:22, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 11월 17 2022 01:52:26, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

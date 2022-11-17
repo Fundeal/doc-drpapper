@@ -18,6 +18,9 @@ var annotated_dup =
           [ "CellBound", "d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html", null ],
           [ "CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ]
         ] ],
+        [ "Door", "d0/d27/namespace_dr_pepper_1_1_core_1_1_door.html", [
+          [ "Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ]
+        ] ],
         [ "Mana", "d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html", [
           [ "ManaObject", "d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html", null ],
           [ "ManaSystem", "d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html", null ]
@@ -33,6 +36,9 @@ var annotated_dup =
           [ "PhaseBase", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base" ],
           [ "StandbyPhase", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase" ],
           [ "TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system" ]
+        ] ],
+        [ "UI", "d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html", [
+          [ "UISystem", "d6/d2a/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_system.html", null ]
         ] ],
         [ "CellRouteTrackingSystem", "d1/d7f/class_dr_pepper_1_1_core_1_1_cell_route_tracking_system.html", null ],
         [ "DataSystem", "d0/da8/class_dr_pepper_1_1_core_1_1_data_system.html", null ],

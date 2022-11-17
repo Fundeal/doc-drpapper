@@ -23,6 +23,7 @@ var hierarchy =
       [ "DrPepper.Core.Cell.CellBasedObject", "d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html", null ],
       [ "DrPepper.Core.Cell.CellBasedObjectRotation", "dc/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_rotation.html", null ],
       [ "DrPepper.Core.Cell.CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ],
+      [ "DrPepper.Core.Door.Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ],
       [ "DrPepper.Core.Mana.ManaObject", "d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html", null ],
       [ "DrPepper.Core.Room.Room", "db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html", null ],
       [ "DrPepper.Core.SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", [
@@ -33,7 +34,8 @@ var hierarchy =
         [ "DrPepper.Core.Mana.ManaSystem", "d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html", null ],
         [ "DrPepper.Core.ProjectileSystem", "dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html", null ],
         [ "DrPepper.Core.Room.DungeonSystem", "d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html", null ],
-        [ "DrPepper.Core.Tick.GlobalTickSystem", "d5/d8d/class_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system.html", null ]
+        [ "DrPepper.Core.Tick.GlobalTickSystem", "d5/d8d/class_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system.html", null ],
+        [ "DrPepper.Core.UI.UISystem", "d6/d2a/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_system.html", null ]
       ] ],
       [ "DrPepper.Core.Tick.PhaseBase", "d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html", [
         [ "DrPepper.Core.Tick.FloorCheckPhase", "dd/d7f/class_dr_pepper_1_1_core_1_1_tick_1_1_floor_check_phase.html", null ],

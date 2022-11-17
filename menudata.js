@@ -36,6 +36,7 @@ var menudata={children:[
 {text:"클래스 멤버",url:"functions.html",children:[
 {text:"모두",url:"functions.html"},
 {text:"함수",url:"functions_func.html"},
+{text:"열거형 타입",url:"functions_enum.html"},
 {text:"속성",url:"functions_prop.html"}]}]},
 {text:"파일들",url:"files.html",children:[
 {text:"파일 목록",url:"files.html"}]}]}

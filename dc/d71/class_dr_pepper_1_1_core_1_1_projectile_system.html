@@ -139,10 +139,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d6/df2/_projectile_system_8cs_source.html">ProjectileSystem.cs</a> 파일의 <a class="el" href="../../d6/df2/_projectile_system_8cs_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            _targets.Clear();</div>
-<div class="line"><span class="lineno">   78</span>        }</div>
+<p class="definition"><a class="el" href="../../d6/df2/_projectile_system_8cs_source.html">ProjectileSystem.cs</a> 파일의 <a class="el" href="../../d6/df2/_projectile_system_8cs_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            _targets.Clear();</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -173,26 +173,28 @@ Public 멤버 함수</h2></td></tr>
 <p class="definition"><a class="el" href="../../d6/df2/_projectile_system_8cs_source.html">ProjectileSystem.cs</a> 파일의 <a class="el" href="../../d6/df2/_projectile_system_8cs_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
 <div class="line"><span class="lineno">   52</span>            <span class="keywordtype">bool</span>[] checkArray = <span class="keyword">new</span> <span class="keywordtype">bool</span>[_actorSystem.Enemys.Count];</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; checkArray.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                checkArray[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   56</span>            }</div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   58</span>            {</div>
-<div class="line"><span class="lineno">   59</span>                <span class="keywordtype">int</span> index = UnityEngine.Random.Range(0, checkArray.Length);</div>
-<div class="line"><span class="lineno">   60</span>                <span class="keywordtype">int</span> noTargetCheck = 0;</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">while</span> (checkArray[index])</div>
-<div class="line"><span class="lineno">   62</span>                {</div>
-<div class="line"><span class="lineno">   63</span>                    <span class="keywordflow">if</span> (noTargetCheck &gt;= checkArray.Length)</div>
-<div class="line"><span class="lineno">   64</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   65</span>                    index++;</div>
-<div class="line"><span class="lineno">   66</span>                    index %= checkArray.Length;</div>
-<div class="line"><span class="lineno">   67</span>                    noTargetCheck++;</div>
-<div class="line"><span class="lineno">   68</span>                }</div>
-<div class="line"><span class="lineno">   69</span>                checkArray[index] = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   70</span>                _targets.Add(_actorSystem.Enemys[index]);</div>
-<div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (checkArray.Length &lt;= 0)</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; checkArray.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   56</span>            {</div>
+<div class="line"><span class="lineno">   57</span>                checkArray[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>            }</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordtype">int</span> index = UnityEngine.Random.Range(0, checkArray.Length);</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordtype">int</span> noTargetCheck = 0;</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">while</span> (checkArray[index] || !_actorSystem.Enemys[index].IsDamageable)</div>
+<div class="line"><span class="lineno">   64</span>                {</div>
+<div class="line"><span class="lineno">   65</span>                    <span class="keywordflow">if</span> (noTargetCheck &gt;= checkArray.Length)</div>
+<div class="line"><span class="lineno">   66</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   67</span>                    index++;</div>
+<div class="line"><span class="lineno">   68</span>                    index %= checkArray.Length;</div>
+<div class="line"><span class="lineno">   69</span>                    noTargetCheck++;</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>                checkArray[index] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   72</span>                _targets.Add(_actorSystem.Enemys[index]);</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
@@ -273,7 +275,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html">ProjectileSystem</a></li>
-    <li class="footer">생성시간 : 수 11월 16 2022 01:52:22, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 11월 17 2022 01:52:26, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -105,6 +105,12 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a5536a52dda93294213bd5f4ff1c28c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c8ef92db86daae35e27ad91460de80"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#a94c8ef92db86daae35e27ad91460de80">OnPostInitialized</a> ()</td></tr>
 <tr class="separator:a94c8ef92db86daae35e27ad91460de80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192b6b9b65565d97d1841388768dc7e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#a192b6b9b65565d97d1841388768dc7e2">StartRoom</a> (int index)</td></tr>
+<tr class="separator:a192b6b9b65565d97d1841388768dc7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b8f5c4735df528be1d5550a135cb89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#a58b8f5c4735df528be1d5550a135cb89">GetRoom</a> (int index)</td></tr>
+<tr class="separator:a58b8f5c4735df528be1d5550a135cb89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb5cba4457a09ef472e12d7daff2a31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#a0fb5cba4457a09ef472e12d7daff2a31">GetRoomIndex</a> (string roomName)</td></tr>
+<tr class="separator:a0fb5cba4457a09ef472e12d7daff2a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49834254e52331075ba21bfce6f4fb6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html#a49834254e52331075ba21bfce6f4fb6f">OnInitialized</a> ()</td></tr>
 <tr class="separator:a49834254e52331075ba21bfce6f4fb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef3bfc2a8897c4710db6061365ef1bb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html#acef3bfc2a8897c4710db6061365ef1bb">OnPostInitialized</a> ()</td></tr>
@@ -114,11 +120,85 @@ Public 멤버 함수</h2></td></tr>
 속성</h2></td></tr>
 <tr class="memitem:af6526a78d361aad3e9c8376915ae9f16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#af6526a78d361aad3e9c8376915ae9f16">CurrentRoom</a><code> [get]</code></td></tr>
 <tr class="separator:af6526a78d361aad3e9c8376915ae9f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383cd92345f478382f289ba99371a15d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#a383cd92345f478382f289ba99371a15d">GetRoomCount</a><code> [get]</code></td></tr>
+<tr class="separator:a383cd92345f478382f289ba99371a15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ba4f677be85a90b423b11e154aac2b"><td class="memItemLeft" align="right" valign="top">UnityAction&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html#aa0ba4f677be85a90b423b11e154aac2b">RoomStartEvent</a></td></tr>
+<tr class="separator:aa0ba4f677be85a90b423b11e154aac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a58b8f5c4735df528be1d5550a135cb89" name="a58b8f5c4735df528be1d5550a135cb89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b8f5c4735df528be1d5550a135cb89">&#9670;&nbsp;</a></span>GetRoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a> DrPepper.Core.Room.DungeonSystem.GetRoom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
+<div class="line"><span class="lineno">   52</span>            <span class="keywordflow">return</span> _Rooms[index];</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0fb5cba4457a09ef472e12d7daff2a31" name="a0fb5cba4457a09ef472e12d7daff2a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb5cba4457a09ef472e12d7daff2a31">&#9670;&nbsp;</a></span>GetRoomIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DrPepper.Core.Room.DungeonSystem.GetRoomIndex </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>roomName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _Rooms.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (_Rooms[i].name.Contains(roomName))</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>;</div>
+<div class="line"><span class="lineno">   62</span>                }</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a5536a52dda93294213bd5f4ff1c28c8d" name="a5536a52dda93294213bd5f4ff1c28c8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5536a52dda93294213bd5f4ff1c28c8d">&#9670;&nbsp;</a></span>OnInitialized()</h2>
 
@@ -144,16 +224,15 @@ Public 멤버 함수</h2></td></tr>
 
 <p><a class="el" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">DrPepper.Core.SystemBase</a>(으)로부터 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            _Rooms = GetComponentsInChildren&lt;Room&gt;();</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _Rooms.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                _Rooms[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].Initialize();</div>
-<div class="line"><span class="lineno">   21</span>            }</div>
-<div class="line"><span class="lineno">   22</span>        }</div>
-<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            _Rooms = GetComponentsInChildren&lt;Room&gt;();</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _Rooms.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   28</span>            {</div>
+<div class="line"><span class="lineno">   29</span>                _Rooms[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].Initialize();</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,13 +261,48 @@ Public 멤버 함수</h2></td></tr>
 
 <p><a class="el" href="../../dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html">DrPepper.Core.SystemBase</a>(으)로부터 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _Rooms.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   27</span>            {</div>
-<div class="line"><span class="lineno">   28</span>                _Rooms[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].PostInitialize();</div>
-<div class="line"><span class="lineno">   29</span>            }</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _Rooms.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                _Rooms[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].PostInitialize();</div>
+<div class="line"><span class="lineno">   38</span>                _Rooms[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a192b6b9b65565d97d1841388768dc7e2" name="a192b6b9b65565d97d1841388768dc7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a192b6b9b65565d97d1841388768dc7e2">&#9670;&nbsp;</a></span>StartRoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrPepper.Core.Room.DungeonSystem.StartRoom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            _Rooms[_CurrentRoomIndex].gameObject.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   45</span>            _CurrentRoomIndex = index;</div>
+<div class="line"><span class="lineno">   46</span>            _Rooms[_CurrentRoomIndex].gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   47</span>            _roomStartAction(_CurrentRoomIndex);</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,8 +327,61 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>{ <span class="keyword">get</span> =&gt; _Rooms[_CurrentRoomIndex]; }</div>
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keyword">get</span> =&gt; _Rooms[_CurrentRoomIndex]; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a383cd92345f478382f289ba99371a15d" name="a383cd92345f478382f289ba99371a15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383cd92345f478382f289ba99371a15d">&#9670;&nbsp;</a></span>GetRoomCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DrPepper.Core.Room.DungeonSystem.GetRoomCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{ <span class="keyword">get</span> =&gt; _Rooms.Length; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa0ba4f677be85a90b423b11e154aac2b" name="aa0ba4f677be85a90b423b11e154aac2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ba4f677be85a90b423b11e154aac2b">&#9670;&nbsp;</a></span>RoomStartEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnityAction&lt;int&gt; DrPepper.Core.Room.DungeonSystem.RoomStartEvent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">add</span><span class="mlabel">remove</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../df/d59/_dungeon_system_8cs_source.html">DungeonSystem.cs</a> 파일의 <a class="el" href="../../df/d59/_dungeon_system_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>        {</div>
+<div class="line"><span class="lineno">   20</span>            add =&gt; _roomStartAction += value;</div>
+<div class="line"><span class="lineno">   21</span>            <span class="keyword">remove</span> =&gt; _roomStartAction -= value;</div>
+<div class="line"><span class="lineno">   22</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -227,7 +394,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a></li><li class="navelem"><a class="el" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a></li>
-    <li class="footer">생성시간 : 수 11월 16 2022 01:52:22, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 11월 17 2022 01:52:26, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
