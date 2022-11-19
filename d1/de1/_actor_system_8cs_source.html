@@ -127,10 +127,22 @@ $(document).ready(function(){initNavTree('d1/de1/_actor_system_8cs_source.html',
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                GameObject.FindObjectOfType&lt;Door.Door&gt;().DoorOpen();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> PlayerReset()</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            Player = GameObject.FindObjectOfType&lt;<a class="code hl_class" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a>&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ActorCellInitialize()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">foreach</span>(<a class="code hl_class" href="../../d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html">Actor</a> actor <span class="keywordflow">in</span> Actors)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                actor.CellInitialise();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_html"><div class="ttname"><a href="../../d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html">DrPepper.Core.Actor.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00016">Actor.cs:17</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_system_html"><div class="ttname"><a href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">DrPepper.Core.Actor.ActorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00007">ActorSystem.cs:8</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object_html"><div class="ttname"><a href="../../d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html">DrPepper.Core.Actor.EnemyObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d6a/_enemy_object_8cs_source.html#l00010">EnemyObject.cs:11</a></div></div>
@@ -143,7 +155,7 @@ $(document).ready(function(){initNavTree('d1/de1/_actor_system_8cs_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><a class="el" href="../../dir_eaccaeeb5c7662bd9d6f1d410ecc9201.html">Enemy</a></li><li class="navelem"><b>ActorSystem.cs</b></li>
-    <li class="footer">생성시간 : 금 11월 18 2022 01:56:01, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 19 2022 01:49:07, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

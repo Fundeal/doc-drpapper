@@ -98,70 +98,72 @@ $(document).ready(function(){initNavTree('dd/df6/_mana_object_8cs_source.html','
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">   11</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">ManaObject</a> : MonoBehaviour</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [SerializeField] GameObject _Modeling;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a> _dungeonSystem;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="../../d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html">ManaSystem</a> _manaSystem;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> _cellBasedObject;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            _cellBasedObject = GetComponent&lt;CellBasedObject&gt;();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            _cellBasedObject.Initialize();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            _Modeling.transform.position = _cellBasedObject.GetModelingLocalPosition();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetRandomPosition()</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">if</span>(!_dungeonSystem)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                _dungeonSystem = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            Vector2Int cellMaximunSize = _dungeonSystem.CurrentRoom.CellSystem.MaximunSize;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            Vector2Int pos = <span class="keyword">new</span> Vector2Int(Random.Range(0, cellMaximunSize.x), Random.Range(0, cellMaximunSize.y));</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_class" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">Cell</a>.Cell[,] cells = _dungeonSystem.CurrentRoom.CellSystem.Cells;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">while</span> (cells[pos.x, pos.y].AttachedCellBasedObjects.Count &gt; 0)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                pos.x++;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">if</span>(pos.x &gt;= cellMaximunSize.x)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    pos.x %= cellMaximunSize.x;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    pos.y++;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    <span class="keywordflow">if</span>(pos.y &gt;= cellMaximunSize.y)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                        pos.y %= cellMaximunSize.y;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            _cellBasedObject.TeleportCellPosition(pos);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetPosition(Vector2Int pos)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            _cellBasedObject.TeleportCellPosition(pos);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> DestroyObject()</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (!_manaSystem)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                _manaSystem = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html">ManaSystem</a>&gt;();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            _manaSystem.CreateMana();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="../../d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html">ManaSystem</a> _manaSystem;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> _cellBasedObject;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            _cellBasedObject = GetComponent&lt;CellBasedObject&gt;();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            _cellBasedObject.Initialize();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            _Modeling.transform.position = _cellBasedObject.GetModelingLocalPosition();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetRandomPosition()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            Vector2Int cellMaximunSize = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().CurrentRoom.CellSystem.MaximunSize;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            Vector2Int pos = <span class="keyword">new</span> Vector2Int(Random.Range(0, cellMaximunSize.x), Random.Range(0, cellMaximunSize.y));</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_class" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">Cell</a>.Cell[,] cells = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().CurrentRoom.CellSystem.Cells;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            while (cells[pos.x, pos.y].AttachedCellBasedObjects.Count &gt; 0)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                pos.x++;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keywordflow">if</span>(pos.x &gt;= cellMaximunSize.x)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    pos.x %= cellMaximunSize.x;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    pos.y++;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    <span class="keywordflow">if</span>(pos.y &gt;= cellMaximunSize.y)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        pos.y %= cellMaximunSize.y;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            _cellBasedObject.TeleportCellPosition(pos);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> ResetCell()</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            _cellBasedObject.Initialize();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetPosition(Vector2Int pos)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            _cellBasedObject.TeleportCellPosition(pos);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> DestroyObject()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (!_manaSystem)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                _manaSystem = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html">ManaSystem</a>&gt;();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            _manaSystem.CreateMana();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_html"><div class="ttname"><a href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">DrPepper.Core.Cell.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00008">CellBasedObject.cs:9</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_html"><div class="ttname"><a href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">DrPepper.Core.Cell.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d2d/_cell_8cs_source.html#l00007">Cell.cs:8</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_mana_1_1_mana_object_html"><div class="ttname"><a href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">DrPepper.Core.Mana.ManaObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df6/_mana_object_8cs_source.html#l00011">ManaObject.cs:12</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_mana_1_1_mana_system_html"><div class="ttname"><a href="../../d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html">DrPepper.Core.Mana.ManaSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dbe/_mana_system_8cs_source.html#l00007">ManaSystem.cs:8</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00008">DungeonSystem.cs:9</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00011">DungeonSystem.cs:12</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_cell_html"><div class="ttname"><a href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/_c_b_view_test_8cs_source.html#l00005">CBViewTest.cs:6</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_mana_html"><div class="ttname"><a href="../../d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html">DrPepper.Core.Mana</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df6/_mana_object_8cs_source.html#l00008">ManaObject.cs:9</a></div></div>
-<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_room_html"><div class="ttname"><a href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">DrPepper.Core.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00006">DungeonSystem.cs:7</a></div></div>
+<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_room_html"><div class="ttname"><a href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">DrPepper.Core.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00009">DungeonSystem.cs:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_b042c228c341de17fe2f97d0a61a9759.html">Mana</a></li><li class="navelem"><b>ManaObject.cs</b></li>
-    <li class="footer">생성시간 : 금 11월 18 2022 01:56:01, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 19 2022 01:49:07, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
