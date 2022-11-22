@@ -1,6 +1,7 @@
 var namespace_dr_pepper =
 [
     [ "Core", "de/d69/namespace_dr_pepper_1_1_core.html", "de/d69/namespace_dr_pepper_1_1_core" ],
+    [ "LevelEditor", "d0/dbb/namespace_dr_pepper_1_1_level_editor.html", "d0/dbb/namespace_dr_pepper_1_1_level_editor" ],
     [ "AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
     [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
     [ "GlobalConstant", "db/d5e/class_dr_pepper_1_1_global_constant.html", null ],

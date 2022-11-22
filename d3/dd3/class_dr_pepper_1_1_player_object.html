@@ -99,6 +99,10 @@ DrPepper.PlayerObject에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a321ea08a789b71b87b8407e290272d49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html#a321ea08a789b71b87b8407e290272d49">CellInit</a> ()</td></tr>
+<tr class="separator:a321ea08a789b71b87b8407e290272d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff9d26ce4ca7b919cd4c91e1e5b2cd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html#a5ff9d26ce4ca7b919cd4c91e1e5b2cd3">SetCellPosition</a> (Vector2Int pos)</td></tr>
+<tr class="separator:a5ff9d26ce4ca7b919cd4c91e1e5b2cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37666b211a7269273d34a8a15bf76318"><td class="memItemLeft" align="right" valign="top">Vector2Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html#a37666b211a7269273d34a8a15bf76318">GetCellPosition</a> ()</td></tr>
 <tr class="separator:a37666b211a7269273d34a8a15bf76318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae2bcb15b8cab2169176b749b42e848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html#a9ae2bcb15b8cab2169176b749b42e848">RotatePlayer</a> (CellDirection swipeDir)</td></tr>
@@ -151,16 +155,44 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">if</span> (!IsAttack)</div>
-<div class="line"><span class="lineno">   90</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   91</span>            IsAttack = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   92</span>            _projectileSystem.SetTarget(_attackTargetAmount);</div>
-<div class="line"><span class="lineno">   93</span>            <span class="keywordtype">float</span> duration = _floorCheck.Duration;</div>
-<div class="line"><span class="lineno">   94</span>            _projectileSystem.Shot(_cellBasedObject.transform.position + _cellBasedObject.GetModelingLocalPosition(), _attackAmount, duration, _attackDamage);</div>
-<div class="line"><span class="lineno">   95</span>            _projectileSystem.ReleaseTarget();</div>
-<div class="line"><span class="lineno">   96</span>        }</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!IsAttack)</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  107</span>            IsAttack = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  108</span>            _projectileSystem.SetTarget(_attackTargetAmount);</div>
+<div class="line"><span class="lineno">  109</span>            _projectileSystem.Shot(_cellBasedObject.transform.position + _cellBasedObject.GetModelingLocalPosition(), _attackAmount, _floorCheckPhase.Duration, _attackDamage);</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a321ea08a789b71b87b8407e290272d49" name="a321ea08a789b71b87b8407e290272d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a321ea08a789b71b87b8407e290272d49">&#9670;&nbsp;</a></span>CellInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrPepper.PlayerObject.CellInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            _cellBasedObject.Initialize();</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -187,10 +219,10 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">return</span> _cellBasedObject.CurrentCellPosition;</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00080">80</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>        {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">return</span> _cellBasedObject.CurrentCellPosition;</div>
+<div class="line"><span class="lineno">   83</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -218,20 +250,20 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>        {</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">foreach</span>(<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> steppedData.AnotherObjects.Distinct())</div>
-<div class="line"><span class="lineno">  101</span>            {</div>
-<div class="line"><span class="lineno">  102</span>                <a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">ManaObject</a> mana;</div>
-<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">if</span>(cbo.TryGetComponent&lt;<a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">ManaObject</a>&gt;(out mana))</div>
-<div class="line"><span class="lineno">  104</span>                {</div>
-<div class="line"><span class="lineno">  105</span>                    IsAttack = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  106</span>                    mana.DestroyObject();</div>
-<div class="line"><span class="lineno">  107</span>                }</div>
-<div class="line"><span class="lineno">  108</span>            }</div>
-<div class="line"><span class="lineno">  109</span>        }</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00112">112</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>        {</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">foreach</span>(<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> steppedData.AnotherObjects.Distinct())</div>
+<div class="line"><span class="lineno">  115</span>            {</div>
+<div class="line"><span class="lineno">  116</span>                <a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">ManaObject</a> mana;</div>
+<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">if</span>(cbo.TryGetComponent&lt;<a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">ManaObject</a>&gt;(out mana))</div>
+<div class="line"><span class="lineno">  118</span>                {</div>
+<div class="line"><span class="lineno">  119</span>                    IsAttack = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  120</span>                    mana.DestroyObject();</div>
+<div class="line"><span class="lineno">  121</span>                }</div>
+<div class="line"><span class="lineno">  122</span>            }</div>
+<div class="line"><span class="lineno">  123</span>        }</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_html"><div class="ttname"><a href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">DrPepper.Core.Cell.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00008">CellBasedObject.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_mana_1_1_mana_object_html"><div class="ttname"><a href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">DrPepper.Core.Mana.ManaObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df6/_mana_object_8cs_source.html#l00011">ManaObject.cs:12</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_mana_1_1_mana_object_html"><div class="ttname"><a href="../../d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html">DrPepper.Core.Mana.ManaObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df6/_mana_object_8cs_source.html#l00008">ManaObject.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -259,18 +291,18 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>        {</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> steppedData.AnotherObjects.Distinct())</div>
-<div class="line"><span class="lineno">  114</span>            {</div>
-<div class="line"><span class="lineno">  115</span>                <a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html">Door</a> door;</div>
-<div class="line"><span class="lineno">  116</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;<a class="code hl_class" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html">Door</a>&gt;(out door))</div>
-<div class="line"><span class="lineno">  117</span>                {</div>
-<div class="line"><span class="lineno">  118</span>                    door.GoNextRoom();</div>
-<div class="line"><span class="lineno">  119</span>                }</div>
-<div class="line"><span class="lineno">  120</span>            }</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_door_1_1_door_html"><div class="ttname"><a href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html">DrPepper.Core.Door.Door</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00013">Door.cs:14</a></div></div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00125">125</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>        {</div>
+<div class="line"><span class="lineno">  127</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> steppedData.AnotherObjects.Distinct())</div>
+<div class="line"><span class="lineno">  128</span>            {</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_class" href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html">GoalDoor</a> door;</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;<a class="code hl_class" href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html">GoalDoor</a>&gt;(out door))</div>
+<div class="line"><span class="lineno">  131</span>                {</div>
+<div class="line"><span class="lineno">  132</span>                    door.GoNextRoom(_moveDirection);</div>
+<div class="line"><span class="lineno">  133</span>                }</div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_door_1_1_goal_door_html"><div class="ttname"><a href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html">DrPepper.Core.Door.GoalDoor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dff/_goal_door_8cs_source.html#l00013">GoalDoor.cs:14</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,10 +330,41 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>            _moveDirection = swipeDir;</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>        {</div>
+<div class="line"><span class="lineno">   87</span>            _moveDirection = swipeDir;</div>
+<div class="line"><span class="lineno">   88</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5ff9d26ce4ca7b919cd4c91e1e5b2cd3" name="a5ff9d26ce4ca7b919cd4c91e1e5b2cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff9d26ce4ca7b919cd4c91e1e5b2cd3">&#9670;&nbsp;</a></span>SetCellPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrPepper.PlayerObject.SetCellPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector2Int&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>            _cellBasedObject.TeleportCellPosition(pos);</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -375,8 +438,8 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -400,8 +463,8 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">false</span>;</div>
+<p class="definition"><a class="el" href="../../d4/df1/_player_object_8cs_source.html">PlayerObject.cs</a> 파일의 <a class="el" href="../../d4/df1/_player_object_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">false</span>;</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -414,7 +477,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../d3/dd3/class_dr_pepper_1_1_player_object.html">PlayerObject</a></li>
-    <li class="footer">생성시간 : 월 11월 21 2022 01:52:35, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 22 2022 01:54:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

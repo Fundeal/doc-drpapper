@@ -4,6 +4,10 @@ var hierarchy =
     [ "DrPepper.Core.Cell.CellBound", "d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html", null ],
     [ "DrPepper.Core.Cell.CellBasedObjectCollisionCheck.CollisionData", "dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html", null ],
     [ "CSVReader", "d4/d16/class_c_s_v_reader.html", null ],
+    [ "Editor", null, [
+      [ "DrPepper.LevelEditor.LevelEditorEditor", "d9/df3/class_dr_pepper_1_1_level_editor_1_1_level_editor_editor.html", null ]
+    ] ],
+    [ "DrPepper.LevelEditor.EditorOption", "d5/d72/class_dr_pepper_1_1_level_editor_1_1_editor_option.html", null ],
     [ "DrPepper.GlobalConstant", "db/d5e/class_dr_pepper_1_1_global_constant.html", null ],
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "TestProject.HangulHelper", "d3/d36/class_test_project_1_1_hangul_helper.html", null ],
@@ -14,7 +18,8 @@ var hierarchy =
       [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
       [ "DrPepper.AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
       [ "DrPepper.Core.Actor.Actor", "d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html", [
-        [ "DrPepper.Core.Actor.EnemyObject", "d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html", null ]
+        [ "DrPepper.Core.Actor.EnemyObject", "d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html", null ],
+        [ "DrPepper.Core.Actor.WallObject", "dc/d3c/class_dr_pepper_1_1_core_1_1_actor_1_1_wall_object.html", null ]
       ] ],
       [ "DrPepper.Core.Actor.ActorAttackComponent", "d4/d28/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component.html", null ],
       [ "DrPepper.Core.Actor.HitComponent", "dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html", null ],
@@ -23,7 +28,10 @@ var hierarchy =
       [ "DrPepper.Core.Cell.CellBasedObject", "d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html", null ],
       [ "DrPepper.Core.Cell.CellBasedObjectRotation", "dc/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_rotation.html", null ],
       [ "DrPepper.Core.Cell.CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ],
-      [ "DrPepper.Core.Door.Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ],
+      [ "DrPepper.Core.Door.Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", [
+        [ "DrPepper.Core.Door.EntryDoor", "d5/dd7/class_dr_pepper_1_1_core_1_1_door_1_1_entry_door.html", null ],
+        [ "DrPepper.Core.Door.GoalDoor", "de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html", null ]
+      ] ],
       [ "DrPepper.Core.Mana.ManaObject", "d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html", null ],
       [ "DrPepper.Core.Room.Room", "db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html", null ],
       [ "DrPepper.Core.SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", [
@@ -43,6 +51,7 @@ var hierarchy =
         [ "DrPepper.Core.Tick.StandbyPhase", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html", null ]
       ] ],
       [ "DrPepper.Core.Tick.TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", null ],
+      [ "DrPepper.LevelEditor.LevelEditor", "d5/db8/class_dr_pepper_1_1_level_editor_1_1_level_editor.html", null ],
       [ "DrPepper.MonoSingleton< T >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
       [ "DrPepper.PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],
       [ "DrPepper.Projectile", "d5/ddd/class_dr_pepper_1_1_projectile.html", null ],
@@ -52,7 +61,9 @@ var hierarchy =
       [ "DrPepper.Core.SystemManager", "d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html", null ]
     ] ],
     [ "ScriptableObject", null, [
-      [ "DrPepper.CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ]
+      [ "DrPepper.CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
+      [ "DrPepper.LevelEditor.CellGenerateData", "da/d35/class_dr_pepper_1_1_level_editor_1_1_cell_generate_data.html", null ],
+      [ "DrPepper.LevelEditor.LevelData", "d3/d90/class_dr_pepper_1_1_level_editor_1_1_level_data.html", null ]
     ] ],
     [ "DrPepper.Core.Cell.CellBasedObjectCollisionCheck.SteppedData", "d6/d0e/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_stepped_data.html", null ],
     [ "DrPepper.Core.TrackingNode", "da/dee/class_dr_pepper_1_1_core_1_1_tracking_node.html", null ],

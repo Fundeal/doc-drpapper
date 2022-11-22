@@ -7,7 +7,8 @@ var annotated_dup =
           [ "ActorAttackComponent", "d4/d28/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component.html", null ],
           [ "ActorSystem", "d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html", null ],
           [ "EnemyObject", "d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html", null ],
-          [ "HitComponent", "dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html", null ]
+          [ "HitComponent", "dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html", null ],
+          [ "WallObject", "dc/d3c/class_dr_pepper_1_1_core_1_1_actor_1_1_wall_object.html", null ]
         ] ],
         [ "Cell", "da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html", [
           [ "CBViewTest", "db/da7/class_dr_pepper_1_1_core_1_1_cell_1_1_c_b_view_test.html", null ],
@@ -19,7 +20,9 @@ var annotated_dup =
           [ "CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ]
         ] ],
         [ "Door", "d0/d27/namespace_dr_pepper_1_1_core_1_1_door.html", [
-          [ "Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ]
+          [ "Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ],
+          [ "EntryDoor", "d5/dd7/class_dr_pepper_1_1_core_1_1_door_1_1_entry_door.html", null ],
+          [ "GoalDoor", "de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html", null ]
         ] ],
         [ "Mana", "d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html", [
           [ "ManaObject", "d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html", null ],
@@ -47,6 +50,13 @@ var annotated_dup =
         [ "SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", null ],
         [ "SystemManager", "d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html", null ],
         [ "TrackingNode", "da/dee/class_dr_pepper_1_1_core_1_1_tracking_node.html", null ]
+      ] ],
+      [ "LevelEditor", "d0/dbb/namespace_dr_pepper_1_1_level_editor.html", [
+        [ "CellGenerateData", "da/d35/class_dr_pepper_1_1_level_editor_1_1_cell_generate_data.html", null ],
+        [ "EditorOption", "d5/d72/class_dr_pepper_1_1_level_editor_1_1_editor_option.html", null ],
+        [ "LevelData", "d3/d90/class_dr_pepper_1_1_level_editor_1_1_level_data.html", null ],
+        [ "LevelEditor", "d5/db8/class_dr_pepper_1_1_level_editor_1_1_level_editor.html", null ],
+        [ "LevelEditorEditor", "d9/df3/class_dr_pepper_1_1_level_editor_1_1_level_editor_editor.html", null ]
       ] ],
       [ "AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
       [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],

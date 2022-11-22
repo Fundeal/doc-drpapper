@@ -4,5 +4,6 @@ var dir_4f3b68dc77c6199308398c9d552a8742 =
     [ "Actor.cs", "d7/d68/_actor_8cs_source.html", null ],
     [ "ActorAttackComponent.cs", "d3/d89/_actor_attack_component_8cs_source.html", null ],
     [ "ActorEyeSightComponent.cs", "d1/df0/_actor_eye_sight_component_8cs_source.html", null ],
-    [ "AreaViewComponent.cs", "dd/d41/_area_view_component_8cs_source.html", null ]
+    [ "AreaViewComponent.cs", "dd/d41/_area_view_component_8cs_source.html", null ],
+    [ "WallObject.cs", "dc/db7/_wall_object_8cs_source.html", null ]
 ];
