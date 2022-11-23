@@ -103,8 +103,8 @@ DrPepper.Core.Tick.TickSystem에 대한 상속 다이어그램 : </div>
 Public 타입</h2></td></tr>
 <tr class="memitem:a25a933976d67b0df9abd3d6c0e09294f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a> { <b>None</b> = 0
 , <b>Standby</b> = 1
-, <b>Move</b> = 2
-, <b>FloorCheck</b> = 3
+, <b>Action</b> = 2
+, <b>PlayerInput</b> = 3
  }</td></tr>
 <tr class="memdesc:a25a933976d67b0df9abd3d6c0e09294f"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 FSM의 State enum값입니다.  <a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a25a933976d67b0df9abd3d6c0e09294f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,8 +140,8 @@ Public 멤버 함수</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>        {</div>
 <div class="line"><span class="lineno">   19</span>            None = 0,</div>
 <div class="line"><span class="lineno">   20</span>            Standby = 1,</div>
-<div class="line"><span class="lineno">   21</span>            Move = 2,</div>
-<div class="line"><span class="lineno">   22</span>            FloorCheck = 3,</div>
+<div class="line"><span class="lineno">   21</span>            Action = 2,</div>
+<div class="line"><span class="lineno">   22</span>            PlayerInput = 3,</div>
 <div class="line"><span class="lineno">   23</span>        }</div>
 </div><!-- fragment -->
 </div>
@@ -199,7 +199,7 @@ Public 멤버 함수</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">다음을 참조함 :  <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00118">DrPepper.Core.Tick.PhaseBase.EndPhase()</a>, <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00088">DrPepper.Core.Tick.PhaseBase.StartPhase()</a>.</p>
 
-<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00101">DrPepper.Core.Tick.PhaseBase.DuringPhase()</a>.</p>
+<p class="reference">다음에 의해서 참조됨 :  <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00101">DrPepper.Core.Tick.PhaseBase.DuringPhase()</a>, <a class="el" href="../../da/d6a/_player_input_phase_8cs_source.html#l00024">DrPepper.Core.Tick.PlayerInputPhase.DuringPhase()</a>.</p>
 
 </div>
 </div>
@@ -234,7 +234,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>Tick/<a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a></li>
+<li>Framework/Tick/<a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -242,7 +242,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html">Tick</a></li><li class="navelem"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a></li>
-    <li class="footer">생성시간 : 화 11월 22 2022 01:54:18, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 수 11월 23 2022 01:41:54, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

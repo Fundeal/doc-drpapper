@@ -5,5 +5,6 @@ var searchData=
   ['register_2',['Register',['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a6382b418182bb3448e835b62450b49dc',1,'DrPepper::Core::Tick::PhaseBase']]],
   ['resetallevents_3',['ResetAllEvents',['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a41a881f3661febed92793eb1193baf3c',1,'DrPepper::Core::Tick::PhaseBase']]],
   ['room_4',['Room',['../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html',1,'DrPepper::Core::Room']]],
-  ['rt_5',['rt',['../db/db5/namespace_test_project.html#aa62327ac01bacbb7ae0f37e8c2e00486a822050d9ae3c47f54bee71b85fce1487',1,'TestProject']]]
+  ['roomgoalsyllabledata_5',['RoomGoalSyllableData',['../d3/de0/class_room_goal_syllable_data.html',1,'']]],
+  ['rt_6',['rt',['../db/db5/namespace_test_project.html#aa62327ac01bacbb7ae0f37e8c2e00486a822050d9ae3c47f54bee71b85fce1487',1,'TestProject']]]
 ];
