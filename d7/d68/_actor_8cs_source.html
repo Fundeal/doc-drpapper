@@ -203,14 +203,14 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordtype">int</span> GetPatternData(<span class="keywordtype">string</span> column)</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (_currentBehavior == <span class="stringliteral">&quot;&quot;</span> || column == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (_currentBehavior == <span class="keyword">null</span> || column == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> _dataSystem.GetPatternData(_currentBehavior, _currentPatternIndex + 1, column);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">int</span> GetActorAIData(<span class="keywordtype">string</span> column)</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">if</span> (_currentBehavior == <span class="stringliteral">&quot;&quot;</span> || column == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">if</span> (_currentBehavior == <span class="keyword">null</span> || column == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> _dataSystem.GetActorAIData(_currentBehavior, _currentPatternIndex + 1, column);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
@@ -392,7 +392,7 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><b>Actor.cs</b></li>
-    <li class="footer">생성시간 : 수 11월 23 2022 01:41:53, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 11월 24 2022 01:46:15, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

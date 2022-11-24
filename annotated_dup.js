@@ -49,6 +49,7 @@ var annotated_dup =
           [ "TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system" ]
         ] ],
         [ "UI", "d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html", [
+          [ "UIManager", "dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html", null ],
           [ "UISystem", "d6/d2a/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_system.html", null ]
         ] ],
         [ "CellRouteTrackingSystem", "d1/d7f/class_dr_pepper_1_1_core_1_1_cell_route_tracking_system.html", null ],
@@ -87,5 +88,7 @@ var annotated_dup =
     [ "CSVReader", "d4/d16/class_c_s_v_reader.html", null ],
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "HangulUtil", "d2/da4/class_hangul_util.html", null ],
-    [ "RoomGoalSyllableData", "d3/de0/class_room_goal_syllable_data.html", null ]
+    [ "RoomGoalSyllableData", "d3/de0/class_room_goal_syllable_data.html", null ],
+    [ "TestRoomClear", "dc/dcd/class_test_room_clear.html", null ],
+    [ "UIPanel", "da/deb/class_u_i_panel.html", null ]
 ];

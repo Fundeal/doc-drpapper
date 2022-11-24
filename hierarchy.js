@@ -61,13 +61,19 @@ var hierarchy =
       [ "DrPepper.MonoSingleton< T >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
       [ "DrPepper.PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],
       [ "DrPepper.Projectile", "d5/ddd/class_dr_pepper_1_1_projectile.html", null ],
-      [ "DrPepper.TestObject", "de/de0/class_dr_pepper_1_1_test_object.html", null ]
+      [ "DrPepper.TestObject", "de/de0/class_dr_pepper_1_1_test_object.html", null ],
+      [ "UIPanel", "da/deb/class_u_i_panel.html", [
+        [ "TestRoomClear", "dc/dcd/class_test_room_clear.html", null ]
+      ] ]
     ] ],
     [ "DrPepper.MonoSingleton< DataContainer >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
       [ "DrPepper.Core.DataContainer", "da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html", null ]
     ] ],
     [ "DrPepper.MonoSingleton< SystemManager >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
       [ "DrPepper.Core.SystemManager", "d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html", null ]
+    ] ],
+    [ "DrPepper.MonoSingleton< UIManager >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
+      [ "DrPepper.Core.UI.UIManager", "dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html", null ]
     ] ],
     [ "RoomGoalSyllableData", "d3/de0/class_room_goal_syllable_data.html", null ],
     [ "ScriptableObject", null, [
