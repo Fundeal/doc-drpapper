@@ -144,26 +144,26 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a> 파일의 <a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; goalData.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            GameObject currentSyllableObject = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span>(_GoalSyllables.Count &lt;= i)</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                currentSyllableObject = _GenerateNewSyllable();</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   46</span>            {</div>
-<div class="line"><span class="lineno">   47</span>                currentSyllableObject = _GoalSyllables[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>];</div>
-<div class="line"><span class="lineno">   48</span>            }</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>            currentSyllableObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordtype">string</span> syllableString = goalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].IsActive ? $<span class="stringliteral">&quot;&lt;color=red&gt;{goalData[i].Syllable}&lt;/color&gt;&quot;</span> : goalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].Syllable;</div>
-<div class="line"><span class="lineno">   52</span>            currentSyllableObject.transform.GetChild(0).GetComponent&lt;Text&gt;().text = syllableString;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>    }</div>
+<p class="definition"><a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a> 파일의 <a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; goalData.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   43</span>        {</div>
+<div class="line"><span class="lineno">   44</span>            GameObject currentSyllableObject = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">if</span>(_GoalSyllables.Count &lt;= i)</div>
+<div class="line"><span class="lineno">   47</span>            {</div>
+<div class="line"><span class="lineno">   48</span>                currentSyllableObject = _GenerateNewSyllable();</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   51</span>            {</div>
+<div class="line"><span class="lineno">   52</span>                currentSyllableObject = _GoalSyllables[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>];</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>            currentSyllableObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordtype">string</span> syllableString = goalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].IsActive ? $<span class="stringliteral">&quot;&lt;color=red&gt;{goalData[i].Syllable}&lt;/color&gt;&quot;</span> : goalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].Syllable;</div>
+<div class="line"><span class="lineno">   57</span>            currentSyllableObject.transform.GetChild(0).GetComponent&lt;Text&gt;().text = syllableString;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
@@ -191,11 +191,12 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a> 파일의 <a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>    {</div>
-<div class="line"><span class="lineno">   31</span>        <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().UpdateGoal(_Input.text);</div>
-<div class="line"><span class="lineno">   32</span>        _Input.text = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   33</span>    }</div>
+<p class="definition"><a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a> 파일의 <a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>    {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="comment">//현재 룸의 목표 단어를 갱신합니다.</span></div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().UpdateGoal(_Input.text);</div>
+<div class="line"><span class="lineno">   37</span>        _Input.text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>    }</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00015">DungeonSystem.cs:16</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_room_html"><div class="ttname"><a href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">DrPepper.Core.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00013">DungeonSystem.cs:14</a></div></div>
@@ -231,20 +232,24 @@ Public 멤버 함수</h2></td></tr>
 
 <p class="definition"><a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a> 파일의 <a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().OnUpdateGoalEvent.AddListener(_OnUpdateRoomGoalEvent);</div>
-<div class="line"><span class="lineno">   20</span>        <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().StartRoom(0);</div>
-<div class="line"><span class="lineno">   21</span>        </div>
-<div class="line"><span class="lineno">   22</span>        _CurrentRoom = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().CurrentRoom;</div>
-<div class="line"><span class="lineno">   23</span>        _CurrentRoom.OnCompleteRoomEvent.AddListener(() =&gt;</div>
-<div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            Debug.Log(<span class="stringliteral">&quot;Clear&quot;</span>);</div>
-<div class="line"><span class="lineno">   26</span>        });</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
+<div class="line"><span class="lineno">   19</span>        <span class="comment">//던전 시스템을 참조하기 때문에 Awake에서 참조하면 안됩니다.</span></div>
+<div class="line"><span class="lineno">   20</span>        var dungeonSystem = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_namespace" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a>.<a class="code hl_namespace" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a>.<a class="code hl_namespace" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a>.<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;();</div>
+<div class="line"><span class="lineno">   21</span>        dungeonSystem.OnUpdateGoalEvent.AddListener(_OnUpdateRoomGoalEvent);</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>        <span class="comment">//던전 시스템의 CurrentRoom은 현재 플레이어가 있는 룸의 위치입니다. </span></div>
+<div class="line"><span class="lineno">   24</span>        <span class="comment">//룸 마다 클리어 이벤트가 따로 존재하기 때문에, 룸 안에 있는 오브젝트는</span></div>
+<div class="line"><span class="lineno">   25</span>        <span class="comment">//GetComponentInParent로 Room의 클리어 이벤트에 등록해야 합니다.</span></div>
+<div class="line"><span class="lineno">   26</span>        _CurrentRoom = dungeonSystem.CurrentRoom;</div>
+<div class="line"><span class="lineno">   27</span>        _CurrentRoom.OnCompleteRoomEvent.AddListener(() =&gt;</div>
+<div class="line"><span class="lineno">   28</span>        {</div>
+<div class="line"><span class="lineno">   29</span>            dungeonSystem.StartRoom(1);</div>
+<div class="line"><span class="lineno">   30</span>        });</div>
+<div class="line"><span class="lineno">   31</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>Test/<a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a></li>
+<li>Test/RoomTest/<a class="el" href="../../da/dd8/_test_room_clear_8cs_source.html">TestRoomClear.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -252,7 +257,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/dcd/class_test_room_clear.html">TestRoomClear</a></li>
-    <li class="footer">생성시간 : 목 11월 24 2022 01:46:16, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -33,7 +33,9 @@ var annotated_dup =
           [ "WordDataContainer", "d6/db7/class_dr_pepper_1_1_core_1_1_hangul_1_1_word_data_container.html", null ]
         ] ],
         [ "Mana", "d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html", [
+          [ "ManaData", "d4/db8/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_data.html", null ],
           [ "ManaObject", "d4/db6/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_object.html", null ],
+          [ "ManaSpawnData", "da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html", null ],
           [ "ManaSystem", "d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html", null ]
         ] ],
         [ "Room", "d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html", [
@@ -49,6 +51,7 @@ var annotated_dup =
           [ "TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system" ]
         ] ],
         [ "UI", "d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html", [
+          [ "TestPanel_Main", "db/d6b/class_dr_pepper_1_1_core_1_1_u_i_1_1_test_panel___main.html", null ],
           [ "UIManager", "dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html", null ],
           [ "UISystem", "d6/d2a/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_system.html", null ]
         ] ],
@@ -56,6 +59,7 @@ var annotated_dup =
         [ "DataContainer", "da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html", null ],
         [ "DataContainerBase", "dd/de0/class_dr_pepper_1_1_core_1_1_data_container_base.html", null ],
         [ "DataSystem", "d0/da8/class_dr_pepper_1_1_core_1_1_data_system.html", null ],
+        [ "DefaultSceneAction", "da/de5/class_dr_pepper_1_1_core_1_1_default_scene_action.html", null ],
         [ "InputSystem", "d7/d7f/class_dr_pepper_1_1_core_1_1_input_system.html", null ],
         [ "ProjectileSystem", "dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html", null ],
         [ "SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", null ],
@@ -71,6 +75,7 @@ var annotated_dup =
       ] ],
       [ "AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
       [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
+      [ "DevPanel_RoomClear", "d4/df6/class_dr_pepper_1_1_dev_panel___room_clear.html", null ],
       [ "GlobalConstant", "db/d5e/class_dr_pepper_1_1_global_constant.html", null ],
       [ "MonoSingleton", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
       [ "PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],

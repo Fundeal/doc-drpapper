@@ -13,6 +13,7 @@ var namespace_dr_pepper_1_1_core =
     [ "DataContainer", "da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html", null ],
     [ "DataContainerBase", "dd/de0/class_dr_pepper_1_1_core_1_1_data_container_base.html", null ],
     [ "DataSystem", "d0/da8/class_dr_pepper_1_1_core_1_1_data_system.html", null ],
+    [ "DefaultSceneAction", "da/de5/class_dr_pepper_1_1_core_1_1_default_scene_action.html", null ],
     [ "InputSystem", "d7/d7f/class_dr_pepper_1_1_core_1_1_input_system.html", null ],
     [ "ProjectileSystem", "dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html", null ],
     [ "SystemBase", "dc/d34/class_dr_pepper_1_1_core_1_1_system_base.html", null ],

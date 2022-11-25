@@ -166,10 +166,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
-<div class="line"><span class="lineno">   55</span>            _CollisionCheck.AddPreCheckObject(cellObject, nextPos);</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            _CollisionCheck.AddPreCheckObject(cellObject, nextPos);</div>
+<div class="line"><span class="lineno">   59</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,25 +197,25 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>        {</div>
-<div class="line"><span class="lineno">   70</span>            CellBound bound = cellObject.Bound;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (!CheckAttachEnableCellObject(cellObject.Bound, cellObject.IsSolid))</div>
-<div class="line"><span class="lineno">   73</span>            {</div>
-<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">   78</span>            {</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">   80</span>                {</div>
-<div class="line"><span class="lineno">   81</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
-<div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   86</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>        {</div>
+<div class="line"><span class="lineno">   73</span>            CellBound bound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (!CheckAttachEnableCellObject(cellObject.Bound, cellObject.IsSolid))</div>
+<div class="line"><span class="lineno">   76</span>            {</div>
+<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   78</span>            }</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">   83</span>                {</div>
+<div class="line"><span class="lineno">   84</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
+<div class="line"><span class="lineno">   85</span>                }</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">TestProject.ChosungType.x</a></div><div class="ttdeci">@ x</div><div class="ttdoc">ㅌ</div></div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">TestProject.JungsungType.y</a></div><div class="ttdeci">@ y</div><div class="ttdoc">ㅛ</div></div>
 </div><!-- fragment -->
@@ -255,18 +255,18 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00088">88</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">   93</span>                {</div>
-<div class="line"><span class="lineno">   94</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
-<div class="line"><span class="lineno">   95</span>                }</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   99</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00091">91</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>        {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">   94</span>            {</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">   96</span>                {</div>
+<div class="line"><span class="lineno">   97</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
+<div class="line"><span class="lineno">   98</span>                }</div>
+<div class="line"><span class="lineno">   99</span>            }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  102</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -304,27 +304,27 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00101">101</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>        {</div>
-<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (!CheckOutOfBoundCellObject(bound))</div>
-<div class="line"><span class="lineno">  104</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (!isSolid)</div>
-<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00104">104</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (!CheckOutOfBoundCellObject(bound))</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">  110</span>            {</div>
-<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">  112</span>                {</div>
-<div class="line"><span class="lineno">  113</span>                    <span class="keywordflow">if</span>(_Cells[x, y].IsContainsSolidObject)</div>
-<div class="line"><span class="lineno">  114</span>                    {</div>
-<div class="line"><span class="lineno">  115</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  116</span>                    }</div>
-<div class="line"><span class="lineno">  117</span>                }</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  121</span>        }</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (!isSolid)</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">  113</span>            {</div>
+<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">  115</span>                {</div>
+<div class="line"><span class="lineno">  116</span>                    <span class="keywordflow">if</span>(_Cells[x, y].IsContainsSolidObject)</div>
+<div class="line"><span class="lineno">  117</span>                    {</div>
+<div class="line"><span class="lineno">  118</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span>                    }</div>
+<div class="line"><span class="lineno">  120</span>                }</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  124</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -352,27 +352,27 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00123">123</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>        {</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span>(bound.Min.x &lt; 0 || bound.Max.x &gt;= MaximunSize.x ||</div>
-<div class="line"><span class="lineno">  126</span>                bound.Min.y &lt; 0 || bound.Max.y &gt;= MaximunSize.y)</div>
-<div class="line"><span class="lineno">  127</span>            {</div>
-<div class="line"><span class="lineno">  128</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  129</span>            }</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">  132</span>            {</div>
-<div class="line"><span class="lineno">  133</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">  134</span>                {</div>
-<div class="line"><span class="lineno">  135</span>                    <span class="keywordflow">if</span> (_Cells[x, y] == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  136</span>                    {</div>
-<div class="line"><span class="lineno">  137</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  138</span>                    }</div>
-<div class="line"><span class="lineno">  139</span>                }</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00126">126</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>        {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">if</span>(bound.Min.x &lt; 0 || bound.Max.x &gt;= MaximunSize.x ||</div>
+<div class="line"><span class="lineno">  129</span>                bound.Min.y &lt; 0 || bound.Max.y &gt;= MaximunSize.y)</div>
+<div class="line"><span class="lineno">  130</span>            {</div>
+<div class="line"><span class="lineno">  131</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  132</span>            }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">  135</span>            {</div>
+<div class="line"><span class="lineno">  136</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">  137</span>                {</div>
+<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">if</span> (_Cells[x, y] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  139</span>                    {</div>
+<div class="line"><span class="lineno">  140</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  141</span>                    }</div>
+<div class="line"><span class="lineno">  142</span>                }</div>
+<div class="line"><span class="lineno">  143</span>            }</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -400,15 +400,15 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00145">145</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>        {</div>
-<div class="line"><span class="lineno">  147</span>            Vector2Int cellPosition = Vector2Int.zero;</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>            cellPosition.x = -Mathf.RoundToInt(worldPos.z);</div>
-<div class="line"><span class="lineno">  150</span>            cellPosition.y = Mathf.RoundToInt(worldPos.x);</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00148">148</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>            Vector2Int cellPosition = Vector2Int.zero;</div>
 <div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>            <span class="keywordflow">return</span> cellPosition;</div>
-<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  152</span>            cellPosition.x = -Mathf.RoundToInt(worldPos.z);</div>
+<div class="line"><span class="lineno">  153</span>            cellPosition.y = Mathf.RoundToInt(worldPos.x);</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">return</span> cellPosition;</div>
+<div class="line"><span class="lineno">  156</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -436,15 +436,15 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00155">155</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>        {</div>
-<div class="line"><span class="lineno">  157</span>            Vector3 worldPosition = Vector3.zero;</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>            worldPosition.x = cellPosition.y;</div>
-<div class="line"><span class="lineno">  160</span>            worldPosition.z = -cellPosition.x;</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00158">158</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>        {</div>
+<div class="line"><span class="lineno">  160</span>            Vector3 worldPosition = Vector3.zero;</div>
 <div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">return</span> worldPosition;</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  162</span>            worldPosition.x = cellPosition.y;</div>
+<div class="line"><span class="lineno">  163</span>            worldPosition.z = -cellPosition.x;</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">return</span> worldPosition;</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -472,11 +472,16 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            MaximunSize = levelData.Size;</div>
-<div class="line"><span class="lineno">   45</span>            InitializeCells();</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>        {</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span>(levelData == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                MaximunSize = Vector2Int.zero;</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   46</span>            }</div>
+<div class="line"><span class="lineno">   47</span>            MaximunSize = levelData.Size;</div>
+<div class="line"><span class="lineno">   48</span>            InitializeCells();</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,10 +508,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
-<div class="line"><span class="lineno">   50</span>            _CollisionCheck.Initialize();</div>
-<div class="line"><span class="lineno">   51</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
+<div class="line"><span class="lineno">   53</span>            _CollisionCheck.Initialize();</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -534,21 +539,21 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00165">165</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>        {</div>
-<div class="line"><span class="lineno">  167</span>            CellBound bound = cellObject.Bound;</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">  170</span>            {</div>
-<div class="line"><span class="lineno">  171</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">  172</span>                {</div>
-<div class="line"><span class="lineno">  173</span>                    <span class="keywordflow">if</span> (_Cells[x, y] == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  174</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].RemoveCellObject(cellObject);</div>
-<div class="line"><span class="lineno">  177</span>                }</div>
-<div class="line"><span class="lineno">  178</span>            }</div>
-<div class="line"><span class="lineno">  179</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00168">168</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            CellBound bound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">  173</span>            {</div>
+<div class="line"><span class="lineno">  174</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">  175</span>                {</div>
+<div class="line"><span class="lineno">  176</span>                    <span class="keywordflow">if</span> (_Cells[x, y] == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  177</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].RemoveCellObject(cellObject);</div>
+<div class="line"><span class="lineno">  180</span>                }</div>
+<div class="line"><span class="lineno">  181</span>            }</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -576,24 +581,24 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00181">181</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">  182</span>        {</div>
-<div class="line"><span class="lineno">  183</span>            CellBound bound = cellObject.Bound;</div>
-<div class="line"><span class="lineno">  184</span>            CellBasedObjectCollisionCheck.SteppedData stepData = <span class="keyword">new</span> CellBasedObjectCollisionCheck.SteppedData();</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
-<div class="line"><span class="lineno">  187</span>            {</div>
-<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
-<div class="line"><span class="lineno">  189</span>                {</div>
-<div class="line"><span class="lineno">  190</span>                    stepData.AnotherObjects.AddRange(_Cells[x, y].GetNotSolidObjects());</div>
-<div class="line"><span class="lineno">  191</span>                }</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>            <span class="keywordflow">if</span>(stepData.AnotherObjects.Count != 0)</div>
-<div class="line"><span class="lineno">  195</span>            {</div>
-<div class="line"><span class="lineno">  196</span>                cellObject.OnStepEvent?.Invoke(stepData);</div>
-<div class="line"><span class="lineno">  197</span>            }</div>
-<div class="line"><span class="lineno">  198</span>        }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00184">184</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            CellBound bound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">  187</span>            CellBasedObjectCollisionCheck.SteppedData stepData = <span class="keyword">new</span> CellBasedObjectCollisionCheck.SteppedData();</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = bound.Min.x; x &lt;= bound.Max.x; x++)</div>
+<div class="line"><span class="lineno">  190</span>            {</div>
+<div class="line"><span class="lineno">  191</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
+<div class="line"><span class="lineno">  192</span>                {</div>
+<div class="line"><span class="lineno">  193</span>                    stepData.AnotherObjects.AddRange(_Cells[x, y].GetNotSolidObjects());</div>
+<div class="line"><span class="lineno">  194</span>                }</div>
+<div class="line"><span class="lineno">  195</span>            }</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span>(stepData.AnotherObjects.Count != 0)</div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                cellObject.OnStepEvent?.Invoke(stepData);</div>
+<div class="line"><span class="lineno">  200</span>            }</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -618,8 +623,8 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{ <span class="keyword">get</span> =&gt; _Cells; }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{ <span class="keyword">get</span> =&gt; _Cells; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -643,8 +648,8 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -657,7 +662,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">Cell</a></li><li class="navelem"><a class="el" href="../../d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html">CellSystem</a></li>
-    <li class="footer">생성시간 : 목 11월 24 2022 01:46:16, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

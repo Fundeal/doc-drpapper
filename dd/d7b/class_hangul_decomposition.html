@@ -91,8 +91,8 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 정적 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a0bca32961a0ac0584f706c02f9232aab"><td class="memItemLeft" align="right" valign="top">static List&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#a0bca32961a0ac0584f706c02f9232aab">decomposition</a> (string word)</td></tr>
-<tr class="separator:a0bca32961a0ac0584f706c02f9232aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d7e639820c0563e47b96e8de111bfe"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#aa1d7e639820c0563e47b96e8de111bfe">decomposition</a> (string word)</td></tr>
+<tr class="separator:aa1d7e639820c0563e47b96e8de111bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dfda5ebce2a9d8a79734221f63160f0"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#a5dfda5ebce2a9d8a79734221f63160f0">IsJaum</a> (string text)</td></tr>
 <tr class="separator:a5dfda5ebce2a9d8a79734221f63160f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac068165636bb0c88f06ceb0e41b5468"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#aac068165636bb0c88f06ceb0e41b5468">IsMoum</a> (string text)</td></tr>
@@ -104,8 +104,8 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <div class="textblock">
 <p class="definition"><a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html">HangulDecomposition.cs</a> 파일의 <a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
-<a id="a0bca32961a0ac0584f706c02f9232aab" name="a0bca32961a0ac0584f706c02f9232aab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bca32961a0ac0584f706c02f9232aab">&#9670;&nbsp;</a></span>decomposition()</h2>
+<a id="aa1d7e639820c0563e47b96e8de111bfe" name="aa1d7e639820c0563e47b96e8de111bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d7e639820c0563e47b96e8de111bfe">&#9670;&nbsp;</a></span>decomposition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static List&lt; char &gt; HangulDecomposition.decomposition </td>
+          <td class="memname">static List&lt; string &gt; HangulDecomposition.decomposition </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>word</em></td><td>)</td>
@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 
 <p class="definition"><a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html">HangulDecomposition.cs</a> 파일의 <a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        List&lt;char&gt; ret = <span class="keyword">new</span> List&lt;char&gt;();</div>
+<div class="line"><span class="lineno">   18</span>        List&lt;string&gt; ret = <span class="keyword">new</span> List&lt;string&gt;();</div>
 <div class="line"><span class="lineno">   19</span> </div>
 <div class="line"><span class="lineno">   20</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; word.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
 <div class="line"><span class="lineno">   21</span>        {</div>
@@ -149,11 +149,11 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <div class="line"><span class="lineno">   34</span>            uniCodeIdx = uniCodeIdx % 28;</div>
 <div class="line"><span class="lineno">   35</span>            lastIdx = uniCodeIdx;</div>
 <div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>            ret.Add(firstTable[firstIdx]);</div>
-<div class="line"><span class="lineno">   38</span>            ret.Add(middleTable[middleIdx]);</div>
+<div class="line"><span class="lineno">   37</span>            ret.Add(firstTable[firstIdx].ToString());</div>
+<div class="line"><span class="lineno">   38</span>            ret.Add(middleTable[middleIdx].ToString());</div>
 <div class="line"><span class="lineno">   39</span> </div>
 <div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (lastIdx != 0)</div>
-<div class="line"><span class="lineno">   41</span>                ret.Add(lastTable[lastIdx]);</div>
+<div class="line"><span class="lineno">   41</span>                ret.Add(lastTable[lastIdx].ToString());</div>
 <div class="line"><span class="lineno">   42</span>        }</div>
 <div class="line"><span class="lineno">   43</span> </div>
 <div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> ret;</div>
@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html">HangulDecomposition</a></li>
-    <li class="footer">생성시간 : 목 11월 24 2022 01:46:16, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

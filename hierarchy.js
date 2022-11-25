@@ -15,6 +15,8 @@ var hierarchy =
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "TestProject.HangulHelper", "d3/d36/class_test_project_1_1_hangul_helper.html", null ],
     [ "HangulUtil", "d2/da4/class_hangul_util.html", null ],
+    [ "DrPepper.Core.Mana.ManaData", "d4/db8/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_data.html", null ],
+    [ "DrPepper.Core.Mana.ManaSpawnData", "da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html", null ],
     [ "MonoBehaviour", null, [
       [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
       [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
@@ -32,6 +34,7 @@ var hierarchy =
       [ "DrPepper.Core.Cell.CellBasedObject", "d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html", null ],
       [ "DrPepper.Core.Cell.CellBasedObjectRotation", "dc/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_rotation.html", null ],
       [ "DrPepper.Core.Cell.CellSystem", "d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html", null ],
+      [ "DrPepper.Core.DefaultSceneAction", "da/de5/class_dr_pepper_1_1_core_1_1_default_scene_action.html", null ],
       [ "DrPepper.Core.Door.Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", [
         [ "DrPepper.Core.Door.EntryDoor", "d5/dd7/class_dr_pepper_1_1_core_1_1_door_1_1_entry_door.html", null ],
         [ "DrPepper.Core.Door.GoalDoor", "de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html", null ]
@@ -57,12 +60,14 @@ var hierarchy =
         [ "DrPepper.Core.Tick.StandbyPhase", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html", null ]
       ] ],
       [ "DrPepper.Core.Tick.TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", null ],
+      [ "DrPepper.DevPanel_RoomClear", "d4/df6/class_dr_pepper_1_1_dev_panel___room_clear.html", null ],
       [ "DrPepper.LevelEditor.LevelEditor", "d5/db8/class_dr_pepper_1_1_level_editor_1_1_level_editor.html", null ],
       [ "DrPepper.MonoSingleton< T >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
       [ "DrPepper.PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],
       [ "DrPepper.Projectile", "d5/ddd/class_dr_pepper_1_1_projectile.html", null ],
       [ "DrPepper.TestObject", "de/de0/class_dr_pepper_1_1_test_object.html", null ],
       [ "UIPanel", "da/deb/class_u_i_panel.html", [
+        [ "DrPepper.Core.UI.TestPanel_Main", "db/d6b/class_dr_pepper_1_1_core_1_1_u_i_1_1_test_panel___main.html", null ],
         [ "TestRoomClear", "dc/dcd/class_test_room_clear.html", null ]
       ] ]
     ] ],
