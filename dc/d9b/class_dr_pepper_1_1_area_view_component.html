@@ -97,6 +97,8 @@ DrPepper.AreaViewComponent에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:ada73ce0900ccfcb61e27f204e22e8e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html#ada73ce0900ccfcb61e27f204e22e8e50">Initialize</a> ()</td></tr>
+<tr class="separator:ada73ce0900ccfcb61e27f204e22e8e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4bdfc29c80557c2fbae2744b5cef239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html#ab4bdfc29c80557c2fbae2744b5cef239">SetViewColor</a> (Color color)</td></tr>
 <tr class="separator:ab4bdfc29c80557c2fbae2744b5cef239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72dd9ae795ccb8432cb8d0e01e0fde0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html#a72dd9ae795ccb8432cb8d0e01e0fde0a">View</a> (ViewType type, Vector2Int viewPos)</td></tr>
@@ -141,6 +143,48 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   82</span>            }</div>
 <div class="line"><span class="lineno">   83</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada73ce0900ccfcb61e27f204e22e8e50" name="ada73ce0900ccfcb61e27f204e22e8e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada73ce0900ccfcb61e27f204e22e8e50">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrPepper.AreaViewComponent.Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../dd/d41/_area_view_component_8cs_source.html">AreaViewComponent.cs</a> 파일의 <a class="el" href="../../dd/d41/_area_view_component_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
+<div class="line"><span class="lineno">   31</span>            _dungeonSystem = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;();</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>            _viewObjects = <span class="keyword">new</span> GameObject[_maxView];</div>
+<div class="line"><span class="lineno">   34</span>            _viewObjectRenderers = <span class="keyword">new</span> MeshRenderer[_maxView];</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _maxView; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                _viewObjects[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = Instantiate(_viewPrefab);</div>
+<div class="line"><span class="lineno">   38</span>                _viewObjectRenderers[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = _viewObjects[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].GetComponent&lt;MeshRenderer&gt;();</div>
+<div class="line"><span class="lineno">   39</span>                _viewObjects[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].transform.parent = transform;</div>
+<div class="line"><span class="lineno">   40</span>                _viewObjects[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00015">DungeonSystem.cs:16</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00008">SystemManager.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,7 +290,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html">AreaViewComponent</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

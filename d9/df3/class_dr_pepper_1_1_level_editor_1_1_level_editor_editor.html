@@ -127,37 +127,41 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/de0/_level_editor_editor_8cs_source.html">LevelEditorEditor.cs</a> 파일의 <a class="el" href="../../da/de0/_level_editor_editor_8cs_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
-<div class="line"><span class="lineno">   40</span>            base.OnInspectorGUI();</div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>            LevelEditor editor = (LevelEditor)target;</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Reset&quot;</span>))</div>
-<div class="line"><span class="lineno">   45</span>            {</div>
-<div class="line"><span class="lineno">   46</span>                editor.ResetTile();</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Load&quot;</span>))</div>
-<div class="line"><span class="lineno">   50</span>            {</div>
-<div class="line"><span class="lineno">   51</span>                editor.LoadLevelData();</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Save&quot;</span>))</div>
-<div class="line"><span class="lineno">   55</span>            {</div>
-<div class="line"><span class="lineno">   56</span>                editor.Save();</div>
-<div class="line"><span class="lineno">   57</span>                AssetDatabase.Refresh();</div>
-<div class="line"><span class="lineno">   58</span>                EditorUtility.SetDirty(editor.Data);</div>
-<div class="line"><span class="lineno">   59</span>                AssetDatabase.SaveAssets();</div>
-<div class="line"><span class="lineno">   60</span>            }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>            _generateSize = EditorGUILayout.Vector2IntField(<span class="stringliteral">&quot;생성 사이즈&quot;</span>, _generateSize);</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Fill&quot;</span>))</div>
-<div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                editor.FillCells(_generateSize);</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
+<p class="definition"><a class="el" href="../../da/de0/_level_editor_editor_8cs_source.html">LevelEditorEditor.cs</a> 파일의 <a class="el" href="../../da/de0/_level_editor_editor_8cs_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            base.OnInspectorGUI();</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>            LevelEditor editor = (LevelEditor)target;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Reset&quot;</span>))</div>
+<div class="line"><span class="lineno">   48</span>            {</div>
+<div class="line"><span class="lineno">   49</span>                editor.ResetTile();</div>
+<div class="line"><span class="lineno">   50</span>                EditorUtility.SetDirty(editor.room);</div>
+<div class="line"><span class="lineno">   51</span>            }</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Load&quot;</span>))</div>
+<div class="line"><span class="lineno">   54</span>            {</div>
+<div class="line"><span class="lineno">   55</span>                editor.LoadLevelData();</div>
+<div class="line"><span class="lineno">   56</span>                EditorUtility.SetDirty(editor.room);</div>
+<div class="line"><span class="lineno">   57</span>            }</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Save&quot;</span>))</div>
+<div class="line"><span class="lineno">   60</span>            {</div>
+<div class="line"><span class="lineno">   61</span>                editor.Save();</div>
+<div class="line"><span class="lineno">   62</span>                AssetDatabase.Refresh();</div>
+<div class="line"><span class="lineno">   63</span>                EditorUtility.SetDirty(editor.Data);</div>
+<div class="line"><span class="lineno">   64</span>                EditorUtility.SetDirty(editor.room);</div>
+<div class="line"><span class="lineno">   65</span>                AssetDatabase.SaveAssets();</div>
+<div class="line"><span class="lineno">   66</span>            }</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>            _generateSize = EditorGUILayout.Vector2IntField(<span class="stringliteral">&quot;생성 사이즈&quot;</span>, _generateSize);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (GUILayout.Button(<span class="stringliteral">&quot;Fill&quot;</span>))</div>
+<div class="line"><span class="lineno">   71</span>            {</div>
+<div class="line"><span class="lineno">   72</span>                editor.FillCells(_generateSize);</div>
+<div class="line"><span class="lineno">   73</span>                EditorUtility.SetDirty(editor.room);</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -170,7 +174,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../d0/dbb/namespace_dr_pepper_1_1_level_editor.html">LevelEditor</a></li><li class="navelem"><a class="el" href="../../d9/df3/class_dr_pepper_1_1_level_editor_1_1_level_editor_editor.html">LevelEditorEditor</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:32, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

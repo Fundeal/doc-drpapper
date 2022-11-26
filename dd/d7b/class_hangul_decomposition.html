@@ -97,6 +97,8 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <tr class="separator:a5dfda5ebce2a9d8a79734221f63160f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac068165636bb0c88f06ceb0e41b5468"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#aac068165636bb0c88f06ceb0e41b5468">IsMoum</a> (string text)</td></tr>
 <tr class="separator:aac068165636bb0c88f06ceb0e41b5468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80dbe5a4aa490b18e4beaead4e462e62"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#a80dbe5a4aa490b18e4beaead4e462e62">IsLastJaum</a> (string text)</td></tr>
+<tr class="separator:a80dbe5a4aa490b18e4beaead4e462e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af135de259fcb3433b1326a991063e113"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html#af135de259fcb3433b1326a991063e113">GetFirst</a> (string text)</td></tr>
 <tr class="separator:af135de259fcb3433b1326a991063e113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -186,23 +188,23 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html">HangulDecomposition.cs</a> 파일의 <a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">string</span> first = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>        ushort tempChar = Convert.ToUInt16(text[0]);</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (tempChar &lt; koreanBase || koreanLast &lt; tempChar)</div>
-<div class="line"><span class="lineno">   64</span>        {</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   66</span>        }</div>
+<p class="definition"><a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html">HangulDecomposition.cs</a> 파일의 <a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">string</span> first = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>        ushort tempChar = Convert.ToUInt16(text[0]);</div>
 <div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>        <span class="keywordtype">int</span> uniCodeIdx = tempChar - koreanBase;</div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordtype">int</span> firstIdx = uniCodeIdx / (21 * 28);</div>
-<div class="line"><span class="lineno">   70</span>        first = firstTable[firstIdx].ToString();</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">return</span> first;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span> (tempChar &lt; koreanBase || koreanLast &lt; tempChar)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   71</span>        }</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordtype">int</span> uniCodeIdx = tempChar - koreanBase;</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordtype">int</span> firstIdx = uniCodeIdx / (21 * 28);</div>
+<div class="line"><span class="lineno">   75</span>        first = firstTable[firstIdx].ToString();</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">return</span> first;</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,6 +236,37 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <div class="fragment"><div class="line"><span class="lineno">   48</span>    {</div>
 <div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> firstTable.Contains(text);</div>
 <div class="line"><span class="lineno">   50</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80dbe5a4aa490b18e4beaead4e462e62" name="a80dbe5a4aa490b18e4beaead4e462e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dbe5a4aa490b18e4beaead4e462e62">&#9670;&nbsp;</a></span>IsLastJaum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool HangulDecomposition.IsLastJaum </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html">HangulDecomposition.cs</a> 파일의 <a class="el" href="../../d9/dc2/_hangul_decomposition_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">return</span> lastTable.Contains(text);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -277,7 +310,7 @@ $(document).ready(function(){initNavTree('dd/d7b/class_hangul_decomposition.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d7b/class_hangul_decomposition.html">HangulDecomposition</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

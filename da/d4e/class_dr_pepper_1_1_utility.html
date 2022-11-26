@@ -95,6 +95,9 @@ $(document).ready(function(){initNavTree('da/d4e/class_dr_pepper_1_1_utility.htm
 <tr class="separator:aa6315888c4308b8ada4698156fc3283c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5355aad26f246cf8b36482f12911a30b"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d4e/class_dr_pepper_1_1_utility.html#a5355aad26f246cf8b36482f12911a30b">ParseEnum&lt; T &gt;</a> (string s)</td></tr>
 <tr class="separator:a5355aad26f246cf8b36482f12911a30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afd7a7c75ada2af6797ac5e692c5aee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d4e/class_dr_pepper_1_1_utility.html#a6afd7a7c75ada2af6797ac5e692c5aee">GetRandomNotContain</a> (int min, int max, int[] notContainValue)</td></tr>
+<tr class="memdesc:a6afd7a7c75ada2af6797ac5e692c5aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">랜덤 숫자 중복 방지 함수  <a href="../../da/d4e/class_dr_pepper_1_1_utility.html#a6afd7a7c75ada2af6797ac5e692c5aee">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a6afd7a7c75ada2af6797ac5e692c5aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
@@ -151,6 +154,74 @@ $(document).ready(function(){initNavTree('da/d4e/class_dr_pepper_1_1_utility.htm
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a6afd7a7c75ada2af6797ac5e692c5aee" name="a6afd7a7c75ada2af6797ac5e692c5aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afd7a7c75ada2af6797ac5e692c5aee">&#9670;&nbsp;</a></span>GetRandomNotContain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int DrPepper.Utility.GetRandomNotContain </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int[]&#160;</td>
+          <td class="paramname"><em>notContainValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>랜덤 숫자 중복 방지 함수 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>최솟값 </td></tr>
+    <tr><td class="paramname">max</td><td>최댓값 - 1 ex -&gt; 0~10 = 0~9를 Return</td></tr>
+    <tr><td class="paramname">notContainValue</td><td>중복 방지할 숫자 배열</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+<p class="definition"><a class="el" href="../../d6/d3b/_utility_8cs_source.html">Utility.cs</a> 파일의 <a class="el" href="../../d6/d3b/_utility_8cs_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            HashSet&lt;int&gt; exclude = <span class="keyword">new</span> HashSet&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; notContainValue.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                exclude.Add(notContainValue[i]);</div>
+<div class="line"><span class="lineno">   52</span>            }</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>            var range = Enumerable.Range(min, max).Where(i =&gt; !exclude.Contains(i));</div>
+<div class="line"><span class="lineno">   55</span>            var rand = <span class="keyword">new</span> System.Random();</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordtype">int</span> index = rand.Next(min, max - exclude.Count);</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> range.ElementAt(index);</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
+<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a5355aad26f246cf8b36482f12911a30b" name="a5355aad26f246cf8b36482f12911a30b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5355aad26f246cf8b36482f12911a30b">&#9670;&nbsp;</a></span>ParseEnum&lt; T &gt;()</h2>
 
@@ -191,7 +262,7 @@ $(document).ready(function(){initNavTree('da/d4e/class_dr_pepper_1_1_utility.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../da/d4e/class_dr_pepper_1_1_utility.html">Utility</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

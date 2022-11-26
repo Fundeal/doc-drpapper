@@ -10,5 +10,5 @@ var namespace_dr_pepper =
     [ "PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],
     [ "Projectile", "d5/ddd/class_dr_pepper_1_1_projectile.html", null ],
     [ "TestObject", "de/de0/class_dr_pepper_1_1_test_object.html", null ],
-    [ "Utility", "da/d4e/class_dr_pepper_1_1_utility.html", null ]
+    [ "Utility", "da/d4e/class_dr_pepper_1_1_utility.html", "da/d4e/class_dr_pepper_1_1_utility" ]
 ];

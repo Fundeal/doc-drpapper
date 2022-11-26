@@ -117,6 +117,8 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a841071b657070fb2504178f36fa2f958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa761927d34f364d7f42bb2b8ef640fbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html#aa761927d34f364d7f42bb2b8ef640fbb">IsComplete</a><code> [get]</code></td></tr>
 <tr class="separator:aa761927d34f364d7f42bb2b8ef640fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68ef888311964251d89e99253bf86ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html#ab68ef888311964251d89e99253bf86ab">IsUsedInDungeon</a><code> [get]</code></td></tr>
+<tr class="separator:ab68ef888311964251d89e99253bf86ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
@@ -145,11 +147,12 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            _CellSystem = GetComponent&lt;Cell.CellSystem&gt;();</div>
-<div class="line"><span class="lineno">   26</span>            _CellSystem.Initialize(_levelData);</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>            _CellSystem = GetComponent&lt;Cell.CellSystem&gt;();</div>
+<div class="line"><span class="lineno">   29</span>            _CellSystem.Initialize(_levelData);</div>
+<div class="line"><span class="lineno">   30</span>            _isInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -176,10 +179,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>        {</div>
-<div class="line"><span class="lineno">   60</span>            _CellSystem.PostInitialise();</div>
-<div class="line"><span class="lineno">   61</span>        }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            _CellSystem.PostInitialise();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -207,18 +210,18 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>        {</div>
-<div class="line"><span class="lineno">   31</span>            _GoalData.Clear();</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; wordData.Word_String.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   34</span>            {</div>
-<div class="line"><span class="lineno">   35</span>                <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a> syllableData = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a>();</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            _GoalData.Clear();</div>
 <div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>                syllableData.Syllable = wordData.Word_String[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].ToString();</div>
-<div class="line"><span class="lineno">   38</span>                _GoalData.Add(syllableData);</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>        }</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; wordData.Word_String.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a> syllableData = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a>();</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>                syllableData.Syllable = wordData.Word_String[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].ToString();</div>
+<div class="line"><span class="lineno">   42</span>                _GoalData.Add(syllableData);</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
 <div class="ttc" id="aclass_room_goal_syllable_data_html"><div class="ttname"><a href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7b/_room_goal_syllable_data_8cs_source.html#l00005">RoomGoalSyllableData.cs:6</a></div></div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
@@ -248,21 +251,21 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>        {</div>
-<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _GoalData.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   45</span>            {</div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (_GoalData[i].IsActive)</div>
-<div class="line"><span class="lineno">   47</span>                {</div>
-<div class="line"><span class="lineno">   48</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   49</span>                }</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">if</span> (_GoalData[i].Syllable.Equals(syllable))</div>
-<div class="line"><span class="lineno">   52</span>                {</div>
-<div class="line"><span class="lineno">   53</span>                    _GoalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].IsActive = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   54</span>                }</div>
-<div class="line"><span class="lineno">   55</span>            }</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>        {</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _GoalData.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   49</span>            {</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (_GoalData[i].IsActive)</div>
+<div class="line"><span class="lineno">   51</span>                {</div>
+<div class="line"><span class="lineno">   52</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   53</span>                }</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>                <span class="keywordflow">if</span> (_GoalData[i].Syllable.Equals(syllable))</div>
+<div class="line"><span class="lineno">   56</span>                {</div>
+<div class="line"><span class="lineno">   57</span>                    _GoalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].IsActive = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,8 +290,8 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{ <span class="keyword">get</span> =&gt; _CellSystem; }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span> =&gt; _CellSystem; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -312,8 +315,8 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00019">19</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>{ <span class="keyword">get</span> =&gt; _GoalData; }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span> =&gt; _GoalData; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -337,8 +340,33 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00021">21</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keyword">get</span> =&gt; !_GoalData.Exists((goal) =&gt; { <span class="keywordflow">return</span> !goal.IsActive; }); }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keyword">get</span> =&gt; !_GoalData.Exists((goal) =&gt; { <span class="keywordflow">return</span> !goal.IsActive; }); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab68ef888311964251d89e99253bf86ab" name="ab68ef888311964251d89e99253bf86ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68ef888311964251d89e99253bf86ab">&#9670;&nbsp;</a></span>IsUsedInDungeon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrPepper.Core.Room.Room.IsUsedInDungeon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keyword">get</span> =&gt; _isInitialized; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -362,8 +390,8 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span> =&gt; _onCompleteRoomEvent; }</div>
+<p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span> =&gt; _onCompleteRoomEvent; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -376,7 +404,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a></li><li class="navelem"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -179,21 +179,21 @@ Public 멤버 함수</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a> 파일의 <a class="el" href="../../d9/d65/_tick_system_8cs_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span> &amp;&amp; _currentPhase.PhaseState == target) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>            var nextPhase = _phases[target];</div>
-<div class="line"><span class="lineno">   75</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span>) _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">EndPhase</a>(tick);</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (nextPhase == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   77</span>            {</div>
-<div class="line"><span class="lineno">   78</span>                _currentPhase = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   80</span>            }</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>            nextPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">StartPhase</a>(tick);</div>
-<div class="line"><span class="lineno">   83</span>            _currentPhase = nextPhase;</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
+<p class="definition"><a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a> 파일의 <a class="el" href="../../d9/d65/_tick_system_8cs_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span> &amp;&amp; _currentPhase.PhaseState == target) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            var nextPhase = _phases[target];</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span>) _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">EndPhase</a>(tick);</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keywordflow">if</span> (nextPhase == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   72</span>            {</div>
+<div class="line"><span class="lineno">   73</span>                _currentPhase = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>            nextPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">StartPhase</a>(tick);</div>
+<div class="line"><span class="lineno">   78</span>            _currentPhase = nextPhase;</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html_a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">DrPepper.Core.Tick.PhaseBase.StartPhase</a></div><div class="ttdeci">virtual void StartPhase(int tick)</div><div class="ttdoc">페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00088">PhaseBase.cs:88</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html_a9c4759f6010fc868dbe7ea3ae9cc7079"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">DrPepper.Core.Tick.PhaseBase.EndPhase</a></div><div class="ttdeci">virtual void EndPhase(int tick)</div><div class="ttdoc">페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00118">PhaseBase.cs:118</a></div></div>
 </div><!-- fragment -->
@@ -226,10 +226,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a> 파일의 <a class="el" href="../../d9/d65/_tick_system_8cs_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">return</span> ++tick;</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
+<p class="definition"><a class="el" href="../../d9/d65/_tick_system_8cs_source.html">TickSystem.cs</a> 파일의 <a class="el" href="../../d9/d65/_tick_system_8cs_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>        {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">return</span> ++tick;</div>
+<div class="line"><span class="lineno">   58</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -242,7 +242,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html">Tick</a></li><li class="navelem"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:32, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

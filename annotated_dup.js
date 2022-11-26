@@ -4,10 +4,17 @@ var annotated_dup =
       [ "Core", "de/d69/namespace_dr_pepper_1_1_core.html", [
         [ "Actor", "df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html", [
           [ "Actor", "d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html", null ],
+          [ "ActorAIData", "db/dc8/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_a_i_data.html", null ],
+          [ "ActorAIDataContainer", "d2/df0/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_a_i_data_container.html", null ],
           [ "ActorAttackComponent", "d4/d28/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component.html", null ],
+          [ "ActorData", "d3/d18/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data.html", null ],
+          [ "ActorDataContainer", "d0/ded/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data_container.html", null ],
           [ "ActorSystem", "d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html", null ],
           [ "EnemyObject", "d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html", null ],
+          [ "EnemySpawnData", "dd/dba/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_spawn_data.html", null ],
           [ "HitComponent", "dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html", null ],
+          [ "PatternData", "dc/d9b/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data.html", null ],
+          [ "PatternDataContainer", "d4/dab/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data_container.html", null ],
           [ "WallObject", "dc/d3c/class_dr_pepper_1_1_core_1_1_actor_1_1_wall_object.html", null ]
         ] ],
         [ "Camera", "dc/d34/namespace_dr_pepper_1_1_core_1_1_camera.html", [
@@ -81,12 +88,13 @@ var annotated_dup =
       [ "PlayerObject", "d3/dd3/class_dr_pepper_1_1_player_object.html", null ],
       [ "Projectile", "d5/ddd/class_dr_pepper_1_1_projectile.html", null ],
       [ "TestObject", "de/de0/class_dr_pepper_1_1_test_object.html", null ],
-      [ "Utility", "da/d4e/class_dr_pepper_1_1_utility.html", null ]
+      [ "Utility", "da/d4e/class_dr_pepper_1_1_utility.html", "da/d4e/class_dr_pepper_1_1_utility" ]
     ] ],
     [ "TestProject", "db/db5/namespace_test_project.html", [
       [ "HangulHelper", "d3/d36/class_test_project_1_1_hangul_helper.html", "d3/d36/class_test_project_1_1_hangul_helper" ]
     ] ],
     [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
+    [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
     [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
     [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
     [ "ChasePlayerCamera", "d5/d12/class_chase_player_camera.html", null ],

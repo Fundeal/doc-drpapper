@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('dc/d6b/class_dr_pepper_1_1_core_1_1_ac
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
 <a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
 <a href="../../d5/d1d/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">DrPepper.Core.Actor.HitComponent 클래스 참조</div></div>
 </div><!--header-->
@@ -113,6 +114,11 @@ Public 멤버 함수</h2></td></tr>
 Public 속성</h2></td></tr>
 <tr class="memitem:a611b93ce3ede61e26031cf0b1fbbab35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#a611b93ce3ede61e26031cf0b1fbbab35">HitCheck</a></td></tr>
 <tr class="separator:a611b93ce3ede61e26031cf0b1fbbab35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+속성</h2></td></tr>
+<tr class="memitem:ae57f6792ff18ab8747d38e3fd1d13b79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#ae57f6792ff18ab8747d38e3fd1d13b79">isDead</a> = false<code> [get]</code></td></tr>
+<tr class="separator:ae57f6792ff18ab8747d38e3fd1d13b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
@@ -142,20 +148,20 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>        {</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (_actor &amp;&amp; !_actor.IsDamageable)</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> collisionData.AnotherObjects.Distinct())</div>
-<div class="line"><span class="lineno">   54</span>            {</div>
-<div class="line"><span class="lineno">   55</span>                Actor tempActor;</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;Actor&gt;(out tempActor))</div>
-<div class="line"><span class="lineno">   57</span>                {</div>
-<div class="line"><span class="lineno">   58</span>                    <span class="keywordflow">if</span> (tempActor.IsTouchDamage)</div>
-<div class="line"><span class="lineno">   59</span>                        Hit(tempActor.Damage);</div>
-<div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">if</span> (_actor &amp;&amp; !_actor.actorData.isDamageable)</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> collisionData.AnotherObjects.Distinct())</div>
+<div class="line"><span class="lineno">   58</span>            {</div>
+<div class="line"><span class="lineno">   59</span>                Actor tempActor;</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;Actor&gt;(out tempActor))</div>
+<div class="line"><span class="lineno">   61</span>                {</div>
+<div class="line"><span class="lineno">   62</span>                    <span class="keywordflow">if</span> (tempActor.actorData.isTouchDamage)</div>
+<div class="line"><span class="lineno">   63</span>                        Hit(tempActor.actorData.damage);</div>
+<div class="line"><span class="lineno">   64</span>                }</div>
+<div class="line"><span class="lineno">   65</span>            }</div>
+<div class="line"><span class="lineno">   66</span>        }</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_html"><div class="ttname"><a href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">DrPepper.Core.Cell.CellBasedObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de9/_cell_based_object_8cs_source.html#l00008">CellBasedObject.cs:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -184,20 +190,20 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (_actor &amp;&amp; !_actor.IsDamageable)</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> collisionData.AnotherObjects.Distinct())</div>
-<div class="line"><span class="lineno">   69</span>            {</div>
-<div class="line"><span class="lineno">   70</span>                Actor tempActor;</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;Actor&gt;(out tempActor))</div>
-<div class="line"><span class="lineno">   72</span>                {</div>
-<div class="line"><span class="lineno">   73</span>                    <span class="keywordflow">if</span> (tempActor.IsTouchDamage)</div>
-<div class="line"><span class="lineno">   74</span>                        Hit(tempActor.Damage);</div>
-<div class="line"><span class="lineno">   75</span>                }</div>
-<div class="line"><span class="lineno">   76</span>            }</div>
-<div class="line"><span class="lineno">   77</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">if</span> (_actor &amp;&amp; !_actor.actorData.isDamageable)</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cbo <span class="keywordflow">in</span> collisionData.AnotherObjects.Distinct())</div>
+<div class="line"><span class="lineno">   73</span>            {</div>
+<div class="line"><span class="lineno">   74</span>                Actor tempActor;</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (cbo.TryGetComponent&lt;Actor&gt;(out tempActor))</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">if</span> (tempActor.actorData.isTouchDamage)</div>
+<div class="line"><span class="lineno">   78</span>                        Hit(tempActor.actorData.damage);</div>
+<div class="line"><span class="lineno">   79</span>                }</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,20 +231,21 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">if</span> (_hitEffect)</div>
-<div class="line"><span class="lineno">   37</span>                _hitEffect.Play();</div>
-<div class="line"><span class="lineno">   38</span>            _currentHP -= damage;</div>
-<div class="line"><span class="lineno">   39</span>            HitCheck = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span>(_currentHP &lt;= 0)</div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                <span class="keywordflow">if</span> (_hitEffect)</div>
-<div class="line"><span class="lineno">   43</span>                    _hitEffect.transform.parent = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">   44</span>                Destroy(_hitEffect, 0.4f);</div>
-<div class="line"><span class="lineno">   45</span>                gameObject.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (_hitEffect)</div>
+<div class="line"><span class="lineno">   40</span>                _hitEffect.Play();</div>
+<div class="line"><span class="lineno">   41</span>            _currentHP -= damage;</div>
+<div class="line"><span class="lineno">   42</span>            HitCheck = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span>(_currentHP &lt;= 0 &amp;&amp; !isDead)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>                isDead = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">if</span> (_hitEffect)</div>
+<div class="line"><span class="lineno">   47</span>                    _hitEffect.transform.parent = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   48</span>                Destroy(_hitEffect, 0.4f);</div>
+<div class="line"><span class="lineno">   49</span>                _actor.Dead();</div>
+<div class="line"><span class="lineno">   50</span>            }</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -265,10 +272,11 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
-<div class="line"><span class="lineno">   25</span>            _currentHP = _maxHP;</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            isDead = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   27</span>            _currentHP = _maxHP;</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,11 +304,12 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
-<div class="line"><span class="lineno">   30</span>            _maxHP = maxHP;</div>
-<div class="line"><span class="lineno">   31</span>            _currentHP = maxHP;</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            isDead = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   33</span>            _maxHP = maxHP;</div>
+<div class="line"><span class="lineno">   34</span>            _currentHP = maxHP;</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -321,6 +330,32 @@ Public 속성</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">속성 문서화</h2>
+<a id="ae57f6792ff18ab8747d38e3fd1d13b79" name="ae57f6792ff18ab8747d38e3fd1d13b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57f6792ff18ab8747d38e3fd1d13b79">&#9670;&nbsp;</a></span>isDead</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DrPepper.Core.Actor.HitComponent.isDead = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>{ <span class="keyword">private</span> <span class="keyword">set</span>; <span class="keyword">get</span>; } = <span class="keyword">false</span>;</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
 <li><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a></li>
 </ul>
@@ -330,7 +365,7 @@ Public 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">Actor</a></li><li class="navelem"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html">HitComponent</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

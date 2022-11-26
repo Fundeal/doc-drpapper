@@ -99,6 +99,10 @@ Public 멤버 함수</h2></td></tr>
 Public 속성</h2></td></tr>
 <tr class="memitem:a441887cfd0b27d3e0e08a9dc727f32ff"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html#a441887cfd0b27d3e0e08a9dc727f32ff">SpawnConsonants</a> = new List&lt;string&gt;()</td></tr>
 <tr class="separator:a441887cfd0b27d3e0e08a9dc727f32ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56319cb44e86c89bb58e397350bb6dd1"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html#a56319cb44e86c89bb58e397350bb6dd1">SpawnJaumConsonants</a> = new List&lt;string&gt;()</td></tr>
+<tr class="separator:a56319cb44e86c89bb58e397350bb6dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77f7d897d8ad4ce28d13706e566c8ec"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html#ab77f7d897d8ad4ce28d13706e566c8ec">SpawnMoumConsonants</a> = new List&lt;string&gt;()</td></tr>
+<tr class="separator:ab77f7d897d8ad4ce28d13706e566c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
@@ -128,32 +132,69 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d3/dbe/_mana_system_8cs_source.html">ManaSystem.cs</a> 파일의 <a class="el" href="../../d3/dbe/_mana_system_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
-<div class="line"><span class="lineno">   15</span>            _UniqueIndices.Clear();</div>
-<div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordtype">int</span> maxCount = Mathf.Min(SpawnConsonants.Count, count);</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordtype">string</span>[] result = <span class="keyword">new</span> <span class="keywordtype">string</span>[maxCount];</div>
-<div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">if</span> (maxCount == 0)</div>
-<div class="line"><span class="lineno">   21</span>            {</div>
-<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   23</span>            }</div>
-<div class="line"><span class="lineno">   24</span> </div>
-<div class="line"><span class="lineno">   25</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; SpawnConsonants.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   26</span>            {</div>
-<div class="line"><span class="lineno">   27</span>                _UniqueIndices.Add(i);</div>
-<div class="line"><span class="lineno">   28</span>            }</div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; maxCount; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   31</span>            {</div>
-<div class="line"><span class="lineno">   32</span>                <span class="keywordtype">int</span> randomIndex = Random.Range(0, _UniqueIndices.Count);</div>
-<div class="line"><span class="lineno">   33</span>                result[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = SpawnConsonants[randomIndex];</div>
-<div class="line"><span class="lineno">   34</span>                _UniqueIndices.RemoveAt(randomIndex);</div>
-<div class="line"><span class="lineno">   35</span>            }</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   38</span>        }</div>
+<p class="definition"><a class="el" href="../../d3/dbe/_mana_system_8cs_source.html">ManaSystem.cs</a> 파일의 <a class="el" href="../../d3/dbe/_mana_system_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
+<div class="line"><span class="lineno">   17</span>            _UniqueIndices.Clear();</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>            <span class="comment">//int maxCount = Mathf.Min(SpawnConsonants.Count, count);</span></div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordtype">string</span>[] result = <span class="keyword">new</span> <span class="keywordtype">string</span>[count];</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span> (count == 0)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   25</span>            }</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            <span class="comment">//for (int i = 0; i &lt; SpawnConsonants.Count; i++)</span></div>
+<div class="line"><span class="lineno">   28</span>            <span class="comment">//{</span></div>
+<div class="line"><span class="lineno">   29</span>            <span class="comment">//    _UniqueIndices.Add(i);</span></div>
+<div class="line"><span class="lineno">   30</span>            <span class="comment">//}</span></div>
+<div class="line"><span class="lineno">   31</span>            Queue&lt;string&gt; jaumQueue = GetRandomJaumPool();</div>
+<div class="line"><span class="lineno">   32</span>            Queue&lt;string&gt; moumQueue = GetRandomMoumPool();</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (jaumQueue.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   34</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> (moumQueue.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   37</span>            result[0] = jaumQueue.Dequeue();</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (count == 1)</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            result[1] = moumQueue.Dequeue();</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   44</span>            {</div>
+<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">if</span> (Random.Range(0, 2) == 0)</div>
+<div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">if</span> (jaumQueue.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   48</span>                    {</div>
+<div class="line"><span class="lineno">   49</span>                        result[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = SpawnJaumConsonants[Random.Range(0, SpawnJaumConsonants.Count)];</div>
+<div class="line"><span class="lineno">   50</span>                    }</div>
+<div class="line"><span class="lineno">   51</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   52</span>                    {</div>
+<div class="line"><span class="lineno">   53</span>                        result[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = jaumQueue.Dequeue();</div>
+<div class="line"><span class="lineno">   54</span>                    }</div>
+<div class="line"><span class="lineno">   55</span>                }</div>
+<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   57</span>                {</div>
+<div class="line"><span class="lineno">   58</span>                    <span class="keywordflow">if</span> (moumQueue.Count &lt;= 0)</div>
+<div class="line"><span class="lineno">   59</span>                    {</div>
+<div class="line"><span class="lineno">   60</span>                        result[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = SpawnMoumConsonants[Random.Range(0, SpawnMoumConsonants.Count)];</div>
+<div class="line"><span class="lineno">   61</span>                    }</div>
+<div class="line"><span class="lineno">   62</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   63</span>                    {</div>
+<div class="line"><span class="lineno">   64</span>                        result[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = moumQueue.Dequeue();</div>
+<div class="line"><span class="lineno">   65</span>                    }</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            <span class="comment">//for(int i = 0; i &lt; count; i++)</span></div>
+<div class="line"><span class="lineno">   70</span>            <span class="comment">//{</span></div>
+<div class="line"><span class="lineno">   71</span>            <span class="comment">//    int randomIndex = Random.Range(0, _UniqueIndices.Count);</span></div>
+<div class="line"><span class="lineno">   72</span>            <span class="comment">//    result[i] = SpawnConsonants[randomIndex];</span></div>
+<div class="line"><span class="lineno">   73</span>            <span class="comment">//    _UniqueIndices.RemoveAt(randomIndex);</span></div>
+<div class="line"><span class="lineno">   74</span>            <span class="comment">//}</span></div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
@@ -175,6 +216,38 @@ Public 속성</h2></td></tr>
 
 </div>
 </div>
+<a id="a56319cb44e86c89bb58e397350bb6dd1" name="a56319cb44e86c89bb58e397350bb6dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56319cb44e86c89bb58e397350bb6dd1">&#9670;&nbsp;</a></span>SpawnJaumConsonants</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; DrPepper.Core.Mana.ManaSpawnData.SpawnJaumConsonants = new List&lt;string&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/dbe/_mana_system_8cs_source.html">ManaSystem.cs</a> 파일의 <a class="el" href="../../d3/dbe/_mana_system_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab77f7d897d8ad4ce28d13706e566c8ec" name="ab77f7d897d8ad4ce28d13706e566c8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77f7d897d8ad4ce28d13706e566c8ec">&#9670;&nbsp;</a></span>SpawnMoumConsonants</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; DrPepper.Core.Mana.ManaSpawnData.SpawnMoumConsonants = new List&lt;string&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/dbe/_mana_system_8cs_source.html">ManaSystem.cs</a> 파일의 <a class="el" href="../../d3/dbe/_mana_system_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
 <li>Mana/<a class="el" href="../../d3/dbe/_mana_system_8cs_source.html">ManaSystem.cs</a></li>
 </ul>
@@ -184,7 +257,7 @@ Public 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html">Mana</a></li><li class="navelem"><a class="el" href="../../da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html">ManaSpawnData</a></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

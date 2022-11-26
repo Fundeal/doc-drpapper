@@ -126,47 +126,42 @@ $(document).ready(function(){initNavTree('d9/d65/_tick_system_8cs_source.html','
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_function" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">ChangePhase</a>(_startPhase);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (_currentPhase == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">DuringPhase</a>(Time.deltaTime, tick);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> Update()</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (_currentPhase == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">DuringPhase</a>(Time.deltaTime, tick);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> IncrementTick()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> ++tick;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> IncrementTick()</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> ++tick;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">   70</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">ChangePhase</a>(<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a> target)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span> &amp;&amp; _currentPhase.PhaseState == target) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            var nextPhase = _phases[target];</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span>) _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">EndPhase</a>(tick);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (nextPhase == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                _currentPhase = <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            nextPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">StartPhase</a>(tick);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            _currentPhase = nextPhase;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">   65</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">ChangePhase</a>(<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a> target)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span> &amp;&amp; _currentPhase.PhaseState == target) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            var nextPhase = _phases[target];</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (_currentPhase != <span class="keyword">null</span>) _currentPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">EndPhase</a>(tick);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">if</span> (nextPhase == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                _currentPhase = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            nextPhase.<a class="code hl_function" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">StartPhase</a>(tick);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            _currentPhase = nextPhase;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html">DrPepper.Core.Tick.PhaseBase</a></div><div class="ttdoc">틱 시스템의 페이즈 개념을 담당하는 기본 가상 클래스입니다. FSM의 요소로 구성되어 작동합니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00014">PhaseBase.cs:15</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html_a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">DrPepper.Core.Tick.PhaseBase.StartPhase</a></div><div class="ttdeci">virtual void StartPhase(int tick)</div><div class="ttdoc">페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00088">PhaseBase.cs:88</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html_a925a7f50e0e5398429c7313ce1fad175"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">DrPepper.Core.Tick.PhaseBase.DuringPhase</a></div><div class="ttdeci">virtual void DuringPhase(float deltaTime, int tick)</div><div class="ttdoc">페이즈 진입한 상태 (StartPhase 먼저 돌고 Update 함수에 의해 해당 함수가 작동함)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00101">PhaseBase.cs:101</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_phase_base_html_a9c4759f6010fc868dbe7ea3ae9cc7079"><div class="ttname"><a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">DrPepper.Core.Tick.PhaseBase.EndPhase</a></div><div class="ttdeci">virtual void EndPhase(int tick)</div><div class="ttdoc">페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dde/_phase_base_8cs_source.html#l00118">PhaseBase.cs:118</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">DrPepper.Core.Tick.TickSystem</a></div><div class="ttdoc">틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00012">TickSystem.cs:13</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html_a011d75b95b5d8a0beef201c96532b9a5"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">DrPepper.Core.Tick.TickSystem.ChangePhase</a></div><div class="ttdeci">void ChangePhase(Phase target)</div><div class="ttdoc">페이즈를 교체합니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00070">TickSystem.cs:70</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html_a011d75b95b5d8a0beef201c96532b9a5"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5">DrPepper.Core.Tick.TickSystem.ChangePhase</a></div><div class="ttdeci">void ChangePhase(Phase target)</div><div class="ttdoc">페이즈를 교체합니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00065">TickSystem.cs:65</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html_a25a933976d67b0df9abd3d6c0e09294f"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">DrPepper.Core.Tick.TickSystem.Phase</a></div><div class="ttdeci">Phase</div><div class="ttdoc">페이즈 FSM의 State enum값입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00017">TickSystem.cs:18</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_tick_html"><div class="ttname"><a href="../../da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html">DrPepper.Core.Tick</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6e/_global_tick_system_8cs_source.html#l00005">GlobalTickSystem.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -175,7 +170,7 @@ $(document).ready(function(){initNavTree('d9/d65/_tick_system_8cs_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bcbb2cf9a3d3d83e5515c82071a07177.html">Framework</a></li><li class="navelem"><a class="el" href="../../dir_eea81a072bfec77cf16285d2a3ae303a.html">Tick</a></li><li class="navelem"><b>TickSystem.cs</b></li>
-    <li class="footer">생성시간 : 금 11월 25 2022 01:41:31, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 토 11월 26 2022 01:37:17, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

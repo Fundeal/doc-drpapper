@@ -1,16 +1,22 @@
 var hierarchy =
 [
+    [ "DrPepper.Core.Actor.ActorAIData", "db/dc8/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_a_i_data.html", null ],
+    [ "DrPepper.Core.Actor.ActorData", "d3/d18/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data.html", null ],
     [ "DrPepper.Core.Cell.CellBasedObjectCollisionCheck", "d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html", null ],
     [ "DrPepper.Core.Cell.CellBound", "d1/d51/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_bound.html", null ],
     [ "DrPepper.Core.Cell.CellBasedObjectCollisionCheck.CollisionData", "dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html", null ],
     [ "CSVReader", "d4/d16/class_c_s_v_reader.html", null ],
     [ "DrPepper.Core.DataContainerBase", "dd/de0/class_dr_pepper_1_1_core_1_1_data_container_base.html", [
+      [ "DrPepper.Core.Actor.ActorAIDataContainer", "d2/df0/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_a_i_data_container.html", null ],
+      [ "DrPepper.Core.Actor.ActorDataContainer", "d0/ded/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data_container.html", null ],
+      [ "DrPepper.Core.Actor.PatternDataContainer", "d4/dab/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data_container.html", null ],
       [ "DrPepper.Core.Hangul.WordDataContainer", "d6/db7/class_dr_pepper_1_1_core_1_1_hangul_1_1_word_data_container.html", null ]
     ] ],
     [ "Editor", null, [
       [ "DrPepper.LevelEditor.LevelEditorEditor", "d9/df3/class_dr_pepper_1_1_level_editor_1_1_level_editor_editor.html", null ]
     ] ],
     [ "DrPepper.LevelEditor.EditorOption", "d5/d72/class_dr_pepper_1_1_level_editor_1_1_editor_option.html", null ],
+    [ "DrPepper.Core.Actor.EnemySpawnData", "dd/dba/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_spawn_data.html", null ],
     [ "DrPepper.GlobalConstant", "db/d5e/class_dr_pepper_1_1_global_constant.html", null ],
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "TestProject.HangulHelper", "d3/d36/class_test_project_1_1_hangul_helper.html", null ],
@@ -19,6 +25,7 @@ var hierarchy =
     [ "DrPepper.Core.Mana.ManaSpawnData", "da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html", null ],
     [ "MonoBehaviour", null, [
       [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
+      [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
       [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
       [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
       [ "ChasePlayerCamera", "d5/d12/class_chase_player_camera.html", null ],
@@ -80,6 +87,7 @@ var hierarchy =
     [ "DrPepper.MonoSingleton< UIManager >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
       [ "DrPepper.Core.UI.UIManager", "dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html", null ]
     ] ],
+    [ "DrPepper.Core.Actor.PatternData", "dc/d9b/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data.html", null ],
     [ "RoomGoalSyllableData", "d3/de0/class_room_goal_syllable_data.html", null ],
     [ "ScriptableObject", null, [
       [ "DrPepper.CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
