@@ -25,6 +25,7 @@ var hierarchy =
     [ "DrPepper.Core.Mana.ManaSpawnData", "da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html", null ],
     [ "MonoBehaviour", null, [
       [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
+      [ "ActorModel", "d9/d5f/class_actor_model.html", null ],
       [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
       [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
       [ "CellTestView", "da/d72/class_cell_test_view.html", null ],

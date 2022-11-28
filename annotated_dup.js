@@ -94,6 +94,7 @@ var annotated_dup =
       [ "HangulHelper", "d3/d36/class_test_project_1_1_hangul_helper.html", "d3/d36/class_test_project_1_1_hangul_helper" ]
     ] ],
     [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
+    [ "ActorModel", "d9/d5f/class_actor_model.html", null ],
     [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
     [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
     [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
