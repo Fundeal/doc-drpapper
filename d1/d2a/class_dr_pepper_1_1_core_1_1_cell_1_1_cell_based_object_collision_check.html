@@ -103,6 +103,8 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a37ffa53a9b24fba69dc2d87899389ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67a76dcb30ebc4a86b2bb5ef4534b4eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html#a67a76dcb30ebc4a86b2bb5ef4534b4eb">AddPreCheckObject</a> (<a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cellObject, Vector2Int nextPos)</td></tr>
 <tr class="separator:a67a76dcb30ebc4a86b2bb5ef4534b4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18740946ef1c5830ac09626baadf9323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html#a18740946ef1c5830ac09626baadf9323">AddStaticData</a> (<a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a> cellObject)</td></tr>
+<tr class="separator:a18740946ef1c5830ac09626baadf9323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e54a2e6b5d84fbddbb3b32f28c42b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html#a13e54a2e6b5d84fbddbb3b32f28c42b8">PreCheckProcess</a> ()</td></tr>
 <tr class="separator:a13e54a2e6b5d84fbddbb3b32f28c42b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -144,25 +146,62 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>        {</div>
-<div class="line"><span class="lineno">   75</span>            CollisionCheckData data = <span class="keyword">new</span> CollisionCheckData();</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>            data.AttachedObject = cellObject;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>            data.PrevBound = cellObject.Bound;</div>
-<div class="line"><span class="lineno">   80</span>            data.NextBound = <span class="keyword">new</span> CellBound();</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>            data.NextBound.Min = nextPos;</div>
-<div class="line"><span class="lineno">   83</span>            data.NextBound.Max = data.NextBound.Min + <span class="keyword">new</span> Vector2Int(cellObject.Size - 1, cellObject.Size - 1);</div>
+<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>        {</div>
+<div class="line"><span class="lineno">   81</span>            CollisionCheckData data = <span class="keyword">new</span> CollisionCheckData();</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>            data.AttachedObject = cellObject;</div>
 <div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span>(!SystemManager.Instance.GetSystem&lt;Room.DungeonSystem&gt;().CurrentRoom.CellSystem.CheckOutOfBoundCellObject(data.NextBound))</div>
-<div class="line"><span class="lineno">   86</span>            {</div>
-<div class="line"><span class="lineno">   87</span>                data.NextBound = data.PrevBound.Clone();</div>
-<div class="line"><span class="lineno">   88</span>            }</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>            _CollisionCheckDatas.Add(data);</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   85</span>            data.PrevBound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">   86</span>            data.NextBound = <span class="keyword">new</span> CellBound();</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            data.NextBound.Min = nextPos;</div>
+<div class="line"><span class="lineno">   89</span>            data.NextBound.Max = data.NextBound.Min + <span class="keyword">new</span> Vector2Int(cellObject.Size - 1, cellObject.Size - 1);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">if</span>(!SystemManager.Instance.GetSystem&lt;Room.DungeonSystem&gt;().CurrentRoom.CellSystem.CheckOutOfBoundCellObject(data.NextBound))</div>
+<div class="line"><span class="lineno">   92</span>            {</div>
+<div class="line"><span class="lineno">   93</span>                data.NextBound = data.PrevBound.Clone();</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>            _CollisionCheckDatas.Add(data);</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a18740946ef1c5830ac09626baadf9323" name="a18740946ef1c5830ac09626baadf9323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18740946ef1c5830ac09626baadf9323">&#9670;&nbsp;</a></span>AddStaticData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrPepper.Core.Cell.CellBasedObjectCollisionCheck.AddStaticData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/da5/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object.html">CellBasedObject</a>&#160;</td>
+          <td class="paramname"><em>cellObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00099">99</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            CollisionCheckData data = <span class="keyword">new</span> CollisionCheckData();</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>            data.AttachedObject = cellObject;</div>
+<div class="line"><span class="lineno">  104</span>            data.PrevBound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">  105</span>            data.NextBound = cellObject.Bound;</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>            _StaticObjectDatas.Add(data);</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -189,11 +228,11 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="comment">//TODO: 페이즈가 총 2개로 줄어들었기 때문에 해당 파트 수정이 필요함</span></div>
-<div class="line"><span class="lineno">   38</span>            Core.SystemManager.Instance.GetSystem&lt;Core.Tick.GlobalTickSystem&gt;().GetPhase(Core.Tick.TickSystem.Phase.Action).OnStartEvent += CellBasedObjectCollisionCheck_OnStartEvent;</div>
-<div class="line"><span class="lineno">   39</span>        }</div>
+<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>        {</div>
+<div class="line"><span class="lineno">   38</span>            <span class="comment">//TODO: 페이즈가 총 2개로 줄어들었기 때문에 해당 파트 수정이 필요함</span></div>
+<div class="line"><span class="lineno">   39</span>            Core.SystemManager.Instance.GetSystem&lt;Core.Tick.GlobalTickSystem&gt;().GetPhase(Core.Tick.TickSystem.Phase.Action).OnStartEvent += CellBasedObjectCollisionCheck_OnStartEvent;</div>
+<div class="line"><span class="lineno">   40</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,20 +259,20 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>        {</div>
-<div class="line"><span class="lineno">   95</span>            _CalculateRelatedObjects();</div>
-<div class="line"><span class="lineno">   96</span>            _CalculateCollision();</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _CollisionCheckDatas.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   99</span>            {</div>
-<div class="line"><span class="lineno">  100</span>                var currentCheckData = _CollisionCheckDatas[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>];</div>
-<div class="line"><span class="lineno">  101</span>                currentCheckData.AttachedObject.NextBound = currentCheckData.UsePrevBound ? currentCheckData.PrevBound : currentCheckData.NextBound;</div>
-<div class="line"><span class="lineno">  102</span>                currentCheckData.UsePrevBound = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        }</div>
+<p class="definition"><a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html">CellBasedObjectCollisionCheck.cs</a> 파일의 <a class="el" href="../../d1/d07/_cell_based_object_collision_check_8cs_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            _CalculateRelatedObjects();</div>
+<div class="line"><span class="lineno">  113</span>            _CalculateCollision();</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _CollisionCheckDatas.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">  116</span>            {</div>
+<div class="line"><span class="lineno">  117</span>                var currentCheckData = _CollisionCheckDatas[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>];</div>
+<div class="line"><span class="lineno">  118</span>                currentCheckData.AttachedObject.NextBound = currentCheckData.UsePrevBound ? currentCheckData.PrevBound : currentCheckData.NextBound;</div>
+<div class="line"><span class="lineno">  119</span>                currentCheckData.UsePrevBound = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  120</span>            }</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
@@ -247,7 +286,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">Cell</a></li><li class="navelem"><a class="el" href="../../d1/d2a/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check.html">CellBasedObjectCollisionCheck</a></li>
-    <li class="footer">생성시간 : 월 11월 28 2022 01:40:25, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 29 2022 01:40:37, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

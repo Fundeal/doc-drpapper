@@ -23,6 +23,7 @@ var hierarchy =
     [ "HangulUtil", "d2/da4/class_hangul_util.html", null ],
     [ "DrPepper.Core.Mana.ManaData", "d4/db8/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_data.html", null ],
     [ "DrPepper.Core.Mana.ManaSpawnData", "da/d98/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_spawn_data.html", null ],
+    [ "DrPepper.Core.Hangul.ManaTable", "d2/d6b/class_dr_pepper_1_1_core_1_1_hangul_1_1_mana_table.html", null ],
     [ "MonoBehaviour", null, [
       [ "ActorEyeSightComponent", "da/d6e/class_actor_eye_sight_component.html", null ],
       [ "ActorModel", "d9/d5f/class_actor_model.html", null ],

@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('d4/db6/class_dr_pepper_1_1_core_1_1_do
 
 <div class="header">
   <div class="summary">
+<a href="#pro-methods">Protected 멤버 함수</a> &#124;
 <a href="#pro-attribs">Protected 속성</a> &#124;
 <a href="../../d0/dd5/class_dr_pepper_1_1_core_1_1_door_1_1_door-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">DrPepper.Core.Door.Door 클래스 참조</div></div>
@@ -99,6 +100,11 @@ DrPepper.Core.Door.Door에 대한 상속 다이어그램 : </div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:a4f0b0b1d8a128f834d1595c9d7089593"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html#a4f0b0b1d8a128f834d1595c9d7089593">Start</a> ()</td></tr>
+<tr class="separator:a4f0b0b1d8a128f834d1595c9d7089593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
 <tr class="memitem:afd79fd2029b380e218fe28edd731c098"><td class="memItemLeft" align="right" valign="top">CellDirection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html#afd79fd2029b380e218fe28edd731c098">_heading</a></td></tr>
@@ -109,7 +115,60 @@ Protected 속성</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
 <p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
-</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a4f0b0b1d8a128f834d1595c9d7089593" name="a4f0b0b1d8a128f834d1595c9d7089593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0b0b1d8a128f834d1595c9d7089593">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DrPepper.Core.Door.Door.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        {</div>
+<div class="line"><span class="lineno">   18</span>            _modeling = GetComponentInChildren&lt;ActorModel&gt;().gameObject;</div>
+<div class="line"><span class="lineno">   19</span>            _cellBasedObject = GetComponent&lt;CellBasedObject&gt;();</div>
+<div class="line"><span class="lineno">   20</span>            _cellBasedObject.Initialize();</div>
+<div class="line"><span class="lineno">   21</span>            _cellBasedObject.SetIsSolid(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">switch</span> (_heading)</div>
+<div class="line"><span class="lineno">   23</span>            {</div>
+<div class="line"><span class="lineno">   24</span>                <span class="keywordflow">case</span> CellDirection.None:</div>
+<div class="line"><span class="lineno">   25</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   26</span>                <span class="keywordflow">case</span> CellDirection.Up:</div>
+<div class="line"><span class="lineno">   27</span>                    _modeling.transform.eulerAngles = <span class="keyword">new</span> Vector3(0, 0, 0);</div>
+<div class="line"><span class="lineno">   28</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordflow">case</span> CellDirection.Right:</div>
+<div class="line"><span class="lineno">   30</span>                    _modeling.transform.transform.eulerAngles = <span class="keyword">new</span> Vector3(0, 90, 0);</div>
+<div class="line"><span class="lineno">   31</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   32</span>                <span class="keywordflow">case</span> CellDirection.Down:</div>
+<div class="line"><span class="lineno">   33</span>                    _modeling.transform.transform.eulerAngles = <span class="keyword">new</span> Vector3(0, 180, 0);</div>
+<div class="line"><span class="lineno">   34</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   35</span>                <span class="keywordflow">case</span> CellDirection.Left:</div>
+<div class="line"><span class="lineno">   36</span>                    _modeling.transform.transform.eulerAngles = <span class="keyword">new</span> Vector3(0, 270, 0);</div>
+<div class="line"><span class="lineno">   37</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">   39</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
 <a id="afeace294c64a9cc0cd9275c54d64554e" name="afeace294c64a9cc0cd9275c54d64554e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afeace294c64a9cc0cd9275c54d64554e">&#9670;&nbsp;</a></span>_cellBasedObject</h2>
 
@@ -167,7 +226,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d0/d27/namespace_dr_pepper_1_1_core_1_1_door.html">Door</a></li><li class="navelem"><a class="el" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html">Door</a></li>
-    <li class="footer">생성시간 : 월 11월 28 2022 01:40:25, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 29 2022 01:40:37, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

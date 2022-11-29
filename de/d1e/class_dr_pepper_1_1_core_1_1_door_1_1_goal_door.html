@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('de/d1e/class_dr_pepper_1_1_core_1_1_do
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pro-methods">Protected 멤버 함수</a> &#124;
 <a href="../../d2/d65/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">DrPepper.Core.Door.GoalDoor 클래스 참조</div></div>
 </div><!--header-->
@@ -104,6 +105,13 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:aabf2d31dc771c481ce80ff17fd87546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312d405055b0d8bdb2633ba50d6054a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html#a312d405055b0d8bdb2633ba50d6054a6">DoorOpen</a> ()</td></tr>
 <tr class="separator:a312d405055b0d8bdb2633ba50d6054a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:a26d1cb4ee1eedf3e75c4b3deca81bf3d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html#a26d1cb4ee1eedf3e75c4b3deca81bf3d">Start</a> ()</td></tr>
+<tr class="separator:a26d1cb4ee1eedf3e75c4b3deca81bf3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0b0b1d8a128f834d1595c9d7089593"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html#a4f0b0b1d8a128f834d1595c9d7089593">Start</a> ()</td></tr>
+<tr class="separator:a4f0b0b1d8a128f834d1595c9d7089593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
@@ -140,10 +148,10 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/dff/_goal_door_8cs_source.html">GoalDoor.cs</a> 파일의 <a class="el" href="../../d2/dff/_goal_door_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            _isOpen = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/dff/_goal_door_8cs_source.html">GoalDoor.cs</a> 파일의 <a class="el" href="../../d2/dff/_goal_door_8cs_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            _isOpen = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -171,16 +179,52 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition"><a class="el" href="../../d2/dff/_goal_door_8cs_source.html">GoalDoor.cs</a> 파일의 <a class="el" href="../../d2/dff/_goal_door_8cs_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">if</span>(_isOpen &amp;&amp; _heading == playerDirection)</div>
+<div class="line"><span class="lineno">   31</span>            {</div>
+<div class="line"><span class="lineno">   32</span>                _isOpen = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a> dungeonSystem = SystemManager.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;();</div>
+<div class="line"><span class="lineno">   34</span>                dungeonSystem.StartRoom(dungeonSystem.GetRoomIndex(_nextDoor));</div>
+<div class="line"><span class="lineno">   35</span>            }</div>
+<div class="line"><span class="lineno">   36</span>        }</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00015">DungeonSystem.cs:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a26d1cb4ee1eedf3e75c4b3deca81bf3d" name="a26d1cb4ee1eedf3e75c4b3deca81bf3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26d1cb4ee1eedf3e75c4b3deca81bf3d">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void DrPepper.Core.Door.GoalDoor.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html">DrPepper.Core.Door.Door</a>(으)로부터 재구현되었습니다.</p>
+
 <p class="definition"><a class="el" href="../../d2/dff/_goal_door_8cs_source.html">GoalDoor.cs</a> 파일의 <a class="el" href="../../d2/dff/_goal_door_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">if</span>(_isOpen &amp;&amp; _heading == playerDirection)</div>
-<div class="line"><span class="lineno">   23</span>            {</div>
-<div class="line"><span class="lineno">   24</span>                _isOpen = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   25</span>                <a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a> dungeonSystem = SystemManager.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;();</div>
-<div class="line"><span class="lineno">   26</span>                dungeonSystem.StartRoom(dungeonSystem.GetRoomIndex(_nextDoor));</div>
-<div class="line"><span class="lineno">   27</span>            }</div>
-<div class="line"><span class="lineno">   28</span>        }</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system_html"><div class="ttname"><a href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DrPepper.Core.Room.DungeonSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d59/_dungeon_system_8cs_source.html#l00015">DungeonSystem.cs:16</a></div></div>
+<div class="line"><span class="lineno">   22</span>            base.Start();</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            Room.Room parentRoom = GetComponentInParent&lt;<a class="code hl_class" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a>.Room&gt;();</div>
+<div class="line"><span class="lineno">   25</span>            parentRoom.OnCompleteRoomEvent.AddListener(DoorOpen);</div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_room_1_1_room_html"><div class="ttname"><a href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">DrPepper.Core.Room.Room</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d98/_room_8cs_source.html#l00009">Room.cs:10</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -193,7 +237,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d0/d27/namespace_dr_pepper_1_1_core_1_1_door.html">Door</a></li><li class="navelem"><a class="el" href="../../de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html">GoalDoor</a></li>
-    <li class="footer">생성시간 : 월 11월 28 2022 01:40:25, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 29 2022 01:40:37, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

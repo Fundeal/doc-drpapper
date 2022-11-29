@@ -102,7 +102,7 @@ Public 속성</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="af949e120be90ca9d092d395927ed88b9" name="af949e120be90ca9d092d395927ed88b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af949e120be90ca9d092d395927ed88b9">&#9670;&nbsp;</a></span>GetRandomSyllables()</h2>
@@ -128,36 +128,36 @@ Public 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
-<div class="line"><span class="lineno">   14</span>            <span class="keywordtype">int</span> maxSpawnCount = SpawnSyllables.Count;</div>
-<div class="line"><span class="lineno">   15</span>            <span class="keywordtype">int</span> currentCount = maxCount;</div>
-<div class="line"><span class="lineno">   16</span>            List&lt;int&gt; totalRandomValues = <span class="keyword">new</span> List&lt;int&gt;();</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordtype">bool</span> isValueEnd = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">while</span> (isValueEnd)</div>
-<div class="line"><span class="lineno">   19</span>            {</div>
-<div class="line"><span class="lineno">   20</span>                List&lt;int&gt; randomValues = <span class="keyword">new</span> List&lt;int&gt;();</div>
-<div class="line"><span class="lineno">   21</span> </div>
-<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; maxSpawnCount; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   23</span>                {</div>
-<div class="line"><span class="lineno">   24</span>                    randomValues.Add(Utility.GetRandomNotContain(0,maxSpawnCount,randomValues.ToArray()));</div>
-<div class="line"><span class="lineno">   25</span>                    currentCount--;</div>
-<div class="line"><span class="lineno">   26</span>                    <span class="keywordflow">if</span> (currentCount &lt;= 0)</div>
-<div class="line"><span class="lineno">   27</span>                    {</div>
-<div class="line"><span class="lineno">   28</span>                        isValueEnd = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   29</span>                        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   30</span>                    }</div>
-<div class="line"><span class="lineno">   31</span>                }</div>
-<div class="line"><span class="lineno">   32</span>                totalRandomValues.AddRange(randomValues);</div>
-<div class="line"><span class="lineno">   33</span>            }</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>            List&lt;string&gt; randomSyllables = <span class="keyword">new</span> List&lt;string&gt;();</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; totalRandomValues.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
-<div class="line"><span class="lineno">   37</span>            {</div>
-<div class="line"><span class="lineno">   38</span>                randomSyllables.Add(SpawnSyllables[totalRandomValues[i]]);</div>
-<div class="line"><span class="lineno">   39</span>            }</div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">return</span> randomSyllables;</div>
-<div class="line"><span class="lineno">   41</span>        }</div>
+<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>        {</div>
+<div class="line"><span class="lineno">   15</span>            <span class="keywordtype">int</span> maxSpawnCount = SpawnSyllables.Count;</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordtype">int</span> currentCount = maxCount;</div>
+<div class="line"><span class="lineno">   17</span>            List&lt;int&gt; totalRandomValues = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordtype">bool</span> isValueEnd = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   19</span>            <span class="keywordflow">while</span> (isValueEnd)</div>
+<div class="line"><span class="lineno">   20</span>            {</div>
+<div class="line"><span class="lineno">   21</span>                List&lt;int&gt; randomValues = <span class="keyword">new</span> List&lt;int&gt;();</div>
+<div class="line"><span class="lineno">   22</span> </div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; maxSpawnCount; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   24</span>                {</div>
+<div class="line"><span class="lineno">   25</span>                    randomValues.Add(Utility.GetRandomNotContain(0,maxSpawnCount,randomValues.ToArray()));</div>
+<div class="line"><span class="lineno">   26</span>                    currentCount--;</div>
+<div class="line"><span class="lineno">   27</span>                    <span class="keywordflow">if</span> (currentCount &lt;= 0)</div>
+<div class="line"><span class="lineno">   28</span>                    {</div>
+<div class="line"><span class="lineno">   29</span>                        isValueEnd = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   30</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   31</span>                    }</div>
+<div class="line"><span class="lineno">   32</span>                }</div>
+<div class="line"><span class="lineno">   33</span>                totalRandomValues.AddRange(randomValues);</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>            List&lt;string&gt; randomSyllables = <span class="keyword">new</span> List&lt;string&gt;();</div>
+<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; totalRandomValues.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   38</span>            {</div>
+<div class="line"><span class="lineno">   39</span>                randomSyllables.Add(SpawnSyllables[totalRandomValues[i]]);</div>
+<div class="line"><span class="lineno">   40</span>            }</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> randomSyllables;</div>
+<div class="line"><span class="lineno">   42</span>        }</div>
 <div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
@@ -175,7 +175,7 @@ Public 속성</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d1/de1/_actor_system_8cs_source.html">ActorSystem.cs</a> 파일의 <a class="el" href="../../d1/de1/_actor_system_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ Public 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">Actor</a></li><li class="navelem"><a class="el" href="../../dd/dba/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_spawn_data.html">EnemySpawnData</a></li>
-    <li class="footer">생성시간 : 월 11월 28 2022 01:40:25, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 화 11월 29 2022 01:40:37, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
