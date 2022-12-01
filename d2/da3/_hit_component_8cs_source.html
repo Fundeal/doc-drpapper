@@ -86,16 +86,16 @@ $(document).ready(function(){initNavTree('d2/da3/_hit_component_8cs_source.html'
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a>;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html">DrPepper.Core.UI</a>;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Linq;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UnityEngine.Events;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine.UI;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine.VFX;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">DrPepper.Core.Actor</a></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d4/d3a/namespace_dr_pepper_1_1_core_1_1_effect.html">DrPepper.Core.Effect</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span><a class="code hl_namespace" href="../../d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html">DrPepper.Core.UI</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>UnityEngine.Events;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>UnityEngine.VFX;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">DrPepper.Core.Actor</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html">HitComponent</a> : MonoBehaviour</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span> UnityEvent&lt;int&gt; OnChangeMaxHpEvent = <span class="keyword">new</span> UnityEvent&lt;int&gt;();</div>
@@ -107,36 +107,42 @@ $(document).ready(function(){initNavTree('d2/da3/_hit_component_8cs_source.html'
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> currentHp { <span class="keyword">get</span> =&gt; _currentHP; }</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span> <span class="keywordtype">int</span> maxHp { <span class="keyword">get</span> =&gt; _maxHP; }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">protected</span> <span class="keywordtype">int</span> _maxHP;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">protected</span> <span class="keywordtype">int</span> _currentHP;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">private</span> <span class="keywordtype">int</span> _maxHP;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">private</span> <span class="keywordtype">int</span> _currentHP;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">private</span> EffectType _effectType;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(<span class="keywordtype">int</span> maxHP)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            isDead = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            _maxHP = maxHP;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            _currentHP = maxHP;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            OnChangeMaxHpEvent.Invoke(maxHP);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Hit(<span class="keywordtype">int</span> damage)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            _currentHP -= damage;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            HitCheck = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            OnChangeHpEvent.Invoke(damage);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (_currentHP &lt;= 0 &amp;&amp; !isDead)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                isDead = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                OnDeadEvent.Invoke();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Initialize(<span class="keywordtype">int</span> maxHP, EffectType effectType)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            isDead = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            _effectType = effectType;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _maxHP = maxHP;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            _currentHP = maxHP;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            OnChangeMaxHpEvent.Invoke(maxHP);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Hit(<span class="keywordtype">int</span> damage)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html">EffectSystem</a>&gt;().PlayEffect(_effectType, transform.position);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            _currentHP -= damage;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            HitCheck = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            OnChangeHpEvent.Invoke(damage);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (_currentHP &lt;= 0 &amp;&amp; !isDead)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                isDead = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                OnDeadEvent.Invoke();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_hit_component_html"><div class="ttname"><a href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html">DrPepper.Core.Actor.HitComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da3/_hit_component_8cs_source.html#l00012">HitComponent.cs:13</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_effect_1_1_effect_system_html"><div class="ttname"><a href="../../db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html">DrPepper.Core.Effect.EffectSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d33/_effect_system_8cs_source.html#l00007">EffectSystem.cs:8</a></div></div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_system_manager_html"><div class="ttname"><a href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">DrPepper.Core.SystemManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d95/_system_manager_8cs_source.html#l00009">SystemManager.cs:10</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_actor_html"><div class="ttname"><a href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">DrPepper.Core.Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d68/_actor_8cs_source.html#l00010">Actor.cs:11</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_cell_html"><div class="ttname"><a href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">DrPepper.Core.Cell</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d53/_c_b_view_test_8cs_source.html#l00005">CBViewTest.cs:6</a></div></div>
+<div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_effect_html"><div class="ttname"><a href="../../d4/d3a/namespace_dr_pepper_1_1_core_1_1_effect.html">DrPepper.Core.Effect</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d22/_effect_list_8cs_source.html#l00006">EffectList.cs:7</a></div></div>
 <div class="ttc" id="anamespace_dr_pepper_1_1_core_1_1_u_i_html"><div class="ttname"><a href="../../d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html">DrPepper.Core.UI</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/de4/_u_i_manager_8cs_source.html#l00005">UIManager.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -144,7 +150,7 @@ $(document).ready(function(){initNavTree('d2/da3/_hit_component_8cs_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>HitComponent.cs</b></li>
-    <li class="footer">생성시간 : 수 11월 30 2022 01:41:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

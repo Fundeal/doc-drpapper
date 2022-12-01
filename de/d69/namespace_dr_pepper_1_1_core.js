@@ -4,6 +4,7 @@ var namespace_dr_pepper_1_1_core =
     [ "Camera", "dc/d34/namespace_dr_pepper_1_1_core_1_1_camera.html", "dc/d34/namespace_dr_pepper_1_1_core_1_1_camera" ],
     [ "Cell", "da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html", "da/d00/namespace_dr_pepper_1_1_core_1_1_cell" ],
     [ "Door", "d0/d27/namespace_dr_pepper_1_1_core_1_1_door.html", "d0/d27/namespace_dr_pepper_1_1_core_1_1_door" ],
+    [ "Effect", "d4/d3a/namespace_dr_pepper_1_1_core_1_1_effect.html", "d4/d3a/namespace_dr_pepper_1_1_core_1_1_effect" ],
     [ "Hangul", "d7/d33/namespace_dr_pepper_1_1_core_1_1_hangul.html", "d7/d33/namespace_dr_pepper_1_1_core_1_1_hangul" ],
     [ "Mana", "d5/da9/namespace_dr_pepper_1_1_core_1_1_mana.html", "d5/da9/namespace_dr_pepper_1_1_core_1_1_mana" ],
     [ "Room", "d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html", "d8/d2f/namespace_dr_pepper_1_1_core_1_1_room" ],

@@ -9,7 +9,8 @@ var searchData=
   ['actordata_6',['ActorData',['../d3/d18/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data.html',1,'DrPepper::Core::Actor']]],
   ['actordatacontainer_7',['ActorDataContainer',['../d0/ded/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data_container.html',1,'DrPepper::Core::Actor']]],
   ['actoreyesightcomponent_8',['ActorEyeSightComponent',['../da/d6e/class_actor_eye_sight_component.html',1,'']]],
-  ['actormodel_9',['ActorModel',['../d9/d5f/class_actor_model.html',1,'']]],
-  ['actorsystem_10',['ActorSystem',['../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html',1,'DrPepper::Core::Actor']]],
-  ['areaviewcomponent_11',['AreaViewComponent',['../dc/d9b/class_dr_pepper_1_1_area_view_component.html',1,'DrPepper']]]
+  ['actorjumpanimation_9',['ActorJumpAnimation',['../d1/d4b/class_dr_pepper_1_1_actor_jump_animation.html',1,'DrPepper']]],
+  ['actormodel_10',['ActorModel',['../d9/d5f/class_actor_model.html',1,'']]],
+  ['actorsystem_11',['ActorSystem',['../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html',1,'DrPepper::Core::Actor']]],
+  ['areaviewcomponent_12',['AreaViewComponent',['../dc/d9b/class_dr_pepper_1_1_area_view_component.html',1,'DrPepper']]]
 ];

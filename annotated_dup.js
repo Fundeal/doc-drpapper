@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "DrPepper", "d2/da8/namespace_dr_pepper.html", [
+      [ "Camera", "d4/d6a/namespace_dr_pepper_1_1_camera.html", [
+        [ "ChasePlayerCamera", "de/d75/class_dr_pepper_1_1_camera_1_1_chase_player_camera.html", null ]
+      ] ],
       [ "Core", "de/d69/namespace_dr_pepper_1_1_core.html", [
         [ "Actor", "df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html", [
           [ "Actor", "d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html", null ],
@@ -33,6 +36,10 @@ var annotated_dup =
           [ "Door", "d4/db6/class_dr_pepper_1_1_core_1_1_door_1_1_door.html", null ],
           [ "EntryDoor", "d5/dd7/class_dr_pepper_1_1_core_1_1_door_1_1_entry_door.html", null ],
           [ "GoalDoor", "de/d1e/class_dr_pepper_1_1_core_1_1_door_1_1_goal_door.html", null ]
+        ] ],
+        [ "Effect", "d4/d3a/namespace_dr_pepper_1_1_core_1_1_effect.html", [
+          [ "EffectSystem", "db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html", null ],
+          [ "EffectTable", "d7/dbf/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_table.html", null ]
         ] ],
         [ "Hangul", "d7/d33/namespace_dr_pepper_1_1_core_1_1_hangul.html", [
           [ "HangulSystem", "dc/d7c/class_dr_pepper_1_1_core_1_1_hangul_1_1_hangul_system.html", null ],
@@ -81,8 +88,10 @@ var annotated_dup =
         [ "LevelEditor", "d5/db8/class_dr_pepper_1_1_level_editor_1_1_level_editor.html", null ],
         [ "LevelEditorEditor", "d9/df3/class_dr_pepper_1_1_level_editor_1_1_level_editor_editor.html", null ]
       ] ],
+      [ "ActorJumpAnimation", "d1/d4b/class_dr_pepper_1_1_actor_jump_animation.html", null ],
       [ "AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
       [ "CellBasedObjectData", "d1/ddd/class_dr_pepper_1_1_cell_based_object_data.html", null ],
+      [ "DevPanel_ChangeRoom", "d0/dcf/class_dr_pepper_1_1_dev_panel___change_room.html", null ],
       [ "DevPanel_RoomClear", "d4/df6/class_dr_pepper_1_1_dev_panel___room_clear.html", null ],
       [ "GlobalConstant", "db/d5e/class_dr_pepper_1_1_global_constant.html", null ],
       [ "MonoSingleton", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
@@ -99,7 +108,6 @@ var annotated_dup =
     [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
     [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
     [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
-    [ "ChasePlayerCamera", "d5/d12/class_chase_player_camera.html", null ],
     [ "CSVReader", "d4/d16/class_c_s_v_reader.html", null ],
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "HangulUtil", "d2/da4/class_hangul_util.html", null ],

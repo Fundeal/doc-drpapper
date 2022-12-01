@@ -13,7 +13,7 @@ var searchData=
   ['cellroutetrackingsystem_10',['CellRouteTrackingSystem',['../d1/d7f/class_dr_pepper_1_1_core_1_1_cell_route_tracking_system.html',1,'DrPepper::Core']]],
   ['cellsystem_11',['CellSystem',['../d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html',1,'DrPepper::Core::Cell']]],
   ['celltestview_12',['CellTestView',['../da/d72/class_cell_test_view.html',1,'']]],
-  ['chaseplayercamera_13',['ChasePlayerCamera',['../d5/d12/class_chase_player_camera.html',1,'']]],
+  ['chaseplayercamera_13',['ChasePlayerCamera',['../de/d75/class_dr_pepper_1_1_camera_1_1_chase_player_camera.html',1,'DrPepper::Camera']]],
   ['collisiondata_14',['CollisionData',['../dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html',1,'DrPepper::Core::Cell::CellBasedObjectCollisionCheck']]],
   ['csvreader_15',['CSVReader',['../d4/d16/class_c_s_v_reader.html',1,'']]]
 ];

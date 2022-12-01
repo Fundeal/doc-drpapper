@@ -15,7 +15,7 @@ var searchData=
   ['cellsystem_12',['CellSystem',['../d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html',1,'DrPepper::Core::Cell']]],
   ['celltestview_13',['CellTestView',['../da/d72/class_cell_test_view.html',1,'']]],
   ['changephase_14',['ChangePhase',['../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a011d75b95b5d8a0beef201c96532b9a5',1,'DrPepper::Core::Tick::TickSystem']]],
-  ['chaseplayercamera_15',['ChasePlayerCamera',['../d5/d12/class_chase_player_camera.html',1,'']]],
+  ['chaseplayercamera_15',['ChasePlayerCamera',['../de/d75/class_dr_pepper_1_1_camera_1_1_chase_player_camera.html',1,'DrPepper::Camera']]],
   ['cho_16',['CHO',['../db/db5/namespace_test_project.html#a8dc9a6a947f521778838d6db7935fb68a4a7adde2647fd3bf972be78a6ce42a93',1,'TestProject']]],
   ['chosungtype_17',['ChosungType',['../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170',1,'TestProject']]],
   ['collisiondata_18',['CollisionData',['../dd/d45/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_based_object_collision_check_1_1_collision_data.html',1,'DrPepper::Core::Cell::CellBasedObjectCollisionCheck']]],

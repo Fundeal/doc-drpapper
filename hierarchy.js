@@ -30,8 +30,9 @@ var hierarchy =
       [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
       [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
       [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
-      [ "ChasePlayerCamera", "d5/d12/class_chase_player_camera.html", null ],
+      [ "DrPepper.ActorJumpAnimation", "d1/d4b/class_dr_pepper_1_1_actor_jump_animation.html", null ],
       [ "DrPepper.AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
+      [ "DrPepper.Camera.ChasePlayerCamera", "de/d75/class_dr_pepper_1_1_camera_1_1_chase_player_camera.html", null ],
       [ "DrPepper.Core.Actor.Actor", "d6/dee/class_dr_pepper_1_1_core_1_1_actor_1_1_actor.html", [
         [ "DrPepper.Core.Actor.EnemyObject", "d4/da2/class_dr_pepper_1_1_core_1_1_actor_1_1_enemy_object.html", null ],
         [ "DrPepper.Core.Actor.WallObject", "dc/d3c/class_dr_pepper_1_1_core_1_1_actor_1_1_wall_object.html", null ]
@@ -55,6 +56,7 @@ var hierarchy =
         [ "DrPepper.Core.Camera.CameraSystem", "d0/d3c/class_dr_pepper_1_1_core_1_1_camera_1_1_camera_system.html", null ],
         [ "DrPepper.Core.CellRouteTrackingSystem", "d1/d7f/class_dr_pepper_1_1_core_1_1_cell_route_tracking_system.html", null ],
         [ "DrPepper.Core.DataSystem", "d0/da8/class_dr_pepper_1_1_core_1_1_data_system.html", null ],
+        [ "DrPepper.Core.Effect.EffectSystem", "db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html", null ],
         [ "DrPepper.Core.Hangul.HangulSystem", "dc/d7c/class_dr_pepper_1_1_core_1_1_hangul_1_1_hangul_system.html", null ],
         [ "DrPepper.Core.InputSystem", "d7/d7f/class_dr_pepper_1_1_core_1_1_input_system.html", null ],
         [ "DrPepper.Core.Mana.ManaSystem", "d7/d32/class_dr_pepper_1_1_core_1_1_mana_1_1_mana_system.html", null ],
@@ -69,6 +71,7 @@ var hierarchy =
         [ "DrPepper.Core.Tick.StandbyPhase", "d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html", null ]
       ] ],
       [ "DrPepper.Core.Tick.TickSystem", "d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html", null ],
+      [ "DrPepper.DevPanel_ChangeRoom", "d0/dcf/class_dr_pepper_1_1_dev_panel___change_room.html", null ],
       [ "DrPepper.DevPanel_RoomClear", "d4/df6/class_dr_pepper_1_1_dev_panel___room_clear.html", null ],
       [ "DrPepper.LevelEditor.LevelEditor", "d5/db8/class_dr_pepper_1_1_level_editor_1_1_level_editor.html", null ],
       [ "DrPepper.MonoSingleton< T >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", null ],
@@ -82,6 +85,9 @@ var hierarchy =
     ] ],
     [ "DrPepper.MonoSingleton< DataContainer >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
       [ "DrPepper.Core.DataContainer", "da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html", null ]
+    ] ],
+    [ "DrPepper.MonoSingleton< EffectTable >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
+      [ "DrPepper.Core.Effect.EffectTable", "d7/dbf/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_table.html", null ]
     ] ],
     [ "DrPepper.MonoSingleton< SystemManager >", "dc/d41/class_dr_pepper_1_1_mono_singleton.html", [
       [ "DrPepper.Core.SystemManager", "d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html", null ]

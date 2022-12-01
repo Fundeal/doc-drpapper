@@ -85,7 +85,6 @@ $(document).ready(function(){initNavTree('dc/d6b/class_dr_pepper_1_1_core_1_1_ac
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
 <a href="#pub-attribs">Public 속성</a> &#124;
-<a href="#pro-attribs">Protected 속성</a> &#124;
 <a href="#properties">속성</a> &#124;
 <a href="../../d5/d1d/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle"><div class="title">DrPepper.Core.Actor.HitComponent 클래스 참조</div></div>
@@ -100,8 +99,8 @@ DrPepper.Core.Actor.HitComponent에 대한 상속 다이어그램 : </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:acd9c9d108c2e774d859fd99bf97dc27e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#acd9c9d108c2e774d859fd99bf97dc27e">Initialize</a> (int maxHP)</td></tr>
-<tr class="separator:acd9c9d108c2e774d859fd99bf97dc27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101e8b6dd8318b3407c57d3f3b5a011c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#a101e8b6dd8318b3407c57d3f3b5a011c">Initialize</a> (int maxHP, EffectType effectType)</td></tr>
+<tr class="separator:a101e8b6dd8318b3407c57d3f3b5a011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c703384100d42556630b4c597a896fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#a3c703384100d42556630b4c597a896fa">Hit</a> (int damage)</td></tr>
 <tr class="separator:a3c703384100d42556630b4c597a896fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -115,13 +114,6 @@ Public 속성</h2></td></tr>
 <tr class="separator:aa68af2a1f7d84cbdeac15ff70fbc61a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a611b93ce3ede61e26031cf0b1fbbab35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#a611b93ce3ede61e26031cf0b1fbbab35">HitCheck</a></td></tr>
 <tr class="separator:a611b93ce3ede61e26031cf0b1fbbab35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected 속성</h2></td></tr>
-<tr class="memitem:a2d5ca37c6ede5c65d4af04495f12df6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#a2d5ca37c6ede5c65d4af04495f12df6b">_maxHP</a></td></tr>
-<tr class="separator:a2d5ca37c6ede5c65d4af04495f12df6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af547e1d8e44aa685cb83eac99294e554"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html#af547e1d8e44aa685cb83eac99294e554">_currentHP</a></td></tr>
-<tr class="separator:af547e1d8e44aa685cb83eac99294e554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 속성</h2></td></tr>
@@ -160,23 +152,25 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>        {</div>
-<div class="line"><span class="lineno">   37</span>            _currentHP -= damage;</div>
-<div class="line"><span class="lineno">   38</span>            HitCheck = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   39</span>            OnChangeHpEvent.Invoke(damage);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (_currentHP &lt;= 0 &amp;&amp; !isDead)</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                isDead = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   44</span>                OnDeadEvent.Invoke();</div>
-<div class="line"><span class="lineno">   45</span>            }</div>
-<div class="line"><span class="lineno">   46</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>        {</div>
+<div class="line"><span class="lineno">   39</span>            SystemManager.Instance.GetSystem&lt;<a class="code hl_class" href="../../db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html">EffectSystem</a>&gt;().PlayEffect(_effectType, transform.position);</div>
+<div class="line"><span class="lineno">   40</span>            _currentHP -= damage;</div>
+<div class="line"><span class="lineno">   41</span>            HitCheck = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>            OnChangeHpEvent.Invoke(damage);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (_currentHP &lt;= 0 &amp;&amp; !isDead)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                isDead = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>                OnDeadEvent.Invoke();</div>
+<div class="line"><span class="lineno">   48</span>            }</div>
+<div class="line"><span class="lineno">   49</span>        }</div>
+<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_effect_1_1_effect_system_html"><div class="ttname"><a href="../../db/d50/class_dr_pepper_1_1_core_1_1_effect_1_1_effect_system.html">DrPepper.Core.Effect.EffectSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/d33/_effect_system_8cs_source.html#l00007">EffectSystem.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="acd9c9d108c2e774d859fd99bf97dc27e" name="acd9c9d108c2e774d859fd99bf97dc27e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd9c9d108c2e774d859fd99bf97dc27e">&#9670;&nbsp;</a></span>Initialize()</h2>
+<a id="a101e8b6dd8318b3407c57d3f3b5a011c" name="a101e8b6dd8318b3407c57d3f3b5a011c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101e8b6dd8318b3407c57d3f3b5a011c">&#9670;&nbsp;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,8 +182,18 @@ Protected 속성</h2></td></tr>
           <td class="memname">void DrPepper.Core.Actor.HitComponent.Initialize </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxHP</em></td><td>)</td>
+          <td class="paramname"><em>maxHP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">EffectType&#160;</td>
+          <td class="paramname"><em>effectType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -199,65 +203,18 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>        {</div>
-<div class="line"><span class="lineno">   29</span>            isDead = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   30</span>            _maxHP = maxHP;</div>
-<div class="line"><span class="lineno">   31</span>            _currentHP = maxHP;</div>
-<div class="line"><span class="lineno">   32</span>            OnChangeMaxHpEvent.Invoke(maxHP);</div>
-<div class="line"><span class="lineno">   33</span>        }</div>
+<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>        {</div>
+<div class="line"><span class="lineno">   30</span>            isDead = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   31</span>            _effectType = effectType;</div>
+<div class="line"><span class="lineno">   32</span>            _maxHP = maxHP;</div>
+<div class="line"><span class="lineno">   33</span>            _currentHP = maxHP;</div>
+<div class="line"><span class="lineno">   34</span>            OnChangeMaxHpEvent.Invoke(maxHP);</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="af547e1d8e44aa685cb83eac99294e554" name="af547e1d8e44aa685cb83eac99294e554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af547e1d8e44aa685cb83eac99294e554">&#9670;&nbsp;</a></span>_currentHP</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DrPepper.Core.Actor.HitComponent._currentHP</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a2d5ca37c6ede5c65d4af04495f12df6b" name="a2d5ca37c6ede5c65d4af04495f12df6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d5ca37c6ede5c65d4af04495f12df6b">&#9670;&nbsp;</a></span>_maxHP</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DrPepper.Core.Actor.HitComponent._maxHP</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d2/da3/_hit_component_8cs_source.html">HitComponent.cs</a> 파일의 <a class="el" href="../../d2/da3/_hit_component_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
 <a id="a611b93ce3ede61e26031cf0b1fbbab35" name="a611b93ce3ede61e26031cf0b1fbbab35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a611b93ce3ede61e26031cf0b1fbbab35">&#9670;&nbsp;</a></span>HitCheck</h2>
 
@@ -407,7 +364,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../df/d7d/namespace_dr_pepper_1_1_core_1_1_actor.html">Actor</a></li><li class="navelem"><a class="el" href="../../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html">HitComponent</a></li>
-    <li class="footer">생성시간 : 수 11월 30 2022 01:41:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
