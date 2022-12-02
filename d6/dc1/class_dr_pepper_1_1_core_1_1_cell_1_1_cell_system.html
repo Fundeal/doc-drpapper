@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: DrPepper.Core.Cell.CellSystem 클래스 참조</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('d6/dc1/class_dr_pepper_1_1_core_1_1_ce
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -135,7 +142,7 @@ Public 멤버 함수</h2></td></tr>
 <p class="definition"><a class="el" href="../../d0/dde/_cell_system_8cs_source.html">CellSystem.cs</a> 파일의 <a class="el" href="../../d0/dde/_cell_system_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a25ef4e2f3759e74df913e7047bedf9ff" name="a25ef4e2f3759e74df913e7047bedf9ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ef4e2f3759e74df913e7047bedf9ff">&#9670;&nbsp;</a></span>AddPreCheckObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ef4e2f3759e74df913e7047bedf9ff">&#9670;&#160;</a></span>AddPreCheckObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +183,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a7c86c0d48bae3eadb88c3045219d971e" name="a7c86c0d48bae3eadb88c3045219d971e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c86c0d48bae3eadb88c3045219d971e">&#9670;&nbsp;</a></span>AddStaticObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c86c0d48bae3eadb88c3045219d971e">&#9670;&#160;</a></span>AddStaticObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +214,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a919262297e7e75d5ef2ec38917aa509a" name="a919262297e7e75d5ef2ec38917aa509a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919262297e7e75d5ef2ec38917aa509a">&#9670;&nbsp;</a></span>AttachCellObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a919262297e7e75d5ef2ec38917aa509a">&#9670;&#160;</a></span>AttachCellObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,19 +250,17 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   86</span>            {</div>
 <div class="line"><span class="lineno">   87</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
 <div class="line"><span class="lineno">   88</span>                {</div>
-<div class="line"><span class="lineno">   89</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
+<div class="line"><span class="lineno">   89</span>                    _Cells[x, y].AddCellObject(cellObject);</div>
 <div class="line"><span class="lineno">   90</span>                }</div>
 <div class="line"><span class="lineno">   91</span>            }</div>
 <div class="line"><span class="lineno">   92</span> </div>
 <div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   94</span>        }</div>
-<div class="ttc" id="anamespace_test_project_html_a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">TestProject.ChosungType.x</a></div><div class="ttdeci">@ x</div><div class="ttdoc">ㅌ</div></div>
-<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">TestProject.JungsungType.y</a></div><div class="ttdeci">@ y</div><div class="ttdoc">ㅛ</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a929cb3dcda97299ade2ddf88a67aafd9" name="a929cb3dcda97299ade2ddf88a67aafd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a929cb3dcda97299ade2ddf88a67aafd9">&#9670;&nbsp;</a></span>AttachCellObjectWithBound()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a929cb3dcda97299ade2ddf88a67aafd9">&#9670;&#160;</a></span>AttachCellObjectWithBound()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +299,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   99</span>            {</div>
 <div class="line"><span class="lineno">  100</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = bound.Min.y; y &lt;= bound.Max.y; y++)</div>
 <div class="line"><span class="lineno">  101</span>                {</div>
-<div class="line"><span class="lineno">  102</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].AddCellObject(cellObject);</div>
+<div class="line"><span class="lineno">  102</span>                    _Cells[x, y].AddCellObject(cellObject);</div>
 <div class="line"><span class="lineno">  103</span>                }</div>
 <div class="line"><span class="lineno">  104</span>            }</div>
 <div class="line"><span class="lineno">  105</span> </div>
@@ -304,7 +309,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a4c57632678caf10e542da25f37c75aa2" name="a4c57632678caf10e542da25f37c75aa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c57632678caf10e542da25f37c75aa2">&#9670;&nbsp;</a></span>CheckAttachEnableCellObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c57632678caf10e542da25f37c75aa2">&#9670;&#160;</a></span>CheckAttachEnableCellObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +367,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a11683f03829122d2afe4f8392e4888a2" name="a11683f03829122d2afe4f8392e4888a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11683f03829122d2afe4f8392e4888a2">&#9670;&nbsp;</a></span>CheckOutOfBoundCellObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a11683f03829122d2afe4f8392e4888a2">&#9670;&#160;</a></span>CheckOutOfBoundCellObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +415,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="af5d63043e348647f92697fd55837bee7" name="af5d63043e348647f92697fd55837bee7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d63043e348647f92697fd55837bee7">&#9670;&nbsp;</a></span>GetCellPosition()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d63043e348647f92697fd55837bee7">&#9670;&#160;</a></span>GetCellPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,7 +451,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a591f9b9a97a3c0d631de446ff2af4f7f" name="a591f9b9a97a3c0d631de446ff2af4f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a591f9b9a97a3c0d631de446ff2af4f7f">&#9670;&nbsp;</a></span>GetWorldPosition()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a591f9b9a97a3c0d631de446ff2af4f7f">&#9670;&#160;</a></span>GetWorldPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +487,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a01058f170ff4a591fccec307fae81342" name="a01058f170ff4a591fccec307fae81342"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01058f170ff4a591fccec307fae81342">&#9670;&nbsp;</a></span>Initialize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a01058f170ff4a591fccec307fae81342">&#9670;&#160;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,7 +524,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a341039e4d18050c1ebec6570fd3f2f12" name="a341039e4d18050c1ebec6570fd3f2f12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a341039e4d18050c1ebec6570fd3f2f12">&#9670;&nbsp;</a></span>PostInitialise()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a341039e4d18050c1ebec6570fd3f2f12">&#9670;&#160;</a></span>PostInitialise()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -549,7 +554,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="abfc56001bf59c56374dabc0be269e52a" name="abfc56001bf59c56374dabc0be269e52a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfc56001bf59c56374dabc0be269e52a">&#9670;&nbsp;</a></span>RemoveCellObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc56001bf59c56374dabc0be269e52a">&#9670;&#160;</a></span>RemoveCellObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,7 +588,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">  181</span>                    <span class="keywordflow">if</span> (_Cells[x, y] == <span class="keyword">null</span>)</div>
 <div class="line"><span class="lineno">  182</span>                        <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>                    _Cells[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a33ddf870eab592abd31e37787b504170a9dd4e461268c8034f5c8564e155c67a6">x</a>, <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba415290769594460e2e485922904f345d">y</a>].RemoveCellObject(cellObject);</div>
+<div class="line"><span class="lineno">  184</span>                    _Cells[x, y].RemoveCellObject(cellObject);</div>
 <div class="line"><span class="lineno">  185</span>                }</div>
 <div class="line"><span class="lineno">  186</span>            }</div>
 <div class="line"><span class="lineno">  187</span>        }</div>
@@ -591,7 +596,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a4088eb502e757669c88d1c4c6ad34699" name="a4088eb502e757669c88d1c4c6ad34699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4088eb502e757669c88d1c4c6ad34699">&#9670;&nbsp;</a></span>StepCheck()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4088eb502e757669c88d1c4c6ad34699">&#9670;&#160;</a></span>StepCheck()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,7 +642,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 <h2 class="groupheader">속성 문서화</h2>
 <a id="a5d01de0391782c40038e04c6b342762e" name="a5d01de0391782c40038e04c6b342762e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d01de0391782c40038e04c6b342762e">&#9670;&nbsp;</a></span>Cells</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d01de0391782c40038e04c6b342762e">&#9670;&#160;</a></span>Cells</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,7 +667,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a705a45f476307af4ee607914412cada5" name="a705a45f476307af4ee607914412cada5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a705a45f476307af4ee607914412cada5">&#9670;&nbsp;</a></span>MaximunSize</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a705a45f476307af4ee607914412cada5">&#9670;&#160;</a></span>MaximunSize</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -695,7 +700,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d00/namespace_dr_pepper_1_1_core_1_1_cell.html">Cell</a></li><li class="navelem"><a class="el" href="../../d6/dc1/class_dr_pepper_1_1_core_1_1_cell_1_1_cell_system.html">CellSystem</a></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

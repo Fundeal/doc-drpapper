@@ -1,12 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefghijklmnopqrstuvwxyz",
+  0: "abcdeghijlmoprstuw",
   1: "abcdeghilmprstuw",
   2: "dt",
   3: "cdeghirs",
   4: "chjp",
-  5: "abcdefghijklmnopqrstuvwxyz",
-  6: "o"
+  5: "o"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "enums",
-  5: "enumvalues",
-  6: "properties"
+  5: "properties"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "네임스페이스들",
   3: "함수",
   4: "열거형 타입",
-  5: "열거형 멤버",
-  6: "속성"
+  5: "속성"
 };
 

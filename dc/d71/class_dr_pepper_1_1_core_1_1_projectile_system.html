@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: DrPepper.Core.ProjectileSystem 클래스 참조</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('dc/d71/class_dr_pepper_1_1_core_1_1_pr
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -117,7 +124,7 @@ Public 멤버 함수</h2></td></tr>
 <p class="definition"><a class="el" href="../../d6/df2/_projectile_system_8cs_source.html">ProjectileSystem.cs</a> 파일의 <a class="el" href="../../d6/df2/_projectile_system_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a439a352dbfef3ac499589c6ad58500c9" name="a439a352dbfef3ac499589c6ad58500c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a439a352dbfef3ac499589c6ad58500c9">&#9670;&nbsp;</a></span>ReleaseTarget()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a439a352dbfef3ac499589c6ad58500c9">&#9670;&#160;</a></span>ReleaseTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +154,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="ac80ce55617abc1d8ddd9cd738922119a" name="ac80ce55617abc1d8ddd9cd738922119a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac80ce55617abc1d8ddd9cd738922119a">&#9670;&nbsp;</a></span>SetTarget()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80ce55617abc1d8ddd9cd738922119a">&#9670;&#160;</a></span>SetTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,11 +182,11 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>            <span class="keywordtype">bool</span>[] checkArray = <span class="keyword">new</span> <span class="keywordtype">bool</span>[_actorSystem.Enemys.Count];</div>
 <div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (checkArray.Length &lt;= 0)</div>
 <div class="line"><span class="lineno">   57</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; checkArray.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; checkArray.Length; i++)</div>
 <div class="line"><span class="lineno">   59</span>            {</div>
-<div class="line"><span class="lineno">   60</span>                checkArray[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>] = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   60</span>                checkArray[i] = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   61</span>            }</div>
-<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;i &lt; count; i++)</div>
 <div class="line"><span class="lineno">   63</span>            {</div>
 <div class="line"><span class="lineno">   64</span>                <span class="keywordtype">int</span> index = UnityEngine.Random.Range(0, checkArray.Length);</div>
 <div class="line"><span class="lineno">   65</span>                <span class="keywordtype">int</span> noTargetCheck = 0;</div>
@@ -195,12 +202,11 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   75</span>                _targets.Add(_actorSystem.Enemys[index]);</div>
 <div class="line"><span class="lineno">   76</span>            }</div>
 <div class="line"><span class="lineno">   77</span>        }</div>
-<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a2f05824bf1d0213b2119bbbc2d79b79f" name="a2f05824bf1d0213b2119bbbc2d79b79f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f05824bf1d0213b2119bbbc2d79b79f">&#9670;&nbsp;</a></span>Shot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f05824bf1d0213b2119bbbc2d79b79f">&#9670;&#160;</a></span>Shot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,9 +254,9 @@ Public 멤버 함수</h2></td></tr>
 <p class="definition"><a class="el" href="../../d6/df2/_projectile_system_8cs_source.html">ProjectileSystem.cs</a> 파일의 <a class="el" href="../../d6/df2/_projectile_system_8cs_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
 <div class="line"><span class="lineno">   35</span>            SetTarget(count);</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _targets.Count;<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0;i &lt; _targets.Count;i++)</div>
 <div class="line"><span class="lineno">   37</span>            {</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515">j</a> &lt; count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515">j</a>++)</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; count; j++)</div>
 <div class="line"><span class="lineno">   39</span>                {</div>
 <div class="line"><span class="lineno">   40</span>                    Projectile curProjectile = _projectilePool[_poolIndex];</div>
 <div class="line"><span class="lineno">   41</span>                    curProjectile.gameObject.SetActive(<span class="keyword">true</span>);</div>
@@ -264,7 +270,6 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>            }</div>
 <div class="line"><span class="lineno">   50</span>            ReleaseTarget();</div>
 <div class="line"><span class="lineno">   51</span>        }</div>
-<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba363b122c528f54df4a0446b6bab05515">TestProject.JungsungType.j</a></div><div class="ttdeci">@ j</div><div class="ttdoc">ㅓ</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -277,7 +282,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../dc/d71/class_dr_pepper_1_1_core_1_1_projectile_system.html">ProjectileSystem</a></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

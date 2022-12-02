@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: DrPepper.Core.Tick.PhaseBase 클래스 참조</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('d1/d61/class_dr_pepper_1_1_core_1_1_ti
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -92,7 +99,7 @@ $(document).ready(function(){initNavTree('d1/d61/class_dr_pepper_1_1_core_1_1_ti
 </div><!--header-->
 <div class="contents">
 
-<p>틱 시스템의 페이즈 개념을 담당하는 기본 가상 클래스입니다. FSM의 요소로 구성되어 작동합니다.  
+<p>틱 시스템의 페이즈 개념을 담당하는 기본 가상 클래스입니다. FSM의 요소로 구성되어 작동합니다.   
  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#details">더 자세히 ...</a></p>
 <div class="dynheader">
 DrPepper.Core.Tick.PhaseBase에 대한 상속 다이어그램 : </div>
@@ -109,25 +116,25 @@ DrPepper.Core.Tick.PhaseBase에 대한 상속 다이어그램 : </div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a6382b418182bb3448e835b62450b49dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a6382b418182bb3448e835b62450b49dc">Register</a> (<a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a> system)</td></tr>
-<tr class="memdesc:a6382b418182bb3448e835b62450b49dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html" title="틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.">TickSystem</a> 에 해당 페이즈 클래스를 등록하는 함수  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a6382b418182bb3448e835b62450b49dc">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a6382b418182bb3448e835b62450b49dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html" title="틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.">TickSystem</a> 에 해당 페이즈 클래스를 등록하는 함수   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a6382b418182bb3448e835b62450b49dc">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a6382b418182bb3448e835b62450b49dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">StartPhase</a> (int tick)</td></tr>
-<tr class="memdesc:a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨)  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨)   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a5ec1f1e20ccf0c4ca8a292a58e99bfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a925a7f50e0e5398429c7313ce1fad175"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">DuringPhase</a> (float deltaTime, int tick)</td></tr>
-<tr class="memdesc:a925a7f50e0e5398429c7313ce1fad175"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진입한 상태 (StartPhase 먼저 돌고 Update 함수에 의해 해당 함수가 작동함)  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a925a7f50e0e5398429c7313ce1fad175"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진입한 상태 (StartPhase 먼저 돌고 Update 함수에 의해 해당 함수가 작동함)   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a925a7f50e0e5398429c7313ce1fad175">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a925a7f50e0e5398429c7313ce1fad175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c4759f6010fc868dbe7ea3ae9cc7079"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">EndPhase</a> (int tick)</td></tr>
-<tr class="memdesc:a9c4759f6010fc868dbe7ea3ae9cc7079"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨)  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a9c4759f6010fc868dbe7ea3ae9cc7079"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨)   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a9c4759f6010fc868dbe7ea3ae9cc7079">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a9c4759f6010fc868dbe7ea3ae9cc7079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a881f3661febed92793eb1193baf3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a41a881f3661febed92793eb1193baf3c">ResetAllEvents</a> ()</td></tr>
-<tr class="memdesc:a41a881f3661febed92793eb1193baf3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 페이즈의 모든 이벤트를 초기화 함  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a41a881f3661febed92793eb1193baf3c">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a41a881f3661febed92793eb1193baf3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 페이즈의 모든 이벤트를 초기화 함   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a41a881f3661febed92793eb1193baf3c">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a41a881f3661febed92793eb1193baf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
 <tr class="memitem:ab18e656dc374d24a2000466e7a9b0f14"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#ab18e656dc374d24a2000466e7a9b0f14">Init</a> ()</td></tr>
-<tr class="memdesc:ab18e656dc374d24a2000466e7a9b0f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 페이즈가 처음 초기화 됐을 때 사용되는 함수  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#ab18e656dc374d24a2000466e7a9b0f14">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:ab18e656dc374d24a2000466e7a9b0f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">해당 페이즈가 처음 초기화 됐을 때 사용되는 함수   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#ab18e656dc374d24a2000466e7a9b0f14">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:ab18e656dc374d24a2000466e7a9b0f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a678f9068735bbd427dd04a4a2e255958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a678f9068735bbd427dd04a4a2e255958">ResetDuringTime</a> ()</td></tr>
 <tr class="separator:a678f9068735bbd427dd04a4a2e255958"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,24 +163,24 @@ Protected 속성</h2></td></tr>
 <tr class="memitem:acbad57bef36379fd51d6be7ea369d47b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#acbad57bef36379fd51d6be7ea369d47b">Duration</a> = 1.0f<code> [get, protected set]</code></td></tr>
 <tr class="separator:acbad57bef36379fd51d6be7ea369d47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75f59275dd96d7da6e8cdba6e9be2159"><td class="memItemLeft" align="right" valign="top">UnityAction&lt; float, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a75f59275dd96d7da6e8cdba6e9be2159">OnStartEvent</a></td></tr>
-<tr class="memdesc:a75f59275dd96d7da6e8cdba6e9be2159"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 시작 이벤트 등록을 담당  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a75f59275dd96d7da6e8cdba6e9be2159">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a75f59275dd96d7da6e8cdba6e9be2159"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 시작 이벤트 등록을 담당   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a75f59275dd96d7da6e8cdba6e9be2159">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a75f59275dd96d7da6e8cdba6e9be2159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47071929ddf88d24dd75974771b49427"><td class="memItemLeft" align="right" valign="top">UnityAction&lt; float, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47071929ddf88d24dd75974771b49427">OnDuringEvent</a></td></tr>
-<tr class="memdesc:a47071929ddf88d24dd75974771b49427"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진행 중 이벤트 등록을 담당  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47071929ddf88d24dd75974771b49427">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a47071929ddf88d24dd75974771b49427"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈 진행 중 이벤트 등록을 담당   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47071929ddf88d24dd75974771b49427">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a47071929ddf88d24dd75974771b49427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47591a3766136f2b166a6b3470cbf511"><td class="memItemLeft" align="right" valign="top">UnityAction&lt; float, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47591a3766136f2b166a6b3470cbf511">OnEndEvent</a></td></tr>
-<tr class="memdesc:a47591a3766136f2b166a6b3470cbf511"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈가 끝나는 이벤트 등록을 담당  <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47591a3766136f2b166a6b3470cbf511">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a47591a3766136f2b166a6b3470cbf511"><td class="mdescLeft">&#160;</td><td class="mdescRight">페이즈가 끝나는 이벤트 등록을 담당   <a href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a47591a3766136f2b166a6b3470cbf511">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a47591a3766136f2b166a6b3470cbf511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3efb1909d39c4b739fd8a4cfad087f23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">TickSystem.Phase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#a3efb1909d39c4b739fd8a4cfad087f23">NextPhaseStateSet</a><code> [set]</code></td></tr>
 <tr class="separator:a3efb1909d39c4b739fd8a4cfad087f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock"><p >틱 시스템의 페이즈 개념을 담당하는 기본 가상 클래스입니다. FSM의 요소로 구성되어 작동합니다. </p>
+<div class="textblock"><p >틱 시스템의 페이즈 개념을 담당하는 기본 가상 클래스입니다. FSM의 요소로 구성되어 작동합니다.  </p>
 
 <p class="definition"><a class="el" href="../../d8/dde/_phase_base_8cs_source.html">PhaseBase.cs</a> 파일의 <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a7ce9ad31770fa19568bec3cd11ffa87b" name="a7ce9ad31770fa19568bec3cd11ffa87b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ce9ad31770fa19568bec3cd11ffa87b">&#9670;&nbsp;</a></span>CalculateDuringTime()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce9ad31770fa19568bec3cd11ffa87b">&#9670;&#160;</a></span>CalculateDuringTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +212,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a925a7f50e0e5398429c7313ce1fad175" name="a925a7f50e0e5398429c7313ce1fad175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a925a7f50e0e5398429c7313ce1fad175">&#9670;&nbsp;</a></span>DuringPhase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a925a7f50e0e5398429c7313ce1fad175">&#9670;&#160;</a></span>DuringPhase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +245,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈 진입한 상태 (StartPhase 먼저 돌고 Update 함수에 의해 해당 함수가 작동함) </p>
+<p>페이즈 진입한 상태 (StartPhase 먼저 돌고 Update 함수에 의해 해당 함수가 작동함)  </p>
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">deltaTime</td><td>한 프레임 당 지나간 시간입니다.</td></tr>
@@ -267,7 +274,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a9c4759f6010fc868dbe7ea3ae9cc7079" name="a9c4759f6010fc868dbe7ea3ae9cc7079"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4759f6010fc868dbe7ea3ae9cc7079">&#9670;&nbsp;</a></span>EndPhase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4759f6010fc868dbe7ea3ae9cc7079">&#9670;&#160;</a></span>EndPhase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +297,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨) </p>
+<p>페이즈에서 나가는 상태 (한 프레임 안에서 해당 함수 호출 후 바로 다음 StartPhase 함수가 호출됨)  </p>
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">tick</td><td>현재 몇번째 틱인지 정수로 표현합니다</td></tr>
@@ -311,7 +318,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="ab18e656dc374d24a2000466e7a9b0f14" name="ab18e656dc374d24a2000466e7a9b0f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18e656dc374d24a2000466e7a9b0f14">&#9670;&nbsp;</a></span>Init()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18e656dc374d24a2000466e7a9b0f14">&#9670;&#160;</a></span>Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,14 +340,14 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>해당 페이즈가 처음 초기화 됐을 때 사용되는 함수 </p>
+<p>해당 페이즈가 처음 초기화 됐을 때 사용되는 함수  </p>
 
 <p><a class="el" href="../../d0/d11/class_dr_pepper_1_1_core_1_1_tick_1_1_action_phase.html#a032d9b38cba742e35b87303c365ade6c">DrPepper.Core.Tick.ActionPhase</a>, <a class="el" href="../../df/df2/class_dr_pepper_1_1_core_1_1_tick_1_1_player_input_phase.html#ab352e7bb26cd207c1580100387e46e8f">DrPepper.Core.Tick.PlayerInputPhase</a>, <a class="el" href="../../d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html#a3d81ac27da15e51f62af9014b3c5cde8">DrPepper.Core.Tick.StandbyPhase</a>에서 구현되었습니다.</p>
 
 </div>
 </div>
 <a id="a6382b418182bb3448e835b62450b49dc" name="a6382b418182bb3448e835b62450b49dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6382b418182bb3448e835b62450b49dc">&#9670;&nbsp;</a></span>Register()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6382b418182bb3448e835b62450b49dc">&#9670;&#160;</a></span>Register()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +370,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html" title="틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.">TickSystem</a> 에 해당 페이즈 클래스를 등록하는 함수 </p>
+<p><a class="el" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html" title="틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.">TickSystem</a> 에 해당 페이즈 클래스를 등록하는 함수  </p>
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">system</td><td>틱 시스템을 받아옵니다.</td></tr>
@@ -380,7 +387,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a41a881f3661febed92793eb1193baf3c" name="a41a881f3661febed92793eb1193baf3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41a881f3661febed92793eb1193baf3c">&#9670;&nbsp;</a></span>ResetAllEvents()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a881f3661febed92793eb1193baf3c">&#9670;&#160;</a></span>ResetAllEvents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +409,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>해당 페이즈의 모든 이벤트를 초기화 함 </p>
+<p>해당 페이즈의 모든 이벤트를 초기화 함  </p>
 
 <p class="definition"><a class="el" href="../../d8/dde/_phase_base_8cs_source.html">PhaseBase.cs</a> 파일의 <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00127">127</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">  128</span>        {</div>
@@ -414,7 +421,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a678f9068735bbd427dd04a4a2e255958" name="a678f9068735bbd427dd04a4a2e255958"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a678f9068735bbd427dd04a4a2e255958">&#9670;&nbsp;</a></span>ResetDuringTime()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a678f9068735bbd427dd04a4a2e255958">&#9670;&#160;</a></span>ResetDuringTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,7 +451,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a5ec1f1e20ccf0c4ca8a292a58e99bfb1" name="a5ec1f1e20ccf0c4ca8a292a58e99bfb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">&#9670;&nbsp;</a></span>StartPhase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec1f1e20ccf0c4ca8a292a58e99bfb1">&#9670;&#160;</a></span>StartPhase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -467,7 +474,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨) </p>
+<p>페이즈 진입 후 처음 돌 때 (한 프레임 안에서 EndPhase 함수 호출 후 바로 다음 해당 함수가 호출됨)  </p>
 <dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
     <tr><td class="paramname">tick</td><td>현재 몇번째 틱인지 정수로 표현합니다</td></tr>
@@ -488,7 +495,7 @@ Protected 속성</h2></td></tr>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
 <a id="a8b9f6b7ceebc054f2e9547a2c47ea81f" name="a8b9f6b7ceebc054f2e9547a2c47ea81f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b9f6b7ceebc054f2e9547a2c47ea81f">&#9670;&nbsp;</a></span>DuringEventAction</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9f6b7ceebc054f2e9547a2c47ea81f">&#9670;&#160;</a></span>DuringEventAction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +519,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="ac9948e575b44ce9e785a6feff77d7795" name="ac9948e575b44ce9e785a6feff77d7795"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9948e575b44ce9e785a6feff77d7795">&#9670;&nbsp;</a></span>DuringTime</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9948e575b44ce9e785a6feff77d7795">&#9670;&#160;</a></span>DuringTime</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,7 +543,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a80224a7a17c271db82c005dac0f2c905" name="a80224a7a17c271db82c005dac0f2c905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80224a7a17c271db82c005dac0f2c905">&#9670;&nbsp;</a></span>EndEventAction</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a80224a7a17c271db82c005dac0f2c905">&#9670;&#160;</a></span>EndEventAction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -560,7 +567,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a66caf2258e97febd6b8c0adef9780335" name="a66caf2258e97febd6b8c0adef9780335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66caf2258e97febd6b8c0adef9780335">&#9670;&nbsp;</a></span>StartEventAction</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a66caf2258e97febd6b8c0adef9780335">&#9670;&#160;</a></span>StartEventAction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,7 +591,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="ab293c5c1ac40bed01268b66bb8f6cfda" name="ab293c5c1ac40bed01268b66bb8f6cfda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab293c5c1ac40bed01268b66bb8f6cfda">&#9670;&nbsp;</a></span>Tick</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab293c5c1ac40bed01268b66bb8f6cfda">&#9670;&#160;</a></span>Tick</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -609,7 +616,7 @@ Protected 속성</h2></td></tr>
 </div>
 <h2 class="groupheader">속성 문서화</h2>
 <a id="acbad57bef36379fd51d6be7ea369d47b" name="acbad57bef36379fd51d6be7ea369d47b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbad57bef36379fd51d6be7ea369d47b">&#9670;&nbsp;</a></span>Duration</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acbad57bef36379fd51d6be7ea369d47b">&#9670;&#160;</a></span>Duration</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -634,7 +641,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a6e1ef5e5e904c2441535a1850994488f" name="a6e1ef5e5e904c2441535a1850994488f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e1ef5e5e904c2441535a1850994488f">&#9670;&nbsp;</a></span>NextPhaseState</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1ef5e5e904c2441535a1850994488f">&#9670;&#160;</a></span>NextPhaseState</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -659,7 +666,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a3efb1909d39c4b739fd8a4cfad087f23" name="a3efb1909d39c4b739fd8a4cfad087f23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3efb1909d39c4b739fd8a4cfad087f23">&#9670;&nbsp;</a></span>NextPhaseStateSet</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efb1909d39c4b739fd8a4cfad087f23">&#9670;&#160;</a></span>NextPhaseStateSet</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,7 +693,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a47071929ddf88d24dd75974771b49427" name="a47071929ddf88d24dd75974771b49427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47071929ddf88d24dd75974771b49427">&#9670;&nbsp;</a></span>OnDuringEvent</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47071929ddf88d24dd75974771b49427">&#9670;&#160;</a></span>OnDuringEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -705,7 +712,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈 진행 중 이벤트 등록을 담당 </p>
+<p>페이즈 진행 중 이벤트 등록을 담당  </p>
 
 <p class="definition"><a class="el" href="../../d8/dde/_phase_base_8cs_source.html">PhaseBase.cs</a> 파일의 <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   49</span>        {</div>
@@ -716,7 +723,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a47591a3766136f2b166a6b3470cbf511" name="a47591a3766136f2b166a6b3470cbf511"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47591a3766136f2b166a6b3470cbf511">&#9670;&nbsp;</a></span>OnEndEvent</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47591a3766136f2b166a6b3470cbf511">&#9670;&#160;</a></span>OnEndEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -735,7 +742,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈가 끝나는 이벤트 등록을 담당 </p>
+<p>페이즈가 끝나는 이벤트 등록을 담당  </p>
 
 <p class="definition"><a class="el" href="../../d8/dde/_phase_base_8cs_source.html">PhaseBase.cs</a> 파일의 <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
@@ -746,7 +753,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="a75f59275dd96d7da6e8cdba6e9be2159" name="a75f59275dd96d7da6e8cdba6e9be2159"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75f59275dd96d7da6e8cdba6e9be2159">&#9670;&nbsp;</a></span>OnStartEvent</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f59275dd96d7da6e8cdba6e9be2159">&#9670;&#160;</a></span>OnStartEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,7 +772,7 @@ Protected 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>페이즈 시작 이벤트 등록을 담당 </p>
+<p>페이즈 시작 이벤트 등록을 담당  </p>
 
 <p class="definition"><a class="el" href="../../d8/dde/_phase_base_8cs_source.html">PhaseBase.cs</a> 파일의 <a class="el" href="../../d8/dde/_phase_base_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
 <div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
@@ -776,7 +783,7 @@ Protected 속성</h2></td></tr>
 </div>
 </div>
 <a id="ad0b639c3a2a478fc0d8adf64aed94392" name="ad0b639c3a2a478fc0d8adf64aed94392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0b639c3a2a478fc0d8adf64aed94392">&#9670;&nbsp;</a></span>PhaseState</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b639c3a2a478fc0d8adf64aed94392">&#9670;&#160;</a></span>PhaseState</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,7 +816,7 @@ Protected 속성</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../da/d8d/namespace_dr_pepper_1_1_core_1_1_tick.html">Tick</a></li><li class="navelem"><a class="el" href="../../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html">PhaseBase</a></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

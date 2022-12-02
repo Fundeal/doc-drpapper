@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: Actor/ActorAttackComponent.cs 소스 파일</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('d3/d89/_actor_attack_component_8cs_sou
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -252,9 +259,17 @@ $(document).ready(function(){initNavTree('d3/d89/_actor_attack_component_8cs_sou
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="keywordflow">return</span> isHorizontal ? (y + 1) * dir : y;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> TouchDamageAttack(<span class="keywordtype">int</span> damage)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">if</span> (_cellBasedObject.CurrentCellPosition == _actorSystem.Player.GetCellPosition())</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                _areaViewComponent.View(ViewType.Attack, _cellBasedObject.CurrentCellPosition);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                _actorSystem.Player.hitComponent.Hit(damage);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
 <div class="ttc" id="aclass_dr_pepper_1_1_area_view_component_html"><div class="ttname"><a href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html">DrPepper.AreaViewComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d41/_area_view_component_8cs_source.html#l00014">AreaViewComponent.cs:15</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component_html"><div class="ttname"><a href="../../d4/d28/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component.html">DrPepper.Core.Actor.ActorAttackComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d89/_actor_attack_component_8cs_source.html#l00011">ActorAttackComponent.cs:12</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_actor_1_1_actor_system_html"><div class="ttname"><a href="../../d9/d90/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_system.html">DrPepper.Core.Actor.ActorSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/de1/_actor_system_8cs_source.html#l00045">ActorSystem.cs:46</a></div></div>
@@ -270,7 +285,7 @@ $(document).ready(function(){initNavTree('d3/d89/_actor_attack_component_8cs_sou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><b>ActorAttackComponent.cs</b></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

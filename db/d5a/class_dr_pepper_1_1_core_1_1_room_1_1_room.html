@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: DrPepper.Core.Room.Room 클래스 참조</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('db/d5a/class_dr_pepper_1_1_core_1_1_ro
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -129,7 +136,7 @@ Public 멤버 함수</h2></td></tr>
 <p class="definition"><a class="el" href="../../d5/d98/_room_8cs_source.html">Room.cs</a> 파일의 <a class="el" href="../../d5/d98/_room_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="abe10b79de202063569d27348a7540178" name="abe10b79de202063569d27348a7540178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe10b79de202063569d27348a7540178">&#9670;&nbsp;</a></span>Initialize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe10b79de202063569d27348a7540178">&#9670;&#160;</a></span>Initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +168,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="af2e8c0ada6109a0dc21f5eee374457de" name="af2e8c0ada6109a0dc21f5eee374457de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2e8c0ada6109a0dc21f5eee374457de">&#9670;&nbsp;</a></span>PostInitialize()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e8c0ada6109a0dc21f5eee374457de">&#9670;&#160;</a></span>PostInitialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +198,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="abe3653889981316430d39b654c353fa0" name="abe3653889981316430d39b654c353fa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe3653889981316430d39b654c353fa0">&#9670;&nbsp;</a></span>SetGoal()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3653889981316430d39b654c353fa0">&#9670;&#160;</a></span>SetGoal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,21 +225,20 @@ Public 멤버 함수</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>        {</div>
 <div class="line"><span class="lineno">   40</span>            _GoalData.Clear();</div>
 <div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; wordData.Word_String.Length; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; wordData.Word_String.Length; i++)</div>
 <div class="line"><span class="lineno">   43</span>            {</div>
 <div class="line"><span class="lineno">   44</span>                <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a> syllableData = <span class="keyword">new</span> <a class="code hl_class" href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a>();</div>
 <div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>                syllableData.Syllable = wordData.Word_String[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].ToString();</div>
+<div class="line"><span class="lineno">   46</span>                syllableData.Syllable = wordData.Word_String[i].ToString();</div>
 <div class="line"><span class="lineno">   47</span>                _GoalData.Add(syllableData);</div>
 <div class="line"><span class="lineno">   48</span>            }</div>
 <div class="line"><span class="lineno">   49</span>        }</div>
 <div class="ttc" id="aclass_room_goal_syllable_data_html"><div class="ttname"><a href="../../d3/de0/class_room_goal_syllable_data.html">RoomGoalSyllableData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d7b/_room_goal_syllable_data_8cs_source.html#l00005">RoomGoalSyllableData.cs:6</a></div></div>
-<div class="ttc" id="anamespace_test_project_html_a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741"><div class="ttname"><a href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">TestProject.JungsungType.i</a></div><div class="ttdeci">@ i</div><div class="ttdoc">ㅑ</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="a3eb482a1dde90a73b8f4c87ea1e58436" name="a3eb482a1dde90a73b8f4c87ea1e58436"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3eb482a1dde90a73b8f4c87ea1e58436">&#9670;&nbsp;</a></span>UpdateGoal()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb482a1dde90a73b8f4c87ea1e58436">&#9670;&#160;</a></span>UpdateGoal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +265,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>        {</div>
 <div class="line"><span class="lineno">   53</span>            <span class="keywordtype">bool</span> isUpdated = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a> &lt; _GoalData.Count; <a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>++)</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; _GoalData.Count; i++)</div>
 <div class="line"><span class="lineno">   56</span>            {</div>
 <div class="line"><span class="lineno">   57</span>                <span class="keywordflow">if</span> (_GoalData[i].IsActive)</div>
 <div class="line"><span class="lineno">   58</span>                {</div>
@@ -268,7 +274,7 @@ Public 멤버 함수</h2></td></tr>
 <div class="line"><span class="lineno">   61</span> </div>
 <div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (_GoalData[i].Syllable.Equals(syllable))</div>
 <div class="line"><span class="lineno">   63</span>                {</div>
-<div class="line"><span class="lineno">   64</span>                    _GoalData[<a class="code hl_enumvalue" href="../../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba865c0c0b4ab0e063e5caa3387c1a8741">i</a>].IsActive = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   64</span>                    _GoalData[i].IsActive = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   65</span>                    isUpdated = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   66</span>                }</div>
 <div class="line"><span class="lineno">   67</span>            }</div>
@@ -280,7 +286,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 <h2 class="groupheader">속성 문서화</h2>
 <a id="ae0010ebf985b64e88f02710f1c20c9cb" name="ae0010ebf985b64e88f02710f1c20c9cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0010ebf985b64e88f02710f1c20c9cb">&#9670;&nbsp;</a></span>CellSystem</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0010ebf985b64e88f02710f1c20c9cb">&#9670;&#160;</a></span>CellSystem</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +311,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a841071b657070fb2504178f36fa2f958" name="a841071b657070fb2504178f36fa2f958"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a841071b657070fb2504178f36fa2f958">&#9670;&nbsp;</a></span>GoalData</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a841071b657070fb2504178f36fa2f958">&#9670;&#160;</a></span>GoalData</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +336,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a107911731cf3effc78aea2020ac3d197" name="a107911731cf3effc78aea2020ac3d197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a107911731cf3effc78aea2020ac3d197">&#9670;&nbsp;</a></span>goalSyllableCount</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a107911731cf3effc78aea2020ac3d197">&#9670;&#160;</a></span>goalSyllableCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +361,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="aa761927d34f364d7f42bb2b8ef640fbb" name="aa761927d34f364d7f42bb2b8ef640fbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa761927d34f364d7f42bb2b8ef640fbb">&#9670;&nbsp;</a></span>IsComplete</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa761927d34f364d7f42bb2b8ef640fbb">&#9670;&#160;</a></span>IsComplete</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +386,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="ab68ef888311964251d89e99253bf86ab" name="ab68ef888311964251d89e99253bf86ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab68ef888311964251d89e99253bf86ab">&#9670;&nbsp;</a></span>IsUsedInDungeon</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68ef888311964251d89e99253bf86ab">&#9670;&#160;</a></span>IsUsedInDungeon</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +411,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a15705f8ef1ee4d0cf61abab46fd3cf97" name="a15705f8ef1ee4d0cf61abab46fd3cf97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15705f8ef1ee4d0cf61abab46fd3cf97">&#9670;&nbsp;</a></span>OnCompleteRoomEvent</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a15705f8ef1ee4d0cf61abab46fd3cf97">&#9670;&#160;</a></span>OnCompleteRoomEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +436,7 @@ Public 멤버 함수</h2></td></tr>
 </div>
 </div>
 <a id="a5b58b384e0732f4425d813d330fbf8c7" name="a5b58b384e0732f4425d813d330fbf8c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b58b384e0732f4425d813d330fbf8c7">&#9670;&nbsp;</a></span>spawnManaAmount</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b58b384e0732f4425d813d330fbf8c7">&#9670;&#160;</a></span>spawnManaAmount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -463,7 +469,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d8/d2f/namespace_dr_pepper_1_1_core_1_1_room.html">Room</a></li><li class="navelem"><a class="el" href="../../db/d5a/class_dr_pepper_1_1_core_1_1_room_1_1_room.html">Room</a></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:42, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DrPapper: Actor/Actor.cs 소스 파일</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.9.4 -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.5 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "../../search",'검색','.html');
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
@@ -76,9 +76,16 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
@@ -160,7 +167,7 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            _actionPhase = globalTickSystem.GetPhase(<a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.Action);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            _modeling = GetComponentInChildren&lt;ActorModel&gt;().gameObject;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            _areaViewComponent = GetComponent&lt;AreaViewComponent&gt;();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            _actorAttackComponent = gameObject.AddComponent&lt;<a class="code hl_class" href="../../d4/d28/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_attack_component.html">ActorAttackComponent</a>&gt;();</div>
@@ -291,166 +298,170 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                AttackAreaType areaType = GetPatternData().attackAreaType;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="keywordtype">int</span> value = GetPatternData().areaValue;</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                _actorAttackComponent.Attack(areaType, value, _currentDirection, actorData.damage);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            }</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            _currentPatternIndex++;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            _currentPatternIndex %= _maxPatternIndex;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="../../da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html">DataContainer</a>.Instance.GetContainer&lt;<a class="code hl_class" href="../../d0/ded/class_dr_pepper_1_1_core_1_1_actor_1_1_actor_data_container.html">ActorDataContainer</a>&gt;().GetActorDataWithID(_actorID).isTouchDamage)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                    _actorAttackComponent.TouchDamageAttack(actorData.damage);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            }</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ActionPhase_OnDuringEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="comment">//if(GetPatternData().move)</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                _actorJumpAnimation.DuringUpdate(arg0);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        }</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> ActionPhase_OnEndEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        {</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="comment">//if (GetPatternData().move) </span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                _actorJumpAnimation.JumpEnd();</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">if</span> (_areaViewComponent)</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                _areaViewComponent.EndView();</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            }</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Dead_StandByPhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg2)</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <a class="code hl_class" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">Cell</a>.Cell[,] cells = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().CurrentRoom.CellSystem.Cells;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            if (!cells[_cellBasedObject.CurrentCellPosition.x, _cellBasedObject.CurrentCellPosition.y])</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">if</span> (_resurrectionCount &lt;= 0 &amp;&amp; cells[_cellBasedObject.CurrentCellPosition.x, _cellBasedObject.CurrentCellPosition.y].AttachedCellBasedObjects.Count == 1)</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                Resurrection();</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Dead_ActionPhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg2)</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            _resurrectionCount--;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            _hanguleText.text = _resurrectionCount.ToString();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        }</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> SyllablesText</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> _syllablesText;}</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keyword">set</span>{ _syllablesText = value; }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetSyllablesTextChange()</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            _hanguleText.text = _syllablesText;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keyword">public</span> UnityEngine.Vector3 GetModelingLocalPosition()</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">return</span> _cellBasedObject.GetModelingLocalPosition();</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        }</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordtype">bool</span> TransitionCheck()</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">switch</span>(GetActorAIData().transitionCondition)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                <span class="keywordflow">case</span> ConditionType.PatternEnd:</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                    <span class="keywordflow">return</span> _currentPatternIndex == 0;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="keywordflow">case</span> ConditionType.Eyesight:</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                    <span class="keywordflow">return</span> _actorEyeSightComponent.EyeSightCheck((<span class="keywordtype">int</span>)actorData.eyesightType, actorData.eyesightRange, _currentDirection);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordflow">case</span> ConditionType.Collision:</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    <span class="keywordflow">return</span> collCheck;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                <span class="keywordflow">case</span> ConditionType.Hit:</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    <span class="keywordflow">return</span> hitComponent.HitCheck;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        }</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordtype">bool</span> PlayerDistanceCheck(<span class="keywordtype">int</span> checkValue, <span class="keywordtype">bool</span> upCheck)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keywordflow">if</span>(upCheck)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                <span class="keywordflow">if</span>(Mathf.Abs(_actorSystem.Player.GetCellPosition().x - _cellBasedObject.CurrentCellPosition.x) &gt;= checkValue &amp;&amp;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                    Mathf.Abs(_actorSystem.Player.GetCellPosition().y - _cellBasedObject.CurrentCellPosition.y) &gt;= checkValue)</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                }</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            }</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keywordflow">if</span> (Mathf.Abs(_actorSystem.Player.GetCellPosition().x - _cellBasedObject.CurrentCellPosition.x) &lt;= checkValue &amp;&amp;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                    Mathf.Abs(_actorSystem.Player.GetCellPosition().y - _cellBasedObject.CurrentCellPosition.y) &lt;= checkValue)</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordtype">void</span> Transition()</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        {</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">if</span> (!_actorBehaviorType || !TransitionCheck())</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            _currentAIIndex = GetActorAIData().transitionTo - 1;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            _currentPatternIndex = 0;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            _maxPatternIndex = <a class="code hl_class" href="../../da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html">DataContainer</a>.Instance.GetContainer&lt;<a class="code hl_class" href="../../d4/dab/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data_container.html">PatternDataContainer</a>&gt;().GetPatternDataMaxIndexWithID(GetActorAIData().usePattern);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> RotateActor(RotateType RotateDir)</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        {</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <span class="keywordtype">int</span> tempDir = (int)_moveDirection - 1;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">if</span> (RotateDir == RotateType.Random)</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                RotateDir = (RotateType)Random.Range(1, 5);</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">switch</span> (RotateDir)</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            {</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                <span class="keywordflow">case</span> RotateType.Front:</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                <span class="keywordflow">case</span> RotateType.Back:</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    tempDir += 2;</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    tempDir %= 4;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            _currentPatternIndex++;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            _currentPatternIndex %= _maxPatternIndex;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ActionPhase_OnDuringEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="comment">//if(GetPatternData().move)</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                _actorJumpAnimation.DuringUpdate(arg0);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> ActionPhase_OnEndEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg1)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="comment">//if (GetPatternData().move)</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                _actorJumpAnimation.JumpEnd();</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">if</span> (_areaViewComponent)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                _areaViewComponent.EndView();</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Dead_StandByPhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg2)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            <a class="code hl_class" href="../../d9/d63/class_dr_pepper_1_1_core_1_1_cell_1_1_cell.html">Cell</a>.Cell[,] cells = <a class="code hl_class" href="../../d5/d6e/class_dr_pepper_1_1_core_1_1_system_manager.html">SystemManager</a>.Instance.GetSystem&lt;<a class="code hl_class" href="../../d4/da5/class_dr_pepper_1_1_core_1_1_room_1_1_dungeon_system.html">DungeonSystem</a>&gt;().CurrentRoom.CellSystem.Cells;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            if (!cells[_cellBasedObject.CurrentCellPosition.x, _cellBasedObject.CurrentCellPosition.y])</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (_resurrectionCount &lt;= 0 &amp;&amp; cells[_cellBasedObject.CurrentCellPosition.x, _cellBasedObject.CurrentCellPosition.y].AttachedCellBasedObjects.Count == 1)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                Resurrection();</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Dead_ActionPhase_OnStartEvent(<span class="keywordtype">float</span> arg0, <span class="keywordtype">int</span> arg2)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            _resurrectionCount--;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            _hanguleText.text = _resurrectionCount.ToString();</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keyword">public</span> <span class="keywordtype">string</span> SyllablesText</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keyword">get</span> { <span class="keywordflow">return</span> _syllablesText;}</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keyword">set</span>{ _syllablesText = value; }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SetSyllablesTextChange()</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            _hanguleText.text = _syllablesText;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keyword">public</span> UnityEngine.Vector3 GetModelingLocalPosition()</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">return</span> _cellBasedObject.GetModelingLocalPosition();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordtype">bool</span> TransitionCheck()</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keywordflow">switch</span>(GetActorAIData().transitionCondition)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordflow">case</span> ConditionType.PatternEnd:</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    <span class="keywordflow">return</span> _currentPatternIndex == 0;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                <span class="keywordflow">case</span> ConditionType.Eyesight:</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                    <span class="keywordflow">return</span> _actorEyeSightComponent.EyeSightCheck((<span class="keywordtype">int</span>)actorData.eyesightType, actorData.eyesightRange, _currentDirection);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <span class="keywordflow">case</span> ConditionType.Collision:</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                    <span class="keywordflow">return</span> collCheck;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                <span class="keywordflow">case</span> ConditionType.Hit:</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                    <span class="keywordflow">return</span> hitComponent.HitCheck;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordtype">bool</span> PlayerDistanceCheck(<span class="keywordtype">int</span> checkValue, <span class="keywordtype">bool</span> upCheck)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">if</span>(upCheck)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                <span class="keywordflow">if</span>(Mathf.Abs(_actorSystem.Player.GetCellPosition().x - _cellBasedObject.CurrentCellPosition.x) &gt;= checkValue &amp;&amp;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                    Mathf.Abs(_actorSystem.Player.GetCellPosition().y - _cellBasedObject.CurrentCellPosition.y) &gt;= checkValue)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keywordflow">if</span> (Mathf.Abs(_actorSystem.Player.GetCellPosition().x - _cellBasedObject.CurrentCellPosition.x) &lt;= checkValue &amp;&amp;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    Mathf.Abs(_actorSystem.Player.GetCellPosition().y - _cellBasedObject.CurrentCellPosition.y) &lt;= checkValue)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="keywordtype">void</span> Transition()</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <span class="keywordflow">if</span> (!_actorBehaviorType || !TransitionCheck())</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            _currentAIIndex = GetActorAIData().transitionTo - 1;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            _currentPatternIndex = 0;</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            _maxPatternIndex = <a class="code hl_class" href="../../da/ddd/class_dr_pepper_1_1_core_1_1_data_container.html">DataContainer</a>.Instance.GetContainer&lt;<a class="code hl_class" href="../../d4/dab/class_dr_pepper_1_1_core_1_1_actor_1_1_pattern_data_container.html">PatternDataContainer</a>&gt;().GetPatternDataMaxIndexWithID(GetActorAIData().usePattern);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        }</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keyword">protected</span> <span class="keywordtype">void</span> RotateActor(RotateType RotateDir)</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keywordtype">int</span> tempDir = (int)_moveDirection - 1;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordflow">if</span> (RotateDir == RotateType.Random)</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                RotateDir = (RotateType)Random.Range(1, 5);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="keywordflow">switch</span> (RotateDir)</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                <span class="keywordflow">case</span> RotateType.Front:</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">case</span> RotateType.Left:</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    tempDir--;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    <span class="keywordflow">if</span> (tempDir &lt; 0)</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                        tempDir += 4;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                    }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <span class="keywordflow">case</span> RotateType.Right:</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                    tempDir++;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    tempDir %= 4;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">case</span> RotateType.Back:</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    tempDir += 2;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    tempDir %= 4;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                <span class="keywordflow">case</span> RotateType.Left:</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                    tempDir--;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                    <span class="keywordflow">if</span> (tempDir &lt; 0)</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        tempDir += 4;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    }</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                <span class="keywordflow">case</span> RotateType.TargetPlayer:</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                    tempDir = (int)_cellRouteTrackingSystem.GetRouteTrackingDir(_cellBasedObject.CurrentCellPosition, _actorSystem.Player.GetCellPosition()) - 1;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            }</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            _moveDirection = (CellDirection)(tempDir + 1);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            _currentDirection = _moveDirection;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Dead()</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        {</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            _resurrectionCount = _resurrectionTime;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            _hanguleText.text = _resurrectionTime.ToString();</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            _modeling.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            _ghostModeling.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            _isDead = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            _standbyPhase.OnStartEvent += Dead_StandByPhase_OnStartEvent;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            _actionPhase.OnStartEvent += Dead_ActionPhase_OnStartEvent;</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            OnDisable();</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        }</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Resurrection()</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        {</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            hitComponent.Initialize(actorData.maxHP, Effect.EffectType.EnemyHit);</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            SetSyllablesTextChange();</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            _modeling.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            _ghostModeling.SetActive(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            _isDead = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            _standbyPhase.OnStartEvent -= Dead_StandByPhase_OnStartEvent;</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            _actionPhase.OnStartEvent -= Dead_ActionPhase_OnStartEvent;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            OnEnable();</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        }</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    }</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                <span class="keywordflow">case</span> RotateType.Right:</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                    tempDir++;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    tempDir %= 4;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="keywordflow">case</span> RotateType.TargetPlayer:</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                    tempDir = (int)_cellRouteTrackingSystem.GetRouteTrackingDir(_cellBasedObject.CurrentCellPosition, _actorSystem.Player.GetCellPosition()) - 1;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            _moveDirection = (CellDirection)(tempDir + 1);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            _currentDirection = _moveDirection;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Dead()</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            _resurrectionCount = _resurrectionTime;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            _hanguleText.text = _resurrectionTime.ToString();</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            _modeling.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            _ghostModeling.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            _isDead = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            _standbyPhase.OnStartEvent += Dead_StandByPhase_OnStartEvent;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            _actionPhase.OnStartEvent += Dead_ActionPhase_OnStartEvent;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            OnDisable();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        }</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Resurrection()</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            hitComponent.Initialize(actorData.maxHP, Effect.EffectType.EnemyHit);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            SetSyllablesTextChange();</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            _modeling.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            _ghostModeling.SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            _isDead = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            _standbyPhase.OnStartEvent -= Dead_StandByPhase_OnStartEvent;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            _actionPhase.OnStartEvent -= Dead_ActionPhase_OnStartEvent;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            OnEnable();</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    }</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>}</div>
 <div class="ttc" id="aclass_actor_eye_sight_component_html"><div class="ttname"><a href="../../da/d6e/class_actor_eye_sight_component.html">ActorEyeSightComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df0/_actor_eye_sight_component_8cs_source.html#l00010">ActorEyeSightComponent.cs:11</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_actor_jump_animation_html"><div class="ttname"><a href="../../d1/d4b/class_dr_pepper_1_1_actor_jump_animation.html">DrPepper.ActorJumpAnimation</a></div><div class="ttdoc">주의 : 스크립트를 붙이면 모델링 오브젝트가 ActorSystem.ActorModels 하위 오브젝트로 바뀝니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d12/_actor_jump_animation_8cs_source.html#l00010">ActorJumpAnimation.cs:11</a></div></div>
 <div class="ttc" id="aclass_dr_pepper_1_1_area_view_component_html"><div class="ttname"><a href="../../dc/d9b/class_dr_pepper_1_1_area_view_component.html">DrPepper.AreaViewComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d41/_area_view_component_8cs_source.html#l00014">AreaViewComponent.cs:15</a></div></div>
@@ -486,7 +497,7 @@ $(document).ready(function(){initNavTree('d7/d68/_actor_8cs_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_4f3b68dc77c6199308398c9d552a8742.html">Actor</a></li><li class="navelem"><b>Actor.cs</b></li>
-    <li class="footer">생성시간 : 목 12월 1 2022 01:52:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">생성시간 : 금 12월 2 2022 01:33:41, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

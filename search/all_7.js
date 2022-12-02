@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['h_0',['h',['../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba2510c39011c5be704182423e3a695e91',1,'TestProject']]],
-  ['hanguldecomposition_1',['HangulDecomposition',['../dd/d7b/class_hangul_decomposition.html',1,'']]],
-  ['hangulhelper_2',['HangulHelper',['../d3/d36/class_test_project_1_1_hangul_helper.html#a6ec2225b7683f0b861d9297eddf7a7ad',1,'TestProject.HangulHelper.HangulHelper()'],['../d3/d36/class_test_project_1_1_hangul_helper.html',1,'TestProject.HangulHelper']]],
-  ['hangulstate_3',['HangulState',['../db/db5/namespace_test_project.html#a8dc9a6a947f521778838d6db7935fb68',1,'TestProject']]],
-  ['hangulsystem_4',['HangulSystem',['../dc/d7c/class_dr_pepper_1_1_core_1_1_hangul_1_1_hangul_system.html',1,'DrPepper::Core::Hangul']]],
-  ['hangulutil_5',['HangulUtil',['../d2/da4/class_hangul_util.html',1,'']]],
-  ['hitcomponent_6',['HitComponent',['../dc/d6b/class_dr_pepper_1_1_core_1_1_actor_1_1_hit_component.html',1,'DrPepper::Core::Actor']]],
-  ['hk_7',['hk',['../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0baae4171856a75f7b67d51fc0e1f95902e',1,'TestProject']]],
-  ['hl_8',['hl',['../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0ba2b4c3f7824a4de1216a63be9add078ff',1,'TestProject']]],
-  ['ho_9',['ho',['../db/db5/namespace_test_project.html#a66a7f5bc4e4365caea1cebdc6bd98f0bab5d9b59113086d3f9f9f108adaaa9ab5',1,'TestProject']]]
+  ['init_0',['Init',['../d0/d11/class_dr_pepper_1_1_core_1_1_tick_1_1_action_phase.html#a032d9b38cba742e35b87303c365ade6c',1,'DrPepper.Core.Tick.ActionPhase.Init()'],['../d1/d61/class_dr_pepper_1_1_core_1_1_tick_1_1_phase_base.html#ab18e656dc374d24a2000466e7a9b0f14',1,'DrPepper.Core.Tick.PhaseBase.Init()'],['../df/df2/class_dr_pepper_1_1_core_1_1_tick_1_1_player_input_phase.html#ab352e7bb26cd207c1580100387e46e8f',1,'DrPepper.Core.Tick.PlayerInputPhase.Init()'],['../d1/da1/class_dr_pepper_1_1_core_1_1_tick_1_1_standby_phase.html#a3d81ac27da15e51f62af9014b3c5cde8',1,'DrPepper.Core.Tick.StandbyPhase.Init()']]],
+  ['initializestate_1',['InitializeState',['../d3/d36/class_test_project_1_1_hangul_helper.html#a1de7aec8d8f57afe4ad2c920b70c1bdf',1,'TestProject::HangulHelper']]],
+  ['input_2',['Input',['../d3/d36/class_test_project_1_1_hangul_helper.html#a47ae993f2b87a1ebe6fefe4cdd6d20f2',1,'TestProject::HangulHelper']]],
+  ['inputsystem_3',['InputSystem',['../d7/d7f/class_dr_pepper_1_1_core_1_1_input_system.html',1,'DrPepper::Core']]]
 ];
