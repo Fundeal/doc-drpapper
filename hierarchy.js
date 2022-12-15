@@ -30,6 +30,7 @@ var hierarchy =
       [ "BillboardAligner", "d8/d34/class_billboard_aligner.html", null ],
       [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
       [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
+      [ "DevPanel_PlayerControllerToggle", "da/d25/class_dev_panel___player_controller_toggle.html", null ],
       [ "DrPepper.ActorJumpAnimation", "d1/d4b/class_dr_pepper_1_1_actor_jump_animation.html", null ],
       [ "DrPepper.AreaViewComponent", "dc/d9b/class_dr_pepper_1_1_area_view_component.html", null ],
       [ "DrPepper.Camera.ChasePlayerCamera", "de/d75/class_dr_pepper_1_1_camera_1_1_chase_player_camera.html", null ],

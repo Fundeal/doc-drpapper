@@ -113,8 +113,6 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a517b56b4c4705c373cc898b6b5ef0267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20199d369456b752bbf7ae8d512ec182"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html#a20199d369456b752bbf7ae8d512ec182">Open</a> (string panelName)</td></tr>
 <tr class="separator:a20199d369456b752bbf7ae8d512ec182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac051fcd01c0d3cc80a4de1bb9ba27b78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html#ac051fcd01c0d3cc80a4de1bb9ba27b78">TickSystemSettingChange</a> (bool isActive)</td></tr>
-<tr class="separator:ac051fcd01c0d3cc80a4de1bb9ba27b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
@@ -131,7 +129,7 @@ Public 멤버 함수</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a8cae72cd7d94f006da1c451198e45772" name="a8cae72cd7d94f006da1c451198e45772"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cae72cd7d94f006da1c451198e45772">&#9670;&#160;</a></span>Initialize()</h2>
@@ -156,30 +154,26 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>        {</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; transform.childCount; i++)</div>
-<div class="line"><span class="lineno">   18</span>            {</div>
-<div class="line"><span class="lineno">   19</span>                <a class="code hl_class" href="../../da/deb/class_u_i_panel.html">UIPanel</a> panel = transform.GetChild(i).GetComponent&lt;<a class="code hl_class" href="../../da/deb/class_u_i_panel.html">UIPanel</a>&gt;();</div>
+<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>        {</div>
+<div class="line"><span class="lineno">   14</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; transform.childCount; i++)</div>
+<div class="line"><span class="lineno">   15</span>            {</div>
+<div class="line"><span class="lineno">   16</span>                <a class="code hl_class" href="../../da/deb/class_u_i_panel.html">UIPanel</a> panel = transform.GetChild(i).GetComponent&lt;<a class="code hl_class" href="../../da/deb/class_u_i_panel.html">UIPanel</a>&gt;();</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>                <span class="keywordflow">if</span> (panel == <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   19</span>                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   20</span> </div>
-<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">if</span> (panel == <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   22</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   23</span> </div>
-<div class="line"><span class="lineno">   24</span>                panel.Initialize();</div>
-<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span>(!_Panels.ContainsKey(panel.gameObject.name))</div>
-<div class="line"><span class="lineno">   26</span>                    _Panels.Add(panel.gameObject.name, panel);</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">if</span>(i == 0)</div>
-<div class="line"><span class="lineno">   29</span>                {</div>
-<div class="line"><span class="lineno">   30</span>                    _CurrentPanel = panel;</div>
-<div class="line"><span class="lineno">   31</span>                    _CurrentPanel.OnOpen();</div>
-<div class="line"><span class="lineno">   32</span>                }</div>
-<div class="line"><span class="lineno">   33</span>            }</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>            _tickSystem = SystemManager.Instance.GetSystem&lt;<a class="code hl_class" href="../../d5/d8d/class_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system.html">GlobalTickSystem</a>&gt;();</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>        }</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system_html"><div class="ttname"><a href="../../d5/d8d/class_dr_pepper_1_1_core_1_1_tick_1_1_global_tick_system.html">DrPepper.Core.Tick.GlobalTickSystem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d6e/_global_tick_system_8cs_source.html#l00007">GlobalTickSystem.cs:8</a></div></div>
+<div class="line"><span class="lineno">   21</span>                panel.Initialize();</div>
+<div class="line"><span class="lineno">   22</span>                <span class="keywordflow">if</span>(!_Panels.ContainsKey(panel.gameObject.name))</div>
+<div class="line"><span class="lineno">   23</span>                    _Panels.Add(panel.gameObject.name, panel);</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>                <span class="keywordflow">if</span>(i == 0)</div>
+<div class="line"><span class="lineno">   26</span>                {</div>
+<div class="line"><span class="lineno">   27</span>                    _CurrentPanel = panel;</div>
+<div class="line"><span class="lineno">   28</span>                    _CurrentPanel.OnOpen();</div>
+<div class="line"><span class="lineno">   29</span>                }</div>
+<div class="line"><span class="lineno">   30</span>            }</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
 <div class="ttc" id="aclass_u_i_panel_html"><div class="ttname"><a href="../../da/deb/class_u_i_panel.html">UIPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d0e/_u_i_panel_8cs_source.html#l00005">UIPanel.cs:6</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -208,12 +202,12 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
-<div class="line"><span class="lineno">   49</span>            _CurrentPanel.OnClose();</div>
-<div class="line"><span class="lineno">   50</span>            _CurrentPanel = _Panels[panelName];</div>
-<div class="line"><span class="lineno">   51</span>            _CurrentPanel.OnOpen();</div>
-<div class="line"><span class="lineno">   52</span>        }</div>
+<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            _CurrentPanel.OnClose();</div>
+<div class="line"><span class="lineno">   44</span>            _CurrentPanel = _Panels[panelName];</div>
+<div class="line"><span class="lineno">   45</span>            _CurrentPanel.OnOpen();</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -240,59 +234,13 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">foreach</span> (var panel <span class="keywordflow">in</span> _Panels)</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                panel.Value.PostSystemInitialize();</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ac051fcd01c0d3cc80a4de1bb9ba27b78" name="ac051fcd01c0d3cc80a4de1bb9ba27b78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac051fcd01c0d3cc80a4de1bb9ba27b78">&#9670;&#160;</a></span>TickSystemSettingChange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrPepper.Core.UI.UIManager.TickSystemSettingChange </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isActive</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>        {</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span> (isActive)</div>
-<div class="line"><span class="lineno">   58</span>            {</div>
-<div class="line"><span class="lineno">   59</span>                _tickSystem.GetComponent&lt;<a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>&gt;().StartPhase = <a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.PlayerInput;</div>
-<div class="line"><span class="lineno">   60</span>                _tickSystem.GetComponent&lt;<a class="code hl_class" href="../../df/df2/class_dr_pepper_1_1_core_1_1_tick_1_1_player_input_phase.html">PlayerInputPhase</a>&gt;().NextPhaseStateSet = <a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.Standby;</div>
-<div class="line"><span class="lineno">   61</span>                _tickSystem.GetComponent&lt;<a class="code hl_class" href="../../d0/d11/class_dr_pepper_1_1_core_1_1_tick_1_1_action_phase.html">ActionPhase</a>&gt;().NextPhaseStateSet = <a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.PlayerInput;</div>
-<div class="line"><span class="lineno">   62</span>            }</div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   64</span>            {</div>
-<div class="line"><span class="lineno">   65</span>                _tickSystem.GetComponent&lt;<a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>&gt;().StartPhase = <a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.Standby;</div>
-<div class="line"><span class="lineno">   66</span>                _tickSystem.GetComponent&lt;<a class="code hl_class" href="../../d0/d11/class_dr_pepper_1_1_core_1_1_tick_1_1_action_phase.html">ActionPhase</a>&gt;().NextPhaseStateSet = <a class="code hl_class" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">TickSystem</a>.<a class="code hl_enumeration" href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">Phase</a>.Standby;</div>
-<div class="line"><span class="lineno">   67</span>            }</div>
-<div class="line"><span class="lineno">   68</span>        }</div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_action_phase_html"><div class="ttname"><a href="../../d0/d11/class_dr_pepper_1_1_core_1_1_tick_1_1_action_phase.html">DrPepper.Core.Tick.ActionPhase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d75/_action_phase_8cs_source.html#l00007">ActionPhase.cs:8</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_player_input_phase_html"><div class="ttname"><a href="../../df/df2/class_dr_pepper_1_1_core_1_1_tick_1_1_player_input_phase.html">DrPepper.Core.Tick.PlayerInputPhase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d6a/_player_input_phase_8cs_source.html#l00008">PlayerInputPhase.cs:9</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html">DrPepper.Core.Tick.TickSystem</a></div><div class="ttdoc">틱 관련 전역 기능의 구현을 담당하는 클래스 입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00012">TickSystem.cs:13</a></div></div>
-<div class="ttc" id="aclass_dr_pepper_1_1_core_1_1_tick_1_1_tick_system_html_a25a933976d67b0df9abd3d6c0e09294f"><div class="ttname"><a href="../../d2/d5a/class_dr_pepper_1_1_core_1_1_tick_1_1_tick_system.html#a25a933976d67b0df9abd3d6c0e09294f">DrPepper.Core.Tick.TickSystem.Phase</a></div><div class="ttdeci">Phase</div><div class="ttdoc">페이즈 FSM의 State enum값입니다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d65/_tick_system_8cs_source.html#l00017">TickSystem.cs:18</a></div></div>
+<p class="definition"><a class="el" href="../../da/de4/_u_i_manager_8cs_source.html">UIManager.cs</a> 파일의 <a class="el" href="../../da/de4/_u_i_manager_8cs_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">foreach</span> (var panel <span class="keywordflow">in</span> _Panels)</div>
+<div class="line"><span class="lineno">   36</span>            {</div>
+<div class="line"><span class="lineno">   37</span>                panel.Value.PostSystemInitialize();</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -305,7 +253,7 @@ Public 멤버 함수</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/da8/namespace_dr_pepper.html">DrPepper</a></li><li class="navelem"><a class="el" href="../../de/d69/namespace_dr_pepper_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="../../d1/dc3/namespace_dr_pepper_1_1_core_1_1_u_i.html">UI</a></li><li class="navelem"><a class="el" href="../../dd/d24/class_dr_pepper_1_1_core_1_1_u_i_1_1_u_i_manager.html">UIManager</a></li>
-    <li class="footer">생성시간 : 수 12월 14 2022 01:36:04, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">생성시간 : 목 12월 15 2022 01:37:43, 프로젝트명 : DrPapper, 생성자 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

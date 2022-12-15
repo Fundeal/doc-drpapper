@@ -109,6 +109,7 @@ var annotated_dup =
     [ "CellBasedObjectDevelopView", "db/d38/class_cell_based_object_develop_view.html", null ],
     [ "CellTestView", "da/d72/class_cell_test_view.html", null ],
     [ "CSVReader", "d4/d16/class_c_s_v_reader.html", null ],
+    [ "DevPanel_PlayerControllerToggle", "da/d25/class_dev_panel___player_controller_toggle.html", null ],
     [ "HangulDecomposition", "dd/d7b/class_hangul_decomposition.html", null ],
     [ "HangulUtil", "d2/da4/class_hangul_util.html", null ],
     [ "RoomGoalSyllableData", "d3/de0/class_room_goal_syllable_data.html", null ],
